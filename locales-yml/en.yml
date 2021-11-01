@@ -13,3 +13,4 @@ en:
     custom_filter: Set date
     customer_export:
       note: This link will expire in 15 days.
+      no_fields_selected: Please check atleast one of the below fields to proceed.
