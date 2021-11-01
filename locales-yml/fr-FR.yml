@@ -1,0 +1,16 @@
+fr:
+  time:
+    am: AM
+    pm: PM
+  attach_file: Attach a file
+  edit_forum_category: Edit Forum Category
+  total: Total
+  service_task: Service Task
+  export_data:
+    thirt_days: Last 30 Days
+    seven_days: Last 7 Days
+    twenty_four: From yesterday
+    custom_filter: Set date
+    customer_export:
+      note: This link will expire in 15 days.
+      no_fields_selected: Please check atleast one of the below fields to proceed.
