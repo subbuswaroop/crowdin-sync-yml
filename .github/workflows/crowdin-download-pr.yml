@@ -11,22 +11,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Induce Build
-        id: induce-build
-        uses: satak/webrequest-action@master
-        with:
-          url: https://api.crowdin.com/api/v2/projects/483057/translations/builds
-          method: POST
-          headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
-          payload: '{}'
+#       - name: Induce Build
+#         id: induce-build
+#         uses: satak/webrequest-action@master
+#         with:
+#           url: https://api.crowdin.com/api/v2/projects/483057/translations/builds
+#           method: POST
+#           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+#           payload: '{}'
 
-      - name: Get data
-        id: vars 
-        run: echo ::set-output name=outputvar::$(echo '${{ steps.induce-build.outputs.output }}' | jq '.data.data')
-      - name: Print data
+#       - name: Get data
+#         id: vars 
+#         run: echo ::set-output name=outputvar::$(echo '${{ steps.induce-build.outputs.output }}' | jq '.data.data')
+      - name: Script data
         shell: bash
         working-directory: crowdin
         run: |
            chmod +x crowdin_init.sh
-           ./crowdin_init.sh
+           ./crowdin_init.sh ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 #          echo ${{ steps.vars.outputs.outputvar }}
