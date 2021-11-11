@@ -8,13 +8,13 @@ else
     echo "NVM installed already"
 fi
 
-if ! type "node" > /dev/null; then
-    echo "Install node LTS version"
-    nvm install node
-else
-    echo "Node already installed"
-    echo "Installing required packages"
-    cd ./js && npm install && cd ..
-fi
+# if ! type "node" > /dev/null; then
+#     echo "Install node LTS version"
+#     nvm install node
+# else
+#     echo "Node already installed"
+#     echo "Installing required packages"
+#     cd ./js && npm install && cd ..
+# fi
 
-node js/index.js $1 $2
+node js/index.js 
