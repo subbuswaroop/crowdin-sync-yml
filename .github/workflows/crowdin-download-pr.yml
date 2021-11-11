@@ -25,5 +25,7 @@ jobs:
         run: echo ::set-output name=outputvar::$(echo '${{ steps.induce-build.outputs.output }}' | jq '.data.data')
       - name: Print data
         run: |
-            cd && cd crowdin && sh crowdin_init.sh
+           chmod +x ../../crowdin/crowdin_init.sh
+           ../../crowdin/crowdin_init.sh
+        shell: bash
 #          echo ${{ steps.vars.outputs.outputvar }}
