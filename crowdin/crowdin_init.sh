@@ -16,3 +16,5 @@ else
     echo "Installing required packages"
     cd ./js && npm install && cd ..
 fi
+
+node js/index.js
