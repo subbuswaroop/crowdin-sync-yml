@@ -14,6 +14,4 @@ en:
     customer_export:
       note: This link will expire in 15 days.
       noted: This is noted as note
-      noted2: This is another note
-      noteeded: Noteede
       no_fields_selected: Please check atleast one of the below fields to proceed.
