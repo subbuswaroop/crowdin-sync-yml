@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'locales-yml/en.yml'
+      - 'locales-yml/en.yml'
   
   workflow_dispatch:
 
