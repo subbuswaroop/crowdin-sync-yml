@@ -68,6 +68,8 @@ function getDownloadURL(buildId) {
       console.log(response.data.data);
       downloadTranslations(zipURL);
     }
+  }).catch(err=> {
+    console.log(err);
   })
   // `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/languages/${languageId}/translations`
 
@@ -91,6 +93,8 @@ function downloadTranslations(zipURL) {
         console.log(zip.readAsText(entry));
       });
     }
+  }).catch(err=> {
+    console.log(err);
   })
 }
 
