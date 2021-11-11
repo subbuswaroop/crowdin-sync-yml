@@ -20,6 +20,9 @@ jobs:
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
           payload: '{}'
 
-      - name: Print Result
+      - name: Get data
+        id: vars
+        run: echo ::set-output name=outputvar::$(echo '${{ steps.induce-build.outputs.output }}' | jq '.data.data')
+      - name: Print data
         run: |
-          echo ${{ steps.induce-build.outputs }}
+          echo ${{ steps.vars.outputs.outputvar }}
