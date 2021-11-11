@@ -18,6 +18,7 @@ jobs:
           url: https://api.crowdin.com/api/v2/projects/483057/translations/builds
           method: POST
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+          payload: '{}'
 
       - name: Print Result
         run: |
