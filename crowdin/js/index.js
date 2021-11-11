@@ -3,8 +3,8 @@ const axios = require('axios').default;
 // const BASE_URL = config.HOST + config.NAMESPACE + "projects/";
 // const PROJECT_ID = config.PROJECT_ID;
 
-const CROWDIN_TOKEN = process.args[3];
-const CROWDIN_PROJECT_ID = process.args[2];
+const CROWDIN_TOKEN = process.argv[3];
+const CROWDIN_PROJECT_ID = process.argv[2];
 console.log(CROWDIN_PROJECT_ID);
 console.log(CROWDIN_TOKEN);
 const HEADERS = {
