@@ -5,6 +5,8 @@ const axios = require('axios').default;
 
 const CROWDIN_TOKEN = process.args[3];
 const CROWDIN_PROJECT_ID = process.args[2];
+console.log(CROWDIN_PROJECT_ID);
+console.log(CROWDIN_TOKEN);
 const HEADERS = {
   headers: {
     'Authorization': `Bearer ${CROWDIN_TOKEN}`
