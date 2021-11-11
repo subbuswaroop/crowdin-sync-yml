@@ -64,8 +64,8 @@ function getDownloadURL(buildId) {
 
   axios(options).then(response=> {
     if(response.data) {
-      zipURL = response.data.url;
-      console.log(response.data);
+      zipURL = response.data.data.url;
+      console.log(response.data.data.url);
       downloadTranslations(zipURL);
     }
   })
