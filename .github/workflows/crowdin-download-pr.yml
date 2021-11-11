@@ -21,8 +21,9 @@ jobs:
           payload: '{}'
 
       - name: Get data
-        id: vars
+        id: vars 
         run: echo ::set-output name=outputvar::$(echo '${{ steps.induce-build.outputs.output }}' | jq '.data.data')
       - name: Print data
         run: |
-          echo ${{ steps.vars.outputs.outputvar }}
+            cd && cd crowdin && sh crowdin_init.sh
+#          echo ${{ steps.vars.outputs.outputvar }}
