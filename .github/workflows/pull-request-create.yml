@@ -1,4 +1,4 @@
-name: YAML workflow
+name: PR Create workflow
 on:  
   workflow_dispatch:
 
