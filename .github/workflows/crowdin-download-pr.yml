@@ -28,5 +28,5 @@ jobs:
         working-directory: crowdin
         run: |
            chmod +x crowdin_init.sh
-           sh crowdin/crowdin_init.sh
+           ./crowdin_init.sh
 #          echo ${{ steps.vars.outputs.outputvar }}
