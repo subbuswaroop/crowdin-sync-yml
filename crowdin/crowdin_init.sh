@@ -17,4 +17,4 @@ else
     cd ./js && npm install && cd ..
 fi
 
-node js/index.js
+node js/index.js PROJECT_ID=$2 CROWDIN_SECRET=$3
