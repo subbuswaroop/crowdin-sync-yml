@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 const JSZip = require("jszip");
-const AdmZip = require('adm-zip');
+const shell = require('shelljs');
 /** CONFIG ENV VARIABLES */
 // const BASE_URL = config.HOST + config.NAMESPACE + "projects/";
 // const PROJECT_ID = config.PROJECT_ID;
@@ -93,10 +93,14 @@ function downloadTranslations(zipURL) {
     //load contents into jszip and create an object
     var buf = Buffer.concat(data);
     JSZip.loadAsync(buf).then((zip) => {
-      const zipObj = zip
       zip.folder("locales-yml").forEach(function (relativePath, file){
-          console.log("iterating over", relativePath);
-      });
+        zip.file(`locales-yml/${relativePath}`).async("string").then(content=> {
+          // console.log(content);
+          shell.exec(`printf "%s" "${content}" > "new.yaml"`);
+          shell.exec(`chmod +x yaml_merge.sh && ./yaml_merge.sh new.yaml ${relativePath}`)
+        })
+          // console.log("iterating over", relativePath);
+      }); 
       // return zip.file("locales-yml/aa-ER.yml").async("string");
     }).then(function (text) {
       console.log(text);
@@ -105,13 +109,7 @@ function downloadTranslations(zipURL) {
 
   // axios(options).then(response=> {
   //   if(response && response.data) {
-  //     var zip = new AdmZip(response);
-  //     var zipEntries = zip.getEntries();
-  //     console.log(zipEntries.length);
-    
-  //     zipEntries.forEach((entry) => {
-  //       console.log(zip.readAsText(entry));
-  //     });
+
   //   }
   // }).catch(err=> {
   //   console.log(err);
