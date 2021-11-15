@@ -1,14 +1,17 @@
 const axios = require('axios').default;
-const JSZip = require("jszip");
+const AdmZip = require("adm-zip");
 const shell = require('shelljs');
 /** CONFIG ENV VARIABLES */
-// const BASE_URL = config.HOST + config.NAMESPACE + "projects/";
+const BASE_URL = "https://api.crowdin.com/api/v2/projects";
 // const PROJECT_ID = config.PROJECT_ID;
 
-// const CROWDIN_TOKEN = process.argv[3];
-const CROWDIN_TOKEN = "2e6e3de1c20f73b61751dd1a62f8495fc080a93332eb58b23c834f664c17a2859dba93bd9996ae94";
-// const CROWDIN_PROJECT_ID = process.argv[2];
-const CROWDIN_PROJECT_ID = 483057;
+const CROWDIN_TOKEN = process.argv[3];
+const CROWDIN_PROJECT_ID = process.argv[2];
+
+const PROVIDER_CODE = ["es-ES", "ja", "es-MX", "no", "pt", "pt", "ru", "sv"];
+const APP_CODE = ["es", "ja-JP", "es-LA", "nb-NO", "pt-BR", "pt-PT", "ru-RU", "sv-SE"];
+const BASE_LANG = 'en';
+
 var checkBuilStatusInterval = null;
 const HEADERS = {
   headers: {
@@ -17,10 +20,11 @@ const HEADERS = {
 };
 
 function checkBuildStatus(buildId) {
+  console.log("Checking Build Status...");
   const options = {
     method: "GET",
     ...HEADERS,
-    url: `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds/${buildId}`
+    url: `${BASE_URL}/${CROWDIN_PROJECT_ID}/translations/builds/${buildId}`
   };
 
   return axios(options).then(response=> {
@@ -39,38 +43,36 @@ function checkBuildStatus(buildId) {
 }
 
 function buildTranslations() {
-  getDownloadURL();
-  // const options = {
-  //   method: "POST",
-  //   ...HEADERS,
-  //   data: {},
-  //   url: `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds`
-  // }
+  console.log("Building Translations...");
+  const options = {
+    method: "POST",
+    ...HEADERS,
+    data: {},
+    url: `${BASE_URL}/${CROWDIN_PROJECT_ID}/translations/builds`
+  }
 
-  // return axios(options).then(response=> {
-  //   if(response.data && response.data.data) {
-  //     let buildId = response.data.data.id;
-  //     // The build process usually takes more than a minute due to large number of keys. So, we are only proceeding
-  //     // to the next step if this build finishes. Until then, we check the status every 30 seconds
-  //     checkBuilStatusInterval = setInterval(checkBuildStatus, 20000, buildId);
-
-  //   }
-  // })
+  return axios(options).then(response=> {
+    if(response.data && response.data.data) {
+      let buildId = response.data.data.id;
+      // The build process usually takes more than a minute due to large number of keys. So, we are only proceeding
+      // to the next step if this build finishes. Until then, we check the status every 30 seconds
+      checkBuilStatusInterval = setInterval(checkBuildStatus, 30000, buildId);
+    }
+  })
 }
 
 function getDownloadURL(buildId) {
-  console.log("Coming to Download");
+  console.log("Fetching zip download url...");
   let zipURL = "";
   const options = {
     method: "GET",
     ...HEADERS,
-    url: `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds/${7}/download`
+    url: `${BASE_URL}/${CROWDIN_PROJECT_ID}/translations/builds/${buildId}/download`
   };
 
   axios(options).then(response=> {
-    if(response.data) {
+    if(response && response.data) {
       zipURL = response.data.data.url;
-      console.log(response.data.data.url);
       downloadTranslations(zipURL);
     }
   }).catch(err=> {
@@ -81,39 +83,27 @@ function getDownloadURL(buildId) {
 }
 
 function downloadTranslations(zipURL) {
-  const options = {
-    method: "GET",
-    url: "https://github.com/mihaifm/linq/releases/download/3.1.1/linq.js-3.1.1.zip"
-  };
-  var data = [];
-
+  console.log("Downloading Translations...");
   axios.get(zipURL, { responseType: 'arraybuffer' }).then(res => {
     console.log('zip download status ', res.status);
-    data.push(res.data);
-    //load contents into jszip and create an object
-    var buf = Buffer.concat(data);
-    JSZip.loadAsync(buf).then((zip) => {
-      zip.folder("locales-yml").forEach(function (relativePath, file){
-        zip.file(`locales-yml/${relativePath}`).async("string").then(content=> {
-          // console.log(content);
-          shell.exec(`printf "%s" "${content}" > "new.yaml"`);
-          shell.exec(`chmod +x yaml_merge.sh && ./yaml_merge.sh new.yaml ${relativePath}`)
-        })
-          // console.log("iterating over", relativePath);
-      }); 
-      // return zip.file("locales-yml/aa-ER.yml").async("string");
-    }).then(function (text) {
-      console.log(text);
+    var zipFile = new AdmZip(res.data);
+    var zipEntries = zipFile.getEntries();
+    shell.exec("chmod +x yaml_merge.sh");
+
+    zipEntries.forEach(function (entry, indx) {
+      let destfilename = entry.entryName.split("/")[0]; // Get the destination file name in the helpkit folder
+      if(indx % 2 == 0 || destfilename.includes(BASE_LANG)) return; // There will be two entries for each file like "ar" and "ar/ar-SA.yml". Ignoring the first one in all iterations
+      
+      zipFile.extractEntryTo(entry.entryName, './tmp', false, true); // Extract the yml data to a tmp file
+            
+      if(PROVIDER_CODE.indexOf(destfilename) > -1) { // Some folder names of the providers doesn't match the destination. So, handling it accordingly
+        destfilename = APP_CODE[PROVIDER_CODE.indexOf(destfilename)];
+      };
+
+      // Merge source and destination yml files
+      shell.exec(`./yaml_merge.sh ./tmp/${entry.entryName.split("/")[1]} ${destfilename}`);
     });
   });
-
-  // axios(options).then(response=> {
-  //   if(response && response.data) {
-
-  //   }
-  // }).catch(err=> {
-  //   console.log(err);
-  // })
 }
 
 buildTranslations();

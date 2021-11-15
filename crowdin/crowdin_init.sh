@@ -1,4 +1,4 @@
-echo "Hello World"
+#!/bin/bash
 ### Check if the nvm is installed or not
 if [ ! -d ~/.nvm ]; then
     echo "Please install, nvm and install node LTS"
@@ -8,13 +8,13 @@ else
     echo "NVM installed already"
 fi
 
-# if ! type "node" > /dev/null; then
-#     echo "Install node LTS version"
-#     nvm install node
-# else
-#     echo "Node already installed"
-#     echo "Installing required packages"
-#     cd ./js && npm install && cd ..
-# fi
+if ! type "node" > /dev/null; then
+    echo "Install node LTS version"
+    nvm install node
+else
+    echo "Node already installed"
+    echo "Installing required packages"
+    cd ./js && npm install && cd ..
+fi
 
 node js/index.js 
