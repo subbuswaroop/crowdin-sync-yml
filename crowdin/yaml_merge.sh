@@ -12,4 +12,4 @@ command -v yaml-merge >/dev/null 2>&1 || install_yaml_merge
 yaml-merge "${source_dir}/$2.yml" tmp_file | sed -e 's/\\_/ /g' > "${source_dir}/$2.yml"
 echo "copied over ${tmp_file}"
 
-rm tmp_file
+rm "$tmp_file"
