@@ -1,4 +1,4 @@
-#!/bin/bash
+echo "Hello World"
 ### Check if the nvm is installed or not
 if [ ! -d ~/.nvm ]; then
     echo "Please install, nvm and install node LTS"
@@ -17,4 +17,4 @@ else
     cd ./js && npm install && cd ..
 fi
 
-node js/index.js 
+node js/index.js $1 $2
