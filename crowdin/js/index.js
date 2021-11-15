@@ -103,7 +103,7 @@ function downloadTranslations(zipURL) {
       console.log("Destination Filename:", destfilename);
       console.log("Source Filename:", entry.entryName.split("/")[1]);
       // Merge source and destination yml files
-      shell.exec(`./yaml_merge.sh ./tmp/${entry.entryName.split("/")[1]} ${destfilename}`);
+      shell.exec(`./yaml_merge.sh ${entry.entryName.split("/")[1]} ${destfilename}`);
     });
   });
 }
