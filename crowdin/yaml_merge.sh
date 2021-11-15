@@ -1,11 +1,6 @@
 #!/bin/bash
 source_dir=../locales-yml/mint_translations
 tmp_file=$1
-echo "$source_dir"
-echo "First Arg"
-echo $1
-echo "Second Arg"
-echo $2
 
 install_yaml_merge(){
   command -v npm  || echo "NPM not installed. Exiting"
