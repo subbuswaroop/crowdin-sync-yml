@@ -106,7 +106,8 @@ function downloadTranslations(zipURL) {
       shell.exec(`./yaml_merge.sh ${entry.entryName.split("/")[1]} ${destfilename}`);
     });
 
-    shell.exec('rm ./js/package-lock.json')
+    console.log("REmoving package lock json file");
+    shell.exec('cd js && [ -f "package-lock.json" ] && rm package-lock.json && cd ..')
   });
 }
 
