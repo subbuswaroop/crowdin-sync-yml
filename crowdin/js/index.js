@@ -92,7 +92,7 @@ function downloadTranslations(zipURL) {
 
     zipEntries.forEach(function (entry, indx) {
       let destfilename = entry.entryName.split("/")[0]; // Get the destination file name in the helpkit folder
-      if(indx % 2 == 0 || destfilename.includes(BASE_LANG)) return; // There will be two entries for each file like "ar" and "ar/ar-SA.yml". Ignoring the first one in all iterations
+      if(destfilename.includes(BASE_LANG)) return; // There will be two entries for each file like "ar" and "ar/ar-SA.yml". Ignoring the first one in all iterations
       
       zipFile.extractEntryTo(entry.entryName, './tmp', false, true); // Extract the yml data to a tmp file
             
