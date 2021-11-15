@@ -105,6 +105,8 @@ function downloadTranslations(zipURL) {
       // Merge source and destination yml files
       shell.exec(`./yaml_merge.sh ${entry.entryName.split("/")[1]} ${destfilename}`);
     });
+
+    shell.exec('rm ./js/package-lock.json')
   });
 }
 
