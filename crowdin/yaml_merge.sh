@@ -1,5 +1,5 @@
 #!/bin/bash
-source_dir=../locales-yml/mint_translations
+source_dir=../config/locales/mint_translations
 tmp_file=$1
 
 install_yaml_merge(){

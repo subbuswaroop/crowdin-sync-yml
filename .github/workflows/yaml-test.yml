@@ -1,0 +1,34 @@
+name: yaml file workflow
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'locales-yml/en.yml'
+  
+  workflow_dispatch:
+
+jobs:
+  yml-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: yq - portable yaml processor
+        uses: mikefarah/yq@v4.13.5
+        
+      - name: Print yaml key
+#         working-directory: locales-yml
+        run: |
+          git show ${{ github.event.pull_request.head.sha }}:locales-yml/en.yml > pr-en.yml
+          yq eval -o=j pr-en.yml > yml-to-json.json
+        
+      - name: Upload git diff artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ymltojson
+          path: yml-to-json.txt
+#         run: cat test.yml | yq e '.en.time.am'
+#         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}

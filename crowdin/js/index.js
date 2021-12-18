@@ -88,12 +88,12 @@ function downloadTranslations(zipURL) {
     console.log('zip download status ', res.status);
     var zipFile = new AdmZip(res.data);
     var zipEntries = zipFile.getEntries();
-    shell.exec("chmod +x yaml_merge.sh");
+    shell.exec("chmod +x yaml_merge.sh"); // Give access for the script file
 
     zipEntries.forEach(function (entry, indx) {
       let destfilename = entry.entryName.split("/")[0]; // Get the destination file name in the helpkit folder
       let sourceFilename = entry.entryName.split("/")[1];
-      if(destfilename.includes(BASE_LANG) || sourceFilename == "") return; // There will be two entries for each file like "ar" and "ar/ar-SA.yml". Ignoring the first one in all iterations
+      if(indx % 2 == 0 || destfilename.includes(BASE_LANG)) return; // There will be two entries for each file like "ar" and "ar/ar-SA.yml". Ignoring the first one in all iterations
       
       zipFile.extractEntryTo(entry.entryName, './tmp', false, true); // Extract the yml data to a tmp file
             
@@ -102,12 +102,12 @@ function downloadTranslations(zipURL) {
       };
 
       console.log("Destination Filename:", destfilename);
-      console.log("Source Filename:", entry.entryName.split("/")[1]);
+      console.log("Source Filename:", sourceFilename);
       // Merge source and destination yml files
       shell.exec(`./yaml_merge.sh ${sourceFilename} ${destfilename}`);
     });
 
-    console.log("REmoving package lock json file");
+    console.log("Removing package lock json file");
     shell.exec('cd js && [ -f "package-lock.json" ] && rm package-lock.json && cd ..')
   });
 }
