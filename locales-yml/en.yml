@@ -50,3 +50,6 @@ en:
   reported_by: 'Reported by '
   requesting: Requesting...
   save: Save
+  filter_options:
+  tags: Tags
+  source: Source
