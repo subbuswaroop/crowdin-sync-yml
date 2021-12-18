@@ -29,6 +29,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ymltojson
-          path: yml-to-json.txt
+          path: yml-to-json.json
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
