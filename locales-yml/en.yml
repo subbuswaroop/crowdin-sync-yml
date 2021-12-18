@@ -45,6 +45,12 @@ en:
           account and get started.'
     activate_button: Activate Account
   hi_user: 'Hi %{agent_name}'
+  user_notifications:
+    notify_dkim_activation: 'DKIM signatures are now activated for emails sent from %{email_domain}.'
+    notify_dkim_failure: 'DKIM verification failed for domain %{email_domain}.'
+    notify_dkim_enforcement_note: >-
+      You have received this email as you have configured one or more custom domains and are using 
+      Freshdesk server to send emails.
   tags: Tags
   source: Source
   mailer_notifier:
