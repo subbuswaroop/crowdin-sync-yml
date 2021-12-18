@@ -27,7 +27,7 @@ jobs:
       - name: Print yaml key
 #         working-directory: locales-yml
         run: |
-          git show ${{ github.event.commits.id }}:locales-yml/en.yml > orig-en.yml
+          git show ${{ github.event.commits[0].id }}:locales-yml/en.yml > orig-en.yml
           git show ${{ github.sha }}:locales-yml/en.yml > pr-en.yml
           yq eval -o=j pr-en.yml > yml-to-json.json
           yq eval -o=j orig-en.yml > orig-to-json.json
