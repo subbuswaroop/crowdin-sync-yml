@@ -48,6 +48,9 @@ en:
       You have received this email as you have configured one or more custom domains and are using 
       Freshdesk server to send emails.
   tags: Tags
+  exceeds_file_size_limit:
+    file_size_error: Sorry your pdf File size > 10MB.
+    report_name: 'Scheduled report name:'
   source: Source
   mailer_notifier:
     security_notification:
