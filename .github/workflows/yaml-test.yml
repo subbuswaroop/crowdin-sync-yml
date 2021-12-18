@@ -23,8 +23,8 @@ jobs:
 #         working-directory: locales-yml
         run: |
           echo "${{ github.event.pull_request.head.sha }}""
-          git show ${{ github.sha }}:locales-yml/en.yml > orig-en.yml
-          git show ${{ github.event.before }}:locales-yml/en.yml > pr-en.yml
+          git show ${{ github.event.pull_request.head.sha }}:locales-yml/en.yml > orig-en.yml
+          git show ${{ github.sha }}:locales-yml/en.yml > pr-en.yml
           yq eval -o=j pr-en.yml > yml-to-json.json
           yq eval -o=j orig-en.yml > orig-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' yml-to-json.json > pr-en.json
