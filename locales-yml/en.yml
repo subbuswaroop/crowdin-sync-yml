@@ -32,3 +32,7 @@ en:
     domain: 'Domain:'
     use_ssl: Use SSL
     smtp_port: Port
+  new_threads_on_my_tickets: New Threads on my tickets
+  new_replies_on_my_thread: New replies on my Thread
+  threads_i_am_tagged_in: Threads I am tagged in
+  success: Success
