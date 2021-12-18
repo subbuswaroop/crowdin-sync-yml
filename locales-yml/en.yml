@@ -39,6 +39,12 @@ en:
   requesting: Requesting...
   save: Save
   filter_options:
+    activate_account: Activate your Freshdesk Support Desk account
+    activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
+          support your customers. Click on the button below to activate your
+          account and get started.'
+    activate_button: Activate Account
+  hi_user: 'Hi %{agent_name}'
   tags: Tags
   source: Source
   mailer_notifier:
