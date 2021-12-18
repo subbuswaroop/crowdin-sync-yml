@@ -24,11 +24,12 @@ jobs:
         run: |
           git show ${{ github.event.pull_request.head.sha }}:locales-yml/en.yml > pr-en.yml
           yq eval -o=j pr-en.yml > yml-to-json.json
+          jq -r '[paths | join(".")]' yml-to-json.json > pr-en.json
         
       - name: Upload git diff artifact
         uses: actions/upload-artifact@v2
         with:
           name: ymltojson
-          path: yml-to-json.json
+          path: pr-en.json
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
