@@ -42,11 +42,6 @@ en:
   undo_toggle: Undo send
   reorder: Reorder
   email_command_settings_heading: Email Command Settings
-  billing_address: Billing Address
-  shipping_address: Shipping Address
-  edit_address: Edit address
-  enter_value: Enter Value
-  view_invoices: 'View invoices: '
   reported_by: 'Reported by '
   requesting: Requesting...
   save: Save
