@@ -20,10 +20,6 @@ en:
     imap_port: Port
     authentication: 'Authentication:'
     user_name: User Name
-    imap_server_info: IMAP server name to fetch the emails: Use SSL/TLS
-    use_default: Default (Freshdesk Support Desk)
-    domain: 'Domain:'
-    use_ssl: Use SSL
     smtp_port: Port
   new_threads_on_my_tickets: New Threads on my tickets
   new_replies_on_my_thread: New replies on my Thread
@@ -52,6 +48,9 @@ en:
       You have received this email as you have configured one or more custom domains and are using 
       Freshdesk server to send emails.
   tags: Tags
+  exceeds_file_size_limit:
+    file_size_error: Sorry your pdf File size > 10MB.
+    report_name: 'Scheduled report name:'
   source: Source
   mailer_notifier:
     security_notification:
