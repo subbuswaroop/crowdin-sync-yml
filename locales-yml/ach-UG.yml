@@ -15,3 +15,20 @@ ach:
       note: This link will expire in 15 days.
       noted: This is noted as note
       no_fields_selected: Please check atleast one of the below fields to proceed.
+    change_plan_title: Are you sure you want to change plan?
+  mailbox:
+    imap_port: Port
+    authentication: 'Authentication:'
+    user_name: User Name
+    imap_server_info: IMAP server name to fetch the emails
+    outgoing_mail_settings: Outgoing Mail Settings
+    use_mail_server_for: 'Use mail server for:'
+    domain_name: Domain Name
+    delete_from_server: Delete emails from server after fetching?
+    use_your_own: Use your own mail server
+    verifying_mailbox_input: Verifying...
+    use_ssl_tls: Use SSL/TLS
+    use_default: Default (Freshdesk Support Desk)
+    domain: 'Domain:'
+    use_ssl: Use SSL
+    smtp_port: Port
