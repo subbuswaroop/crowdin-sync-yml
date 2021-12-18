@@ -53,3 +53,12 @@ en:
   filter_options:
   tags: Tags
   source: Source
+  mailer_notifier:
+    security_notification:
+      trusted_ip_enabled:
+        one: 'IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP range below:'
+        other: 'IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP ranges below:'
+      trusted_ip_modified:
+        one: 'The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP range below:'
+        other: 'The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP ranges below:'
+      trusted_ip_disabled: "IP whitelisting has been disabled on your account."
