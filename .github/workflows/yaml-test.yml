@@ -16,6 +16,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup node
+        uses: actions/setup-node@v2
+      
+      - name: Install json-diff package
+        run: npm install json-diff
+
       - name: yq - portable yaml processor
         uses: mikefarah/yq@v4.13.5
 
@@ -35,26 +41,37 @@ jobs:
           yq eval -o=j pr-en.yml > yml-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' yml-to-json.json > pr-en.json
 
-      - name: Upload git diff artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: ymltojson
           path: pr-en.json
 
+      - name: Checkout previous branch
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.before }}
 
-      - name: Original file
+      - name: Get en.yml content
         run: |
           yq eval -o=j locales-yml/en.yml > orig-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' orig-to-json.json > orig-en.json
 
-      - name: Upload git diff artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: originaljson
           path: orig-en.json
+
+      - name: Get JSON diff
+        run: |
+          json-diff orig-en.json pr-en.json > json-diff.txt
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ymltojson
+          path: json-diff.txt
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
           # jq -r '[paths | join(".")]' yml-to-json.json > pr-en.json
