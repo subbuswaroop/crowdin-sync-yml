@@ -6,12 +6,19 @@ en:
   edit_forum_category: Edit Forum Category
   customer_export:
     note: This link will expire in 15 days.
-  no_fields_selected: Please check atleast one of the below fields to proceed.
   no_tickets_mail:
     body: Seems like there are no tickets in the provided date range.
   export: Export
   csv: CSV
-  xls: Excel
-  title: Forums
+  xls: Excel Edited
+  title: Forums Edited
   type: Forum Type
   category: Forum Category
+  agent_working_on_this_ticket: Agent Working on This Ticket
+  zendesk_import_status:
+    extracting: >-
+      <b>Step (1/2) Downloading your Zendesk backup file.</b><br/>This might
+      take a few minutes depending on the size of your data. Please wait.
+    info: >-
+      <b>Step (2/2) Import in progress. Please wait.</b><br/>You will receive an
+      email from us once the import is complete.
