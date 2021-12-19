@@ -48,7 +48,7 @@ jobs:
           path: pr-en.json
 
       - name: Checkout previous branch
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.before }}
 
