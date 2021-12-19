@@ -4,3 +4,11 @@ en:
     pm: PM
   attach_file: Attach a file
   edit_forum_category: Edit Forum Category
+  customer_export:
+    note: This link will expire in 15 days.
+  no_fields_selected: Please check atleast one of the below fields to proceed.
+  no_tickets_mail:
+    body: Seems like there are no tickets in the provided date range.
+  export: Export
+  csv: CSV
+  xls: Excel
