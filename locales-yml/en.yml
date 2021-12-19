@@ -6,19 +6,6 @@ en:
   edit_forum_category: Edit Forum Category
   total: Total
   service_task: Service Task
-  export_data:
-    thirt_days: Last 30 Days
-    seven_days: Last 7 Days
-    twenty_four: From yesterday
-    custom_filter: Set date
-    customer_export:
-      note: This link will expire in 15 days.
-      noted: This is noted as note
-      no_fields_selected: Please check atleast one of the below fields to proceed.
-    change_plan_title: Are you sure you want to change plan?
-  new_threads_on_my_tickets: New Threads on my tickets
-  new_replies_on_my_thread: New replies on my Thread
-  threads_i_am_tagged_in: Threads I am tagged in
   filter_options:
     activate_account: Activate your Freshdesk Support Desk account
     activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
