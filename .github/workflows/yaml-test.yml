@@ -74,6 +74,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: origjson
+
+      - name: Checking file present
+        run: |
+          cat pr-en.json
+          cat orig-en.json
       
       - name: Install json-diff and get the difference
         run: |
