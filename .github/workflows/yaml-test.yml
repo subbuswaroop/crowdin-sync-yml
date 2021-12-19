@@ -34,7 +34,11 @@ jobs:
           git show ${{ github.sha }}:locales-yml/en.yml > pr-en.yml
           yq eval -o=j pr-en.yml > yml-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' yml-to-json.json > pr-en.json
-          git checkout ${{ github.event.before }}
+
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.before }}
+        run: |
           yq eval -o=j locales-yml/en.yml > orig-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' orig-to-json.json > orig-en.json
         
