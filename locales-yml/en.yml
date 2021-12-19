@@ -19,11 +19,6 @@ en:
   new_threads_on_my_tickets: New Threads on my tickets
   new_replies_on_my_thread: New replies on my Thread
   threads_i_am_tagged_in: Threads I am tagged in
-  success: Success
-    no_message:
-    products: You have not created any product yet.
-  forum_confirm_msg1: Are you sure you want to delete this category?
-  undo_toggle: Undo send
   filter_options:
     activate_account: Activate your Freshdesk Support Desk account
     activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
