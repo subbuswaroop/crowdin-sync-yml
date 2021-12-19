@@ -77,13 +77,13 @@ jobs:
 
       - name: Checking file present
         run: |
-          cat pr-en.json
-          cat orig-en.json
+          cp pr-en.json > pr-new.json
+          cp orig-en.json > orig-new.json
       
       - name: Install json-diff and get the difference
         run: |
           npm install -g json-diff
-          json-diff orig-en.json pr-en.json > json-diff.txt
+          json-diff orig-new.json pr-new.json > json-diff.txt
       
       - name: Upload artifact
         uses: actions/upload-artifact@v2
