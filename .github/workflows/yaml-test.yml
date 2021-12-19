@@ -77,8 +77,8 @@ jobs:
 
       - name: Checking file present
         run: |
-          cp pr-en.json > pr-new.json
-          cp orig-en.json > orig-new.json
+          cp pr-en.json pr-new.json
+          cp orig-en.json orig-new.json
       
       - name: Install json-diff and get the difference
         run: |
