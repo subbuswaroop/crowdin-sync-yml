@@ -57,12 +57,17 @@ jobs:
           name: originaljson
           path: orig-en.json
 
+      - name: Checkout previous branch
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
       - name: Setup node
         uses: actions/setup-node@v2
       
       - name: Install json-diff and get the difference
         run: |
-          npm install json-diff
+          npm install -g json-diff
           json-diff orig-en.json pr-en.json > json-diff.txt
       
       - name: Upload artifact
