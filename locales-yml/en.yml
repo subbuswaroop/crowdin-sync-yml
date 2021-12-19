@@ -16,11 +16,6 @@ en:
       noted: This is noted as note
       no_fields_selected: Please check atleast one of the below fields to proceed.
     change_plan_title: Are you sure you want to change plan?
-  mailbox:
-    imap_port: Port
-    authentication: 'Authentication:'
-    user_name: User Name
-    smtp_port: Port
   new_threads_on_my_tickets: New Threads on my tickets
   new_replies_on_my_thread: New replies on my Thread
   threads_i_am_tagged_in: Threads I am tagged in
