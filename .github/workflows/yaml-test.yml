@@ -62,6 +62,9 @@ jobs:
         with:
           ref: master
 
+      - name: Setup node
+        uses: actions/setup-node@v2
+
       - name: Download PR JSON artifact
         uses: actions/download-artifact@v2
         with:
@@ -71,9 +74,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: origjson
-
-      - name: Setup node
-        uses: actions/setup-node@v2
       
       - name: Install json-diff and get the difference
         run: |
