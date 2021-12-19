@@ -27,7 +27,7 @@ jobs:
       - name: Print yaml key
 #         working-directory: locales-yml
         run: |
-          git show ${{ github.event.before }}:locales-yml/en.yml > orig-en.yml
+          git show master:locales-yml/en.yml > orig-en.yml
           yq eval -o=j orig-en.yml > orig-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' orig-to-json.json > orig-en.json
           git show ${{ github.sha }}:locales-yml/en.yml > pr-en.yml
