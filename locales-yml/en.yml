@@ -9,16 +9,13 @@ en:
   no_tickets_mail:
     body: Seems like there are no tickets in the provided date range.
   export: Export
-  csv: CSV
-  xls: Excel Edited
-  title: Forums Edited
-  type: Forum Type
-  category: Forum Category
-  agent_working_on_this_ticket: Agent Working on This Ticket
-  zendesk_import_status:
-    extracting: >-
-      <b>Step (1/2) Downloading your Zendesk backup file.</b><br/>This might
-      take a few minutes depending on the size of your data. Please wait.
-    info: >-
-      <b>Step (2/2) Import in progress. Please wait.</b><br/>You will receive an
-      email from us once the import is complete.
+  csv: CSV edited
+  change_password: Change Password
+  filter_options:
+    tags: Tags
+    source: Source
+    unassigned: Unassigned
+  no_topics_text: No topics
+  enable_oauth2_info: >-
+    The industry standard OAuth protocol allows you to delegate agent and
+    customer authentication to the service that hosts their user accounts.
