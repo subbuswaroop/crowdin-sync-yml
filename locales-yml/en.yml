@@ -12,8 +12,7 @@ en:
   filter_options:
     tags: Tags
     source: Source
-    unassigned: Unassigned
-  no_topics_text: No topics edited
+    unassigned: Unassigned edited
   remote_logout_url_info: >-
     This is the URL to which Freshdesk Support Desk will redirect users when they click
     on the Logout link in Freshdesk Support Desk.
@@ -28,3 +27,11 @@ en:
       href="https://support.freshdesk.com/support/tickets/new"
       target="_top">request for a custom SSL certificate for your vanity
       support URL here</a>.
+    info4: >-
+      <b>Password Policy</b><br>You can set up different password policies
+      for agents and customers. The advanced settings allow you to configure
+      custom password policies such as password expiry time and minimum
+      password length. The changes you make will apply to new and existing
+      agents and customers. Learn more about password policy <a
+      href="https://support.freshdesk.com/support/solutions/articles/213865-password-policy"
+      target="_top"> here</a>.
