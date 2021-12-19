@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ymltojson
+          name: prjson
           path: pr-en.json
 
       - name: Checkout previous branch
@@ -54,13 +54,23 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: originaljson
+          name: origjson
           path: orig-en.json
 
       - name: Checkout previous branch
         uses: actions/checkout@v2
         with:
           ref: master
+
+      - name: Download PR JSON artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: prjson
+
+      - name: Download original JSON artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: origjson
 
       - name: Setup node
         uses: actions/setup-node@v2
@@ -73,7 +83,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ymltojson
+          name: jsondiff
           path: json-diff.txt
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
