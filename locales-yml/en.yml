@@ -8,25 +8,3 @@ en:
     note: This link will expire in 15 days Edited.
   no_tickets_mail:
     body: Seems like there are no tickets in the provided date range.
-  remote_logout_url_info: >-
-    This is the URL to which Freshdesk Support Desk will redirect users when they click
-    on the Logout link in Freshdesk Support Desk.
-  helpnote:
-    title: Security Settings
-    info2: >-
-      <b>Enabling SSL security </b><br>If you are not using a custom domain
-      for your support portal, Freshdesk Support Desk offers a default wildcard SSL
-      certificate to accounts on the <a href="https://freshdesk.com"
-      target="_top">freshdesk.com</a> domain. <b>SSL option for custom
-      domains are available from Blossom Plan.</b> You can <a
-      href="https://support.freshdesk.com/support/tickets/new"
-      target="_top">request for a custom SSL certificate for your vanity
-      support URL here</a>.
-    info4: >-
-      <b>Password Policy</b><br>You can set up different password policies
-      for agents and customers. The advanced settings allow you to configure
-      custom password policies such as password expiry time and minimum
-      password length. The changes you make will apply to new and existing
-      agents and customers. Learn more about password policy <a
-      href="https://support.freshdesk.com/support/solutions/articles/213865-password-policy"
-      target="_top"> here</a>.
