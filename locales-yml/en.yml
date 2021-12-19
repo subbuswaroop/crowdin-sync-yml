@@ -8,3 +8,7 @@ en:
   service_task: Service Task
   notify_dkim_whats_dkim: 'What is DKIM?'
   source: Source
+  select_all: Select all
+  select_header: Select all fields
+  from: From
+  select_format: 'Export as:'
