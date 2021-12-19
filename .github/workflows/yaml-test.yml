@@ -35,6 +35,12 @@ jobs:
           yq eval -o=j pr-en.yml > yml-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' yml-to-json.json > pr-en.json
 
+      - name: Upload git diff artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ymltojson
+          path: pr-en.json
+
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.before }}
@@ -43,12 +49,6 @@ jobs:
         run: |
           yq eval -o=j locales-yml/en.yml > orig-to-json.json
           jq -r '[leaf_paths as $path | {"key": $path | join("."), "value": getpath($path)}] | from_entries' orig-to-json.json > orig-en.json
-        
-      - name: Upload git diff artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ymltojson
-          path: pr-en.json
 
       - name: Upload git diff artifact
         uses: actions/upload-artifact@v2
