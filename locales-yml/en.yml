@@ -12,3 +12,6 @@ en:
   export: Export
   csv: CSV
   xls: Excel
+  title: Forums
+  type: Forum Type
+  category: Forum Category
