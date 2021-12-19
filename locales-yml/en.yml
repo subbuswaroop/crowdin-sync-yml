@@ -3,9 +3,9 @@ en:
     am: AM
     pm: PM
   attach_file: Attach a file
-  edit_forum_category: Edit Forum Category
+  edit_forum_category: Edit Forum Category edited
   customer_export:
-    note: This link will expire in 15 days.
+    note: This link will expire in 15 days Edited.
   no_tickets_mail:
     body: Seems like there are no tickets in the provided date range.
   export: Export
@@ -14,9 +14,17 @@ en:
     source: Source
     unassigned: Unassigned
   no_topics_text: No topics edited
-  enable_oauth2_info: >-
-    The industry standard OAuth protocol allows you to delegate agent and
-    customer authentication to the service that hosts their user accounts.
   remote_logout_url_info: >-
     This is the URL to which Freshdesk Support Desk will redirect users when they click
     on the Logout link in Freshdesk Support Desk.
+  helpnote:
+    title: Security Settings
+    info2: >-
+      <b>Enabling SSL security </b><br>If you are not using a custom domain
+      for your support portal, Freshdesk Support Desk offers a default wildcard SSL
+      certificate to accounts on the <a href="https://freshdesk.com"
+      target="_top">freshdesk.com</a> domain. <b>SSL option for custom
+      domains are available from Blossom Plan.</b> You can <a
+      href="https://support.freshdesk.com/support/tickets/new"
+      target="_top">request for a custom SSL certificate for your vanity
+      support URL here</a>.
