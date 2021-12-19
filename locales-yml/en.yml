@@ -6,6 +6,7 @@ en:
   edit_forum_category: Edit Forum Category
   total: Total
   service_task: Service Task
+  notify_dkim_whats_dkim: 'What is DKIM?'
   filter_options:
     activate_account: Activate your Freshdesk Support Desk account
     activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
