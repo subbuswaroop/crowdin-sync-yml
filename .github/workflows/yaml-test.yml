@@ -11,6 +11,11 @@ jobs:
   yml-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: yq - portable yaml processor
         uses: mikefarah/yq@v4.13.5
 
