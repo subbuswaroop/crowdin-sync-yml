@@ -10,8 +10,7 @@ en:
     body: Seems like there are no tickets in the provided date range.
   export: Export
   filter_options:
-    tags: Tags
-    source: Source
+    source: Source edited
     unassigned: Unassigned edited
   remote_logout_url_info: >-
     This is the URL to which Freshdesk Support Desk will redirect users when they click
