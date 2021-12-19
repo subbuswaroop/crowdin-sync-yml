@@ -8,6 +8,11 @@ en:
     note: This link will expire in 15 days Edited.
   no_tickets_mail:
     body: Seems like there are no tickets in the provided date range.
+    company_name: Company
+    mobile: Mobile
+    job_title: Job title
+    country: Country
+    state: State
   last_name: Last name
   twitter_id: Twitter
   add_photo: Add Photo
