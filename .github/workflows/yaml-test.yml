@@ -84,6 +84,7 @@ jobs:
         run: |
           npm install -g json-diff
           json-diff orig-new.json pr-new.json
+          echo "Diff found"
       
       - name: Upload artifact
         uses: actions/upload-artifact@v2
