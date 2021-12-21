@@ -16,17 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup node
+        uses: actions/setup-node@v2
+
       - name: yq - portable yaml processor
         uses: mikefarah/yq@v4.13.5
-
-      - name: Show GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-
-      - name: Set HEAD SHA
-        id: head-sha
-        run: echo "::set-output name=sha::$(git rev-parse HEAD)"
         
       - name: Print yaml key
 #         working-directory: locales-yml
@@ -40,6 +34,7 @@ jobs:
         with:
           name: prjson
           path: pr-en.json
+          retention-days: 1
 
       - name: Checkout previous branch
         uses: actions/checkout@v2
@@ -56,14 +51,7 @@ jobs:
         with:
           name: origjson
           path: orig-en.json
-
-      - name: Checkout previous branch
-        uses: actions/checkout@v2
-        with:
-          ref: master
-
-      - name: Setup node
-        uses: actions/setup-node@v2
+          retention-days: 1
 
       - name: Download PR JSON artifact
         uses: actions/download-artifact@v2
@@ -83,7 +71,7 @@ jobs:
       - name: Install json-diff and get the difference
         run: |
           npm install -g json-diff
-          json-diff orig-new.json pr-new.json > json-diff.txt
+          json-diff orig-en.json pr-en.json > json-diff.txt
           echo "Diff found"
       
       - name: Upload artifact
@@ -91,7 +79,22 @@ jobs:
         with:
           name: jsondiff
           path: json-diff.txt
+          retention-days: 1
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
           # jq -r '[paths | join(".")]' yml-to-json.json > pr-en.json
+
+     # - name: Show GitHub context
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJson(github) }}
+      #   run: echo "$GITHUB_CONTEXT"
+
+      # - name: Set HEAD SHA
+      #   id: head-sha
+      #   run: echo "::set-output name=sha::$(git rev-parse HEAD)"
+
+      # - name: Checkout previous branch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: master
 
