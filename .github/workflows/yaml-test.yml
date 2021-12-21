@@ -83,7 +83,7 @@ jobs:
       - name: Install json-diff and get the difference
         run: |
           npm install -g json-diff
-          json-diff orig-new.json pr-new.json
+          json-diff orig-new.json pr-new.json > json-diff.txt
           echo "Diff found"
       
       - name: Upload artifact
