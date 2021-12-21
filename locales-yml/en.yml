@@ -2,7 +2,7 @@ en:
   time:
     am: AM
     pm: PM
-  attach_file: Attach a file
+  attach_file: Attach a file edited
   edit_forum_category: Edit Forum Category edited
   customer_export:
     note: This link will expire in 15 days Edited.
@@ -10,6 +10,18 @@ en:
   twitter_id: Twitter
   add_photo: Add Photo
   first_name: First name
-  title: Title
-  test: testtest
-  test1: test222
+  testing:
+    to_submit_ticket: ' to submit a new ticket'
+    login_to_submit_ticket: '<a href=%{login_url}>Login</a> to submit a new ticket'
+    login_signup_to_submit_ticket: >-
+      <a href=%{login_url}>Login</a> or <a href=%{signup_url}>Signup</a> to
+      submit a new ticket
+    login_to_post_topic: <a href='' class='solution_c'>Login</a> to post a topic
+    login_to_post_comment: <a href='' class='solution_c'>Login</a> to post a comment
+    login_signup_to_post_topic: >-
+      <a href=%{topic_reply_url}>Login</a> or <a href=%{signup_url}>Signup</a>
+      to post a topic
+    login_signup_to_post_comment: >-
+      <a href=%{topic_reply_url}>Login</a> or <a href=%{signup_url}>Signup</a>
+      to post a comment
+    to_post_topic: ' to post a topic'
