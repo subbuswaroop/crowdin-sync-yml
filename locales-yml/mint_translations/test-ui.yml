@@ -1,0 +1,279 @@
+test-ui:
+  email_notifications:
+    preview_message: "$Preview Message$"
+    preview_mail_prefix: "$Test Mail - $"
+  export_data:
+    audit_log_export:
+      subject: "$Audit Log Export for %{domain}$"
+      body: "$You can download the file from <a href=%{url}>here</a>.If the link does not work, copy and paste the URL below in your browser's address bar:$"
+      note: "$This link will expire in 15 days.$"
+    no_logs_mail:
+      body: "$There is no logs for given request. Please try with different timeline or filter$"
+    failure_message: "$An error occurred while exporting data. Please try again or contact Freshdesk support.$"
+    scheduled_ticket_export:
+      subject: "$%{title} for %{date}$"
+      body: "$Hello there,<br><br>The export scheduled by %{user_name} is now ready. This report has the details of tickets that were created and updated from %{latest_schedule_range}.<br><br><a href=%{url}>Download Report</a><br><br>Please download this report within 30 days, after which the link will expire.<br><br>Happy number crunching!<br>%{helpdesk_name}$"
+    scheduled_ticket_export_no_data:
+      subject: "$%{title} - No tickets created or updated$"
+      body: "$Hello there,<br><br>It’s been a little quiet here! You have no tickets created or updated from %{latest_schedule_range}. We’ll be back once your support is in action.<br><br>%{helpdesk_name}$"
+    ticket_export:
+      note: "$This link will expire in 15 days.$"
+    data_backup_failure:
+      body: '$Your data export has failed. Can you please initiate the export again?$'
+    customer_export:
+      subject: "$%{type} export for %{domain}$"
+      note: "$This link will expire in 15 days.$"
+  mailer_notifier:
+    hi: '$Hi,$'
+    hi_user: '$Hi %{user_name},$'
+    role:
+      one: '$role$'
+      other: '$roles$'
+    thanks: "$Thanks,$"
+    freshdesk_customer_support: '$Freshdesk Support Desk Customer Support$'
+    note: "$Note: $"
+    freshdesk_support: '$Freshdesk Support$'
+    turn_off: $Turn Off,$
+    regards: "$Regards,$"
+    freshdesk_support_team: "$Freshdesk Support Team$"
+    note_for_recipients: "$Note: This email was also sent to - %{to_emails}.$"
+    freshdesk: "$Freshdesk Support Desk$"
+    attachment: '$Attachments:$'
+    notify_new_follower:
+      topic:
+        title: '$Added as topic follower$'
+        message: '$You have been added as a follower by %{name} to this topic.$'
+        unfollow: '$Stop following this topic$'
+      forum:
+        title: '$Added as forum follower$'
+        message: '$You have been added as a follower by %{name} to this forum.$'
+        unfollow: '$Stop following this forum$'
+    email_config_notifier:
+      activation_instructions:
+        body: '$This email has been added as your support email address in %{app_name}. Click the URL below to activate your support email
+        <br><br>
+        %{activation_url}
+        <br><br>
+        If the above URL does not work, try copying and pasting it into your browser. If you continue to have problems, please feel free to contact us.$'
+      test_email:
+        body: '$You’ve received the test mail you just sent out from Freshdesk Support Desk account.
+        <br><br>
+        If everything worked fine, you should now see this mail converted to a new ticket. Hop over to your Freshdesk Support Desk helpdesk portal and look under the "Ticket" tab.
+        <br><br>
+        Got it? Great! Now everytime your customers send you an email here, you’ll have it appear as a ticket in Freshdesk Support Desk automatically!
+        <br><br>
+        If your helpdesk did not show you a new ticket, first make sure that you have configured all your emails in this id to get forwarded to your Freshdesk Support id ( "%{to_email}" ).
+        You can learn how to do this <a href=%{support_url} target=_blank >here</a>. Still having problems? Get in touch with us at support@freshdesk.com and we’ll help you set this up.$'
+        support_url: '$https://support.freshdesk.com/support/solutions/articles/37541-converting-your-support-email-into-freshdesk-tickets$'
+    draft_mailer:
+      discard_email:
+        discard_msg_html: "$The draft version of the article %{article_url} was discarded by %{user} on %{time}$"
+        discard_msg_plain: '$Your draft of the article "%{title}" was discarded by %{user} on %{time} .$'
+        view_article: '$View Article$'
+        draft_by_html: '$<h3> %{title} <h5> by %{author} <h5> </h3>$'
+        draft_by_plain: '$%{title} by %{author}$'
+    ecommerce_notifier:
+      token_expiry:
+        token_expiry_msg: '$We want to let you know that your auth token for Ecommerce account %{account_name} will expire in %{expiry_date}.$'
+        token_update: $Please revoke the token and update the account inorder to be active.$
+        view_account: $View account$
+        contact_us: '$If you have queries of any kind, please do not hesitate to contact us: support@freshdesk.com$'
+    report_export_mailer:
+      common:
+        filters_applied: '$Filters applied:$'
+        date_range: '$Date Range$'
+        date_range_title: '$Date Range:$'
+      bi_report_export:
+        report_download_html: '$You can download the file from <a href=%{export_url}>here</a> (It will expire in 45 days).$'
+        report_download_plain: '$You can download the file from %{export_url} (It will expire in 45 days).$'
+        report_complete: '$The %{report_label} report %{ticket_export} export you had requested is complete.$'
+        paste_url: "$If the link does not work, copy and paste the URL below in your browser's address bar:$"
+        file_attached: '$Please find the file attached with this mail.$'
+        for_metric: '$For metric:$'
+        report_name: '$Report Name:$'
+        ticket: '$ticket$'
+      no_report_data:
+        main_msg: '$Seems like there is no data to display for date range %{date_range} with applied filters.$'
+      exceeds_file_size_limit:
+        file_size_error: '$Sorry your pdf File size > 10MB.$'
+        report_name: '$Scheduled report name:$'
+      report_export_task:
+        cvs_report_request: '$CSV report requested at:$'
+        no_of_invalid: '$No. of invalid accounts:$'
+        description: '$Description:$'
+    user_notifications:
+      notify_dkim_activation: $DKIM signatures are now activated for emails sent from %{email_domain}.$
+      notify_dkim_failure: $DKIM verification failed for domain %{email_domain}.$
+      activate_account: "$Activate your Freshdesk Support Desk account$"
+      activation_message: "$Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you support your customers. Click on the button below to activate your account and get started.$"
+      activate_button: "$Activate Account$"
+      freshdesk_url: "$Your Freshdesk Support Desk URL:$"
+      get_in_touch: "$Got Questions? Get in touch with us$"
+      support_email: "$Email: %{support_email}$"
+      support_call: "$Call: %{support_number}$"
+      ssl_certificate_approved: "$Your request for a custom SSL certificate has been approved.$"
+      ssl_steps_introduction: "$We have already turned on Custom SSL in your portal, under Admin->Security. In order for it to work, please follow the steps below to update your CNAME records.$"
+      ssl_step_1: "$1. Login to DNS Control Panel for the custom domain - %{portal_url}. $"
+      ssl_step_2: "$2. Create a CNAME record under %{portal_url} and point it to %{elb_name}.$"
+      ssl_step_3: "$3. Wait for a few hours for the changes to take effect.$"
+      ssl_once_ready: "$Once ready, your support portal at %{portal_url} will be secure thanks to the new SSL certificate.$"
+      facebook_access_token_expired: "$The access token for your %{page_name} page has expired. This could be because$"
+      facebook_info_1: "$One of the admin's changed their facebook password.$"
+      facebook_info_2: "$One of the admin's has revoked some app permissions.$"
+      facebook_info_3: "$It has been 60 days since the last time you authorized the app.$"
+      facebook_reauth_link_html: "$Please click on this <a href='%{facebook_url}'>link</a> to reauthorize your facebook page and continue receiving facebook posts as tickets.$"
+      facebook_reauth_link_plain: "$Please click on this link %{facebook_url} to reauthorize your facebook page and continue receiving facebook posts as tickets.$"
+      update_billing_info: '$Please update your billing information so that you always have day passes readily available for use.$'
+      reply_to_email_for_queries: '$You can reply to this email if you have any questions.$'
+      locate_accounts_request_html: '$<p>We just received a request to locate any Freshdesk Support Desk accounts associated with this email address.</p><p>Here is a list of accounts where you are an agent. You can click on any of the links below to access your support portal</p>$'
+      click_on_forgot_password: '$In case you have forgotten the login credentials for your account, you can click on the forgot password link to reset your password.'
+      webhook_failed_message: "The %{automation_type} rule you configured to send API request to %{webhook_url} has failed after several retries.$"
+      webhook_reconfigure_rule: '$Please check and reconfigure the rule to avoid any loss of communication.$'
+      webhook_rule_details: "$Rule: %{automation_name} (%{automation_link})$"
+      webhook_rate_limit_exceeded: '$A webhook that was scheduled 24 hours ago for execution has now been dropped since you consistently exceeded your API rate limits.$'
+      webhook_raise_limit_html: $If you wish to prevent this from happening again, mail us at support@freshdesk.com to raise your API limits. To learn more about how we support webhooks and why we drop them, <a href=%{solution_article_link}>click here.</a>$
+      webhook_raise_limit_plain: $If you wish to prevent this from happening again, mail us at support@freshdesk.com to raise your API limits. To learn more about how we support webhooks and why we drop them, click here %{solution_article_link}.$
+    scheduled_task_notifications:
+      no_data: "$Seems like there is no data to display for scheduled report that you created for $"
+      blocked_users:
+        report_not_sent_html: "$The scheduled report that you created for <b>%{scheduled_task_name}</b> was not sent to the following email address(es):$"
+        report_not_sent: "$The scheduled report that you created for %{scheduled_task_name} was not sent to the following email address(es):$"
+        reason_title: "$This could be because of one of the following reasons:$"
+        first_reason: "$The contact associated with the email was deleted$"
+        second_reason: "$The email address was deleted$$"
+        update_email: "$You can update the email address(es) by clicking on the below link:$"
+      downgraded_users:
+        report_being_sent_html: "$The scheduled report that you created for <b>%{scheduled_task_name}</b> is still being sent to the below agents who were deleted/ downgraded to contact recently: $"
+        report_being_sent: "$The scheduled report that you created for %{scheduled_task_name} is still being sent to the below agents who were deleted/ downgraded to contact recently: $"
+        update_configuration: "$Please update the configuration if you wish to stop sending this report to the above emails in the future.$"
+    topic_notifications:
+      new_forum_topic: "$New Topic in \"%{forum_name}\" %>$"
+      new_forum_topic_html: <b>$New Topic</b> in forum$
+      author: "$By: %{user_name}$"
+      view_topic: $View Topic$
+      follow_topic: $Follow Topic$
+      reply: $Reply$
+      view_forum: $View Forum$
+      turn_off_forum_notifications: $Turn off notifications for this forum$
+      turn_off_topic_notifications: $Turn off notifications for this topic$
+      turn_off_new_topic_notifications: $Turn off notifications for the new topic$
+      turn_off_forum_notifications_html: "<a href='%{unfollow_url}'>$Turn off</a> notifications for this forum$"
+      turn_off_topic_notifications_html: "<a href='%{unfollow_url}'>$Turn off</a> notifications for this topic$"
+      turn_off_new_topic_notifications_html: "<a href='%{unfollow_url}'>$Turn off</a> new topic notifications for this forum$"
+      status_update: $Status update in topic$
+      current_stamp: "$The %{forum_type} has been marked as %{stamp}.$"
+      current_stamp_html: "$The %{forum_type} has been marked as <strong>%{stamp}</strong>.$"
+      merged_and_added_follower: "$Your topic %{topic_url} has been merged into %{target_topic_url} and you have been added as a follower.$"
+      merged_and_added_follower_html: "$Your topic <a href='%{topic_url}'>%{topic_name}</a> has been merged into <a href='%{target_topic_url}'>%{target_topic_name}</a> and you have been added as a follower.$"
+    subscriptions:
+      admin_spam_watcher:
+        unblock_message: "$Below listed users are blocked by our spam watcher. If you feel they are genuine users, you can send an email to %{support_email} with the following details.$"
+        account_url: "$Account url: %{account_url}$"
+        username: "$Username: %{user_details}$"
+        whitelist_message: "$Below listed users are blocked by our spam watcher.If you feel they are genuine users, you can whitelist them by clicking the links.$"
+        unblock: "<a href='%{unblock_link}'>$unblock$</a>"
+      admin_spam_watcher_blocked: "$Your Account has been blocked due to high volume of traffic. If you feel your requests are genuine, please send an email to %{support_email} with your account details.$"
+      account_cancel: "<div>$This email is a confirmation that your Freshdesk Support Desk account has been cancelled. We’re sorry to see you go.</div><br/>
+           <div>If you have feedback on how we can provide a better experience, please write to us at %{support_email}. We’d love to hear from you. $</div>"
+    security_notification:
+      trusted_ip_enabled:
+        one: '$IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP range below:$'
+        other: '$IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP ranges below:$'
+      trusted_ip_modified:
+        one: '$The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP range below:$'
+        other: '$The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP ranges below:$'
+      trusted_ip_disabled: "$IP whitelisting has been disabled on your account.$"
+      trusted_ip_actor: '$These modifications were made by %{user_name} on %{time}.$'
+      trusted_ip_actor_change: '$This was done by %{user_name} on %{time}.$'
+      trusted_ip_create_time: '$This was done on %{time}.$'
+      agent_deleted: '$An agent, %{agent_name} was deleted by %{doer} in your account on %{time}.$'
+      deleted_agent_info: '$Note that %{agent_name} will still exist in your account as a contact.$'
+      current_agent_stats: '$You currently have %{full_time} full time agents and %{occasional} occasional agents in your Freshdesk Support Desk account.$'
+      update_agent_billing: '$To reflect this change in your billing, please <a href="%{billing_url}">update</a> the agent information in the billing page.$'
+      update_agent_billing_plain: '$To reflect this change in your billing, please update the agent information in the billing page.$'
+      agent_added: '$A new %{agent_type} agent, %{agent_name} was added by %{doer} in your account on %{time} and has the %{agent_data_key} %{agent_data_value}.$'
+      unauthorized_change_info: '$If this change was made without your authorization, send us a reply.$'
+      configure_change: '$You can configure this notification settings under Admin -> Security.$'
+      configure_change_html: '$You can configure this notification settings by <a href="%{security_url}"> clicking here </a> or going to Admin -> Security in your account$'
+    export_success_download: "$The %{export_type} export you had requested is complete. You can download the file from <a href='%{url}'>here</a>. If the link does not work, copy and paste the URL below in your browser's address bar:$"
+    post_monitor:
+      new_reply_html: "$<b>New Reply</b> - %{posts_count} replies in topic$"
+      new_reply_plain: "$New Reply on topic %{post_topic}$"
+      reply_notify_html: '$Reply notifications for this topic$' 
+      reply_notify_plain: '$Turn off reply notifications for this topic$'
+  mailer_notifier_subject:
+    notify_new_topic_follower: '$Added as Topic Follower - %{title}$'
+    notify_new_forum_follower: '$Added as Forum Follower - %{title}$'
+    discard_email: "$[Draft Discarded] %{draft_title}$"
+    token_expiry: '$Ecommerce account %{ecom_name} token expiration$'
+    new_forum_topic: "$[New Topic] %{title} in %{forum_name}$"
+    topic_update: "$[Status Update] in %{title}$"
+    topic_merged: "$[Topic Merged] to %{title}$"
+    send_reminder_email: '$Reminder:%{todo_body}$'
+    report_type_sub: "$%{report_name} report for %{date_range}$"
+    ticket_export: '$Ticket export | $'
+    account_data_export: "$Data Export for %{account}$"
+    agent_export: '$Agents List Export$'
+    no_tickets_to_export: "$No tickets in range - %{domain}$"
+    audit_log_export: $Audit Log Export$
+    spam_watcher: "$Freshdesk Support Desk :: Spam watcher$"
+    account_cancelled: "$%{account_domain} has been cancelled$"
+    notify_dkim_activation: "$DKIM signatures activation email$"
+    notify_new_watcher: '$Added as Watcher %{display_id} %{subject}$'
+    notify_on_reply: '$New Activity %{display_id} %{subject}$'
+    activation_instructions: "$%{portal_name} email activation instructions$"
+    admin_activation: "$Activate your %{app_name} account$"
+    custom_ssl_activation: "$Custom SSL Activated$"
+    notify_facebook_reauth: "$Need Attention, Facebook app should be reauthorized$"
+    failure_transaction_notifier: '$Payment failed for auto recharge of day passes$'
+    helpdesk_url_reminder: '$Your Freshdesk Support Desk Portal Information$'
+    notify_webhook_failure: '$Please recheck the webhook settings in your account$'
+    notify_webhook_drop: '$Webhook dropped$'
+    agent_deleted: "$%{account_name}: %{agent_name} was deleted$"
+    cloud_log_email_to_freshdesk: "$%{app_name} to Freshdesk Support Desk Log$"
+    cloud_log_email_to_app: "$Freshdesk Support Desk to %{app_name} Log$"
+    outreach_customer_import: "$Outreach in progress$"
+    outreach_customer_import_failure: "$Outreach: some contacts weren't imported$"
+    monitor_email_subject: "$[New Reply] in %{post_topic}$"
+  flash:
+    import:
+      hi: "$Hi$"
+      info8: "$Agents for whom skill update failed can be found in the attachment along with the reason for the failure.$"
+      info9: "$The successfully imported skills and mapping can be viewed under Admin->Skills. Kindly ensure that you add conditions to the new skills in order to map the skill to the right tickets. The new skills can be found at the bottom of the skill list.$"
+      info10: "$The agent to skill mapping CSV file that you uploaded has been imported. Please find the summary below:$"
+      info11: "$Please check the formatting of the CSV file and upload it again.$"
+      info12: "$The value 'Email' or 'Skills' was not present in the first row.$"
+      info13: "$The columns Email or Skills was missing is the CSV.$"
+      info14: "$We could not import skills from the file %{file_name} due to one of the following reasons:$"
+      info15: "$No. of new skills that were created: %{create_count}$"
+      info16: "$No. of agents whose skills were updated: %{update_count}$"
+      info17: "$No. of new skills that could not be created: %{create_failed_count}$"
+      info18: "$No. of agents whose skills could not be updated: %{update_failed_count}$"
+      info19: "$Skills Import for %{portal_url}$"
+      info20: "$The %{type} import running on %{domain} was stopped. Please find the summary below:$"
+      invalid_file: "$Please upload proper csv file$"
+      info21: "$Your import is complete. Your outreach %{outreach_name} will now begin.$"
+      info22: "$You recently tried to send an outreach via Freshdesk Support Desk. %{failed_count} contact(s) failed to get imported.$"
+      info23: "$Once you clean up the errors, please create a new outreach with the new CSV to send them an email.$"
+      info24: "$The outreach you set up will now be sent to %{success_count} contact(s) who were successfully imported.$"
+  customize_domain:
+    email:
+      subject: "$%{account_name}: Here's your new helpdesk URL$"
+      greeting: "$Hello %{name},$"
+      agent_line: "$The administrator has changed the URL of your helpdesk. Your new helpdesk URL is: <a href='%{url}'> %{url} </a> (bookmark this for easier access)$"
+      admin_line: "$The URL of your helpdesk has changed. Your new helpdesk URL is: <a href='%{url}'> %{url} </a> (bookmark this for easier access)$"
+      cheers: "$Cheers,$"
+      team: "$Freshdesk Support Desk Team$"
+  custom_mailbox_admin_email_notifications:
+    subject: "$System notification: Custom email server is unable to fetch emails$"
+    welcome_message: "$Dear Admin$"
+    unable_to_fetch: "$Freshdesk Support Desk is unable to fetch emails from %{email_mailbox}. Please ensure that the mailbox is reachable or that the configurations are correct.<br/>If you need any further assistance, please contact support@freshdesk.com.$"
+    regards: "$Regards$"
+    freshdesk_support": "$Freshdesk Support$"
+  todos_reminder:
+    email:
+      user: "$Hi %{user_name},$"
+      message: "$You have a reminder on the ticket$"
+      due: "$due now:$"
+      at: "$at$"
+      association: "$Here is the associated ticket:$"
