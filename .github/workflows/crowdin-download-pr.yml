@@ -53,4 +53,6 @@ jobs:
           title: Update YAML FILEs
           body: Testing Yaml Files
           branch: yml-updates
+          add-paths: |
+            locales-yml/mint_translations/*.yml
 #          echo ${{ steps.vars.outputs.outputvar }}
