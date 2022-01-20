@@ -56,7 +56,7 @@ function buildTranslations() {
       let buildId = response.data.data.id;
       // The build process usually takes more than a minute due to large number of keys. So, we are only proceeding
       // to the next step if this build finishes. Until then, we check the status every 30 seconds
-      checkBuildStatusInterval = setInterval(checkBuildStatus, 30000, buildId);
+      checkBuildStatusInterval = setInterval(checkBuildStatus, 10000, buildId);
     }
   })
 }
