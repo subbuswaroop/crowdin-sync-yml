@@ -90,7 +90,7 @@ function downloadTranslations(zipURL) {
     zipFile.extractAllTo('./tmp');
     shell.exec(`chmod +x translations_merge.sh && ./translations_merge.sh`);
     console.log("Removing package lock json file");
-    shell.exec('rm ./tmp && cd js && [ -f "package-lock.json" ] && rm package-lock.json && cd ..')
+    shell.exec('rm -rf tmp && cd js && [ -f "package-lock.json" ] && rm package-lock.json && cd ..')
   }).catch(err=> {
     console.log(err);
   });
