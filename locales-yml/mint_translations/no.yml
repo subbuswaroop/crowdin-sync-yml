@@ -1,0 +1,1458 @@
+"no":
+  "attach_file": "Vedlegg fil"
+  "edit_forum_category": "Rediger forum kategori"
+  "total": "Totalt"
+  "export_data":
+    "from": "Fra"
+    "no_fields_selected": "Vennligst hak av for minst ett av valgende nedenfor for å fortsette."
+    "field_select_title": "Velg felter som skal eksporteres"
+    "select_header": "Velg felter som skal eksporteres"
+    "to": "Til"
+    "filter_label_customer": "Filtrer saker opprettet i"
+  "go_back": "Gå tilbake"
+  "change_plan_title": "Er du sikker på at du vil skifte plan?"
+  "success": "Vellykket"
+  "forum":
+    "verb":
+      "announcement": "Annonsert av"
+      "questions": "Spørsmål stilt av"
+      "problems": "Problem Rapportert av"
+      "ideas": "Idé delt av"
+    "start_topic": "Opprett et Emne"
+    "new": "Nytt Forum"
+    "edit": "Endre Forum"
+    "title": "Forum"
+  "agent_working_on_this_ticket": "Agent som jobber på denne saken"
+  "more": "Mer"
+  "message": "Beskjed"
+  "level_label": "Nivå"
+  "topics":
+    "show":
+      "mark_this_idea_as": "Merk denne ideen som"
+  "step1": "Steg 1"
+  "contacts":
+    "contacts": "kontakter"
+    "new": "Ny Kontakt"
+    "send_activation": "Send aktiveringsepost"
+    "add_new_requester": "Legg til ny anmoder"
+    "status_title":
+      "verified": "Aktive kontakter"
+      "unverified": "Kontakter som ikke har verifisert e-post"
+      "all": "Alle kontakter"
+      "deleted": "Slettede kontakter"
+    "showing": "Viser:"
+    "status":
+      "all": "Alle"
+      "unverified": "Ikke verifisert"
+      "deleted": "Slettet"
+      "blocked": "Blokkert"
+      "verified": "Verifisert"
+      "spam": "Søppel"
+    "title": "Kontakter"
+    "restore": "Gjenopprett"
+  "no_message":
+    "products": "Du har ikke laget noe produkt enda."
+  "forum_confirm_msg1": "Er du sikker på at du vil slette denne kommentaren?"
+  "reorder": "Endre rekkefølge"
+  "email_command_settings_heading": "E-post kommando innstillinger"
+  "billing_address": "Fakturaadresse"
+  "view_invoices": "Vis fakturaer:"
+  "reported_by": "Rapportert av "
+  "save": "Lagre"
+  "filter_options":
+    "tags": "Tagger"
+    "source": "Kilde"
+    "unassigned": "Ikke tildelt"
+  "no_topics_text": "Ingen emner i dette forumet"
+  "folder":
+    "edit": "Endre mappen"
+  "example": "eksempel"
+  "customers": "Kunder"
+  "import_solution_article_info": "Merk: Vi vil ikke lagre forum-kommentarene"
+  "Email": "E-post"
+  "zendesk_backup_info": "Velg Zendesk backup-fil lastet ned fra zendesk"
+  "right": "Høyre"
+  "agent":
+    "permissions": "Rettigheter"
+    "more": "Mer"
+    "agent_restored": "Denne agenten er gjenopprettet"
+    "info3": "Er du sikker på at du vil slette"
+    "group_info": "Kan se saker i deres gruppe(r) og saker tildelt dem"
+    "full_time_agent": "Fulltidsagent"
+    "add_signature": "Legg til signatur"
+    "group": "Agent (gruppetilgang)"
+    "individual": "Agent (begrenset tilgang)"
+    "contact_exists": "En anmoder med e-postadressen %{existing_email} eksisterer allerede, %{use_email}"
+    "password_reset_note": "En e-post med instruksjoner for nullstilling vil bli sendt til %{requester}"
+    "info1": "Dette er en slettet Agent"
+    "available_seats_without_count": "Agentseter tilgjengelig"
+    "occasional_agent": "Periodevis agent"
+    "day_pass_expired": "Ditt dagspass har utløpt, vennligst logg inn for nytt dagspass."
+    "occasional": "Tidvis"
+    "admin_info": "Fulle administrasjonsrettigheter"
+    "new": "Ny Agent"
+    "supervisor": "Leder"
+    "update": "Oppdater"
+    "supervisor_info": "Kan se alle saker i helpdesken og har tilgang til rapport (ingen admin rettigheter)"
+    "available_seats": "%{count} agentseter tilgjengelig"
+    "individual_info": "Kan bare se sine egne saker"
+    "full_time": "Heltid"
+    "info4": "Konverter til en Kontakt"
+    "showing": "Viser:"
+    "edit": "Endre Agent"
+    "use_email": "Bruk denne e-posten"
+    "view_user": "Vis bruker"
+    "insufficient_day_pass": "Kan ikke gi deg dagspass, vennligst ta kontakt med din administrator."
+    "helpcard":
+      "title3": "Agent (gruppetilgang)"
+    "signature": "Signatur"
+    "password_reset_message": "Ønsker du å nullstille %{requester} sitt passord?"
+    "no_seats": "Ingen agentseter tilgjengelig"
+    "title": "Agenter"
+    "deleted":
+      "no_agents": "Du har ingen slettede agenter"
+      "agent_deleted": "Agenten har blitt slettet"
+    "occasional_description": "Denne agenten vil ha tilgang til supportportalen"
+    "make_admin": "Gjør denne agenten en admin"
+    "global_info": "Kan se alle saker i helpdesken"
+    "info2": "E-post er allerede i bruk"
+    "active":
+      "no_agents": "Du har ikke lagt til noen agenter i listen"
+    "restore": "Gjenopprett"
+    "global": "Agent (global tilgang)"
+  "back": "Tilbake"
+  "change_plan": "Forandre plan"
+  "agent_emailnotverified": "Epostadressen har ikke blitt verifisert av denne agenten!"
+  "zendesk_url_info": "f.eks.: http://acme.zendesk.com"
+  "add_holiday": "Legg til helligdag"
+  "next": "Neste"
+  "top": "Topp"
+  "dispatch":
+    "reorder": "Endre rekkefølge"
+    "match_any": "Match en av"
+    "info3": "Når skal denne regelen gjelde"
+    "rule_name": "Regel Navn"
+    "new_rule": "Ny Regel"
+    "new": "Dispatch'r - ny regel"
+    "add_new_action": "Legg til ny handling"
+    "dispatch_rules": "Dispatch'r - regler"
+    "edit": "Dispatch'r - rediger regel"
+    "helpcard":
+      "info2": "Husk at rekkefølgen for Dispatch'r regler er viktig. For hver innkomne sak vil Dispatch'r utføre den første regelen som matcher og deretter stoppe. Du kan endre rekkefølgen på listen av regler for å ha en viktigste øverst."
+    "inactive_rules": "Inaktive Regler"
+    "match_all": "Match alle"
+    "add_condition": "Legg til nytt vilkår"
+    "act_to_perform": "Handling som skal utføres"
+  "warning": "ADVARSEL"
+  "downgrade_plan_title": "Er du sikker på at du vil nedgradere?"
+  "delete_topic_msg": "Slett dette emnet for alltid"
+  "resolved_tickets": "Løste Saker"
+  "errors_in_payment_info": "Feil oppstått med din betalingsinformasjon:"
+  "change_plan_info": "Du kan endre din plan når som helst, din neste faktura forfaller %{date}"
+  "choose_plan_trial_v2": "Kontoen deres deaktiveres etter prøveperioden. Hvis du vil fortsette å bruke Freshdesk Support Desk, velger du et abonnement nedenfor.<br />"
+  "cancel": "Angre"
+  "errors_in_plan_change": "Feil oppstå ved din endring:"
+  "non_covered_feature_error": "Denne funksjonaliteten er for øyeblikket låst"
+  "company":
+    "title": "Firmaer"
+    "title1": "firmaer?"
+    "new": "Nytt firma"
+    "info10": "Obs: Sletting av et firma vil ikke slette firmaets kontakter."
+    "info11": "Er du sikker på at du vil slette"
+  "forwarded_to": "Videresend til"
+  "marketplace":
+    "cancel": "Angre"
+    "helpnote1": "Apps in Freshdesk Support Desk let you share data with third party solutions and services that you use regularly. They also enable you to add additional features to the ticket and contact details page. Freshdesk Support Desk offers several apps out-of-the-box. To browse our selection of apps, click on the “Get more Apps” button."
+  "shortcuts":
+    "goto_tab":
+      "forums": "Forum"
+      "customers": "Kunder"
+  "integration":
+    "helpcard":
+      "title1": "Integrasjoner"
+  "plans_billing": "Planer & Fakturering"
+  "gamification":
+    "levels":
+      "expert": "Ekspert"
+      "intermediate": "Amatør"
+      "professional": "Profesjonell"
+      "master": "Mester"
+      "beginner": "Nybegynner"
+    "leaderboard":
+      "sharpshooter_trophie_info": "Agenten med høyest \"Løst på første samtale\" poeng denne måneden"
+      "love_trophie_info": "Agent med flest Fornøyd kunde poeng denne måneden"
+      "mvp_trophie_info": "Agenten med flest poeng denne måneden"
+      "speed_trophie_label": "Fartsfantom"
+      "speed_trophie_info": "Agenten med flest poeng for raskt oppdrag denne måneden"
+      "mvp_trophie_label": "Mest verdifulle spiller"
+      "sharpshooter_trophie_label": "Skarpskytter"
+      "love_trophie_label": "Wow Kunde Mester"
+  "next_level_info": "+%{points} for å bli %{name}"
+  "delete": "Slett"
+  "user_sessions":
+    "new":
+      "forgot": "Jeg glemte mitt passord?"
+      "email": "E-post"
+      "sign_in_using_google": "Logg inn med din Google konto"
+      "remember": "Husk meg på denne maskinen"
+      "sign_in_using": "Logg inn"
+      "help": "Hjelp"
+      "login": "Logg inn"
+  "current_plan": "Gjeldende plan"
+  "settings": "Innstillinger"
+  "email_notifications_agent_selection_msg": "Velg agenter som skal varsles"
+  "group":
+    "info1": "Agenter"
+    "new": "Ny gruppe"
+    "learn_more": "Lær mer"
+    "name": "Gruppenavn"
+    "info5": "Er du sikker"
+    "info4": "Dersom en sak forblir utildelt i mer enn"
+    "edit": "Rediger gruppe"
+    "title": "Agent (gruppetilgang)"
+    "ticket_assignment": "Automatisk sakstildeling"
+    "select_an_agent": "Velg agent"
+  "email_command_preview_to_email": "Til"
+  "ticket_field":
+    "helpcard":
+      "tour": "Hjelp meg å forstå saksfelt"
+      "title1": "Saksfelt"
+  "no_level_achieved_label": "Ingen nivåer oppnådd ennå."
+  "import_note_info": "Pass på at den første raden har header informasjon (navn, epost osv). Feltene ellers i din CSV fil kan ha hvilken som helst rekkefølge."
+  "no_tags": "Ingen tagger funnet"
+  "save_changes": "Lagre endringer"
+  "payment_info": "Betalingsinformasjon"
+  "attach_files": "Legg ved filer"
+  "username": "Brukernavn"
+  "reports":
+    "scoreboard_title_nav": "Ledertavle"
+    "no_data": "Ingen data å vise"
+    "customer_title": "Kunder aktivitetsarpport"
+    "select_time_period": "Velg tidsperiode"
+    "survey_reports":
+      "back_to": "Tilbake til Visningsliste"
+      "list":
+        "no_feedback": "Ingen har gitt noen tilabkemelding i løpet av denne perioden."
+      "main":
+        "total_responses_v2": "Totalt"
+        "all": "Alle"
+      "sidebar":
+        "filter_by": "Tilfredshetvisning"
+        "view_report_date": "Se rapporter mens"
+      "index":
+        "agent_list_loading": "Henter agent liste"
+      "feedbacks":
+        "in_response_to": "- - Som svar på"
+    "summary":
+      "fcr": "Saker løst ved første svar"
+      "title": "Oppsummering av sak"
+      "received_tickets": "Mottatte saker"
+      "resolved_tickets": "Løste Saker"
+    "timeline_chart_title": "Saker mottatt vs løst"
+    "helpdesk_title": "Helpdesk aktivitetsrapport"
+    "date_ranges":
+      "yesterday": "Igår"
+      "custom": "Dato intervall"
+      "today": "Idag"
+      "last_30_days": "Siste 30 dager"
+      "last_90_days": "Siste 90 dager"
+      "last_7_days": "Siste 7 dager"
+    "livechat":
+      "total_chats": "Totalt"
+    "timesheet_reports":
+      "index":
+        "select_agent": "Velg agent"
+        "select_group": "Velg gruppe"
+    "select_customer": "Velg kunde"
+    "summary_report":
+      "tickets_resolved": "Saker <br> løst"
+      "show_report": "Vis rapport"
+      "back_to_reports": "Tilbake til rapporter"
+      "on_time_resolution": "I tide <br> løsning"
+    "satisfaction_title": "Tilfredshetsrapport"
+    "helpdesk_activity_title": "Helpdesk aktivitetsrapport"
+    "pie_chart_title_prefix": "Saker av"
+  "import_user_org_text": "Alle brukere og avdelinger i din Zendesk konto vil bli importert inn i din nåværende Freshdesk Support Desk konto som \"Kontakter og avdelinger\""
+  "agent_info_title": "Agentinformasjon"
+  "number_of_attachments": " vedlegg"
+  "ticket":
+    "properties": "Sakens egenskaper"
+    "sort_by": "Sortert etter"
+    "submit_ticket": "Send inn"
+    "priority": "Prioritet"
+    "update_done": "Ferdig"
+    "note_form":
+      "form_title": "Legg til et notat"
+      "private_note": "Legg til et privat notat, ikke gi beskjed til anmoder"
+    "view_twitter": "Vis på Twitter"
+    "ticket_url": "Sak URL"
+    "available_commands": "Tilgjengelige kommandoer"
+    "source": "Kilde"
+    "updating": "Oppdaterer"
+    "from": "Fra:"
+    "close_btn_title": "Lukk denne saken"
+  "trial_plan_name": "Nedgrader prøverperiode til %{name}"
+  "user":
+    "phone_no": "Telefonnr."
+    "remove_profile_image_confirm": "Er du sikker på at du vil slette dette profilbildet?"
+    "full_name": "Fullt navn"
+    "change_photo": "Endre bildet"
+    "phone_number": "Telefonnr."
+    "info1": "Profilbilde bør ha lik høyde og bredde"
+    "choose_another_photo": "Velg et annet bilde"
+    "remove_photo": "Fjern bildet"
+    "email": "E-post"
+    "industry": "Bransje"
+    "name": "Navn"
+    "photo": "Foto"
+    "title": "Tittel"
+    "mobile_phone": "Mobiltelefon"
+    "work": "Arbeid"
+    "mobile": "Mobil"
+  "admin":
+    "products":
+      "helpnote":
+        "heading2": "Konfigurer en egen portal for produkter"
+        "heading1": "Forskjellige produkter"
+      "index":
+        "add_product": "Nytt produkt"
+        "title": "Produkter"
+      "primary_product_support_email": "Primær produkt support e-post"
+      "form":
+        "forwarding_email_info": "Din videresendings e-post er:"
+        "product_support_emails": "Produkt Support E-post"
+        "enter_support_email_id": "Din support e-post"
+        "product_name": "Produkt navn"
+      "new":
+        "title": "Nytt produkt"
+      "product":
+        "email_not_verified": "Ikke verifisert"
+        "customize_portal": "Tilpasse portal"
+        "delete": "Er du sikker på at du vil slette dette Produktet?"
+        "enable_portal": "Aktivér Portal"
+      "edit":
+        "title": "Endre Produkt"
+      "portal":
+        "select_solution_category": "Velg en løsningskategori..."
+        "select_forum_category": "Velg en forumkategori..."
+        "customize_portal": "Tilpasse portal"
+        "portal_rebranding": "Portal tilpasning"
+        "portal_name_info": "Navnet vil vises i din support portal ved siden av topplogoen"
+        "portal_settings": "Portalinnstillinger"
+        "portal_language": "Portal språk"
+        "portal_name": "Portal navn"
+        "portal_language_info": "Dette vil være standard språk for besøkende til portalen"
+        "portal_url": "Portaladresse"
+      "add_another_email": "Legg til flere E-post"
+    "skills":
+      "index":
+        "agents": "Agenter"
+        "agents_label": "Agenter"
+    "security":
+      "index":
+        "security_title": "Sikkerhet"
+        "enable_SSL": "Tillat SSL"
+        "only_agents": "Agenter"
+        "remote_login_url_info": "Dette er adressen som Freshdesk Support Desk vil sende brukere til for autentisering når de forsøker å få tilgang til Freshdesk Support Desk."
+        "remote_login_url": "Fjerninnlogging URL"
+        "remote_logout_url_info": "Dette er adressen som Freshdesk Support Desk vil sende brukere til når de klikker på Logg ut knappen i Freshdesk Support Desk."
+        "shared_secret": "Delt hemmelighet"
+        "remote_logout_url": "Fjerntilgang utloggingsadresse"
+        "enable_sso": "Tillat single sign on"
+    "user_skills":
+      "index":
+        "more": "Mer"
+    "widget_config":
+      "embedded_widget":
+        "feedbackwidget_attach_a_file": "Vedlegg fil"
+      "popup_widget":
+        "feedbackwidget_attach_a_file": "Vedlegg fil"
+      "popup_embedded_widget":
+        "feedbackwidget_attach_a_file": "Vedlegg fil"
+    "gamification":
+      "gamification_settings":
+        "title_ticket_points": "Sakspoeng"
+        "title_levels": "Agent nivåer"
+        "bonus_points_for": "Bonus poeng for: "
+        "firstcall_resolution": "Saker løst ved første svar"
+        "fast_resolution": "Rask<span>< 1 hr)</span>"
+        "ontime_resolution": "I tide <span>(Innen SLA)</span>"
+        "happy_customer": "Fornøyd kunde"
+        "late_resolution": "Forsinket<span>(Forfalt)</span>"
+        "agent_resolves_ticket": "Når en agent<br />løser en sak:"
+        "unhappy_customer": "Misfornøyd kunde"
+        "bonus_points": "Bonus poeng"
+        "title_trophies": "Premier"
+      "help_text":
+        "why_game": "Poeng og nivå"
+      "points": "Poeng"
+    "surveys":
+      "index":
+        "title": "Instillinger kundetilfredshet"
+        "save_survey": "Lagre"
+        "delete": "Slett"
+        "cancel": "Angre"
+      "satisfaction_settings":
+        "link_text_info": "Denne teksten vises under signaturen nederst på siden i e-post sendt til kunden."
+        "link_text_input": "Vennligst gi oss en tilbakemelding på opplevelsen av vår support."
+        "send_while_option4": "Tillat agenter å legge til tekstlenker til kundetilfredshets undersøkelser i e-post."
+        "send_while_option2": "E-post sendt etter at en sak er \"Løst\"."
+        "link_text_label": "Lenke til kundetilfredshetsundersøkelse"
+        "send_while_title": "Velg hvilke e-post som har tekstlenke til kundetilfredshets undersøkelse"
+        "send_while_option1": "Alle e-post sendt til kunde."
+        "send_while_option3": "E-post sendt etter at en sak er \"Lukket\"."
+        "enable_label": "Undersøkerlser om kundetilfredshet"
+    "shared":
+      "filter_jsinit":
+        "not_selected": "Ikke valgt"
+        "to": "Til"
+        "selected": "Valgt"
+        "username": "Brukernavn"
+    "quests":
+      "quest_form":
+        "quest_type": "oppgave type"
+        "ticket": "Løser <br /><strong> Saker </strong>"
+        "brief": "Kort om oppgaven"
+        "edit": "Redigerer oppgave"
+        "bonus_points": "Bonus poeng"
+        "final": "... og til slutt"
+        "reward": "Belønning"
+        "solution": "Publiserer <br /><strong> løsninger</strong>"
+        "change": "Endre"
+    "portal_settings":
+      "simple":
+        "headingsColor": "Topp farge"
+        "btn_background": "Sekundær aktiv knapp"
+        "tab_color": "Bakgrunn"
+        "linkColor": "Lenke tekst"
+        "headingsFont": "Tittel font"
+        "footer_color": "Bunn"
+        "textColor": "Basis farge"
+        "header_color": "Topp"
+        "baseFont": "Basis font"
+        "btn_primary_background": "Primær aktiv knapp"
+        "tab_hover_color": "Aktiv tab"
+        "help_center_color": "Kundeservice"
+        "linkColorHover": "Lenke tekst aktiv"
+    "supervisor_rules":
+      "new":
+        "title": "Leder - Ny regel"
+      "index":
+        "title": "Leder - Regler"
+      "edit":
+        "title": "Leder - Endre regel"
+      "helpnote":
+        "help_title": "Leder"
+    "day_passes":
+      "index":
+        "payment_info": "Legg inn betalingsinformasjon for å kjøpe flere dagspass"
+        "no_of_day_passes": "Antall dagspass"
+        "email": "E-post"
+        "auto_recharge": "Automatisk fornyelse"
+        "add_confirm": "Ditt kredittkort vil bli belastet "
+        "day_pass_history": "Kjøpshistorikk"
+        "add_payment_info": "Legg inn betalingsinformasjon"
+        "order": "Ordre nr."
+        "title": "Dagspass"
+        "recharge_quantity": "Forny antall:"
+        "buy_now": "Kjøp nå"
+        "helptext": "Dine dagspass vil fornyes automatisk når det kun er 2 tilgjenglige dagspass igjen."
+        "no_credit_card": "Ikke noe kredittkortinformasjon lagret"
+        "all": "Alle"
+      "helpnote":
+        "title": "Dagspass"
+        "info": "Dagspass brukes når en tidvis agent logger inn på din helpdesk. Du kan kjøpe 5 dagspass av gangen og du kan også sette opp Freshdesk Support Desk til å automatisk fornye dagspassene når de er brukt opp"
+    "home":
+      "index":
+        "billing": "Planer & Fakturering"
+    "getting_started":
+      "index":
+        "support_email_subtitle": "Legg til din primære e-post adresse til support"
+        "emails_invalid": "En eller flere av dine e-post er ugyldig"
+        "agent_limit_reached": "Du har overskredet ditt tillate antall agenter"
+        "going_social": "Gå<br> Sosialt"
+        "support_email_title": "Support<br> e-post"
+        "title_message": "Hurtigstart din kundeservice i 4 steg..."
+        "rebranding_header": "Skriv inn et navn for din helpdesk"
+        "rebrand_tab_empty": "Fane fargekode er påkrevd."
+        "info": "Du må lage en regel for videresending av din support postkasse til denne adressen"
+        "rebrand_title": "Logo<br>farger"
+        "email_sent_success": "E-post har blitt sendt."
+        "social_add_account": "Legg til Konto"
+        "rebrand_header_invalid": "Topp fargekode er feil"
+        "adding_agents": "Legg til<br> Agenter"
+        "support_email_submsg": "Dette vil også være den forhåndsvalgte svar-til adressen når du besvarer <br> spørringer fra Freshdesk Support Desk."
+        "skip_text": "Nei takk, send meg til min helpdesk"
+        "agents_subtitle": "Inviter din gruppe til å bli med på morroa"
+        "send_test_mail_info2": "Her ser du <a href='https://support.google.com/mail/bin/answer.py?hl=en&answer=10957' target='_blank'>hvordan du kan gjøre det</a>."
+        "rebrand_subtitle": "Skreddersy med din logo og farger!"
+        "agent_title_info": "Legg til e-post adressene til dine gruppemedlemmer for å invitere over hit til Freshdesk Support Desk. Bruk komma for å skille mellom e-post."
+        "rebrand_bg_invalid": "Bakgrunns fargekode er feil"
+        "email_send_problem": "Problemer med å sende e-posten."
+        "implement_changes": "Oppdaterer med endringene..."
+        "rebrand_company_field_placeholder": "Skriv inn ditt firmanavn"
+        "rebrand_tab_invalid": "Fanefargekode er feil"
+        "back_link": "Tilbake"
+        "agent_email_required": "E-post ID påkrevd for å sende invitasjon."
+        "agent_invite_field_placeholder": "Skriv inn dine team medlemmers epostadresser"
+        "send_invite": "Send Invitasjon"
+        "congratulations": "Gratulerer! Din Freshdesk Support Desk er klar!"
+        "sending_test_mail_progress": "Sender test e-post, vennligst vent..."
+        "title1": "La oss nå legge til e-post til Freshdesk Support Desk"
+        "rebrand_header_empty": "Topp fargekode er påkrevd."
+        "problem_updating": "Problemet oppdateres, vennligst forsøk igjen."
+        "updating": "Oppdaterer..."
+        "rebrand_bg_empty": "Bakgrunn fargekode er påkrevd."
+        "validating": "Validerer..."
+        "successfully_sent": "Sendt."
+        "email_invalid": "Din e-post adresse er ugyldig, vennligst kontroller"
+        "info2": "Ikke fornøyd? Legg til en ny e-post og velg \"Lagre\""
+        "next_alt_text": "Hopp i det!"
+        "social_twitter_add": "Legg til Konto"
+        "social_subtitle": "Gjør din kundeservice tilgjengelig i sosiale medier"
+        "agent_email_sending": "Sender Invitasjoner..."
+        "successfully_updated": "Oppdatering vellykket."
+        "rebrand_submit_label": "Tilpass"
+        "next_link": "Neste"
+        "footer_msg": "<strong>Merk: <strong>Du kan endre disse instillingene når som helst ved å gå til <a href='/admin/home' target='_blank' style='text-decoration:none; color:#1272DE'>Admin fanen</a>"
+      "send_mail_content":
+        "send_test_mail_yes_response": "Bra jobba! Din support e-post fungerer nå med Freshdesk Support Desk. Lykke til!"
+        "send_test_mail_confirm_no": "Nei, jeg kan ikke se noen saker."
+        "button_title": "Send test"
+        "send_test_mail_confirm_yes": "Ja, jeg har mottat den."
+        "button_sending": "Sender..."
+        "test_info_1": "Ser alt bra ut så langt? Forsøk å sende en e-post."
+        "button_again_title": "...send test på nytt"
+    "social":
+      "streams":
+        "cancel": "Angre"
+        "update": "Oppdater"
+    "roles":
+      "scroll":
+        "customers": "Kunder"
+        "forums": "Forum"
+      "agents_label": "Agenter"
+      "save_label": "Lagre"
+      "done_label": "Ferdig"
+      "permissions": "Rettigheter"
+      "cancel_label": "Angre"
+  "posted_by": "Lagt ut av"
+  "badges_achieved_label": "Merker oppnådd"
+  "forgot_password": "Glemt passord"
+  "profile":
+    "current_password": "Gjeldende passord"
+    "manage": "Se på/endre din profil"
+    "new_password": "Nytt passord"
+    "api_key":
+      "reset_warning": "Når API nøkkelen er resatt vil alle applikasjoner som bruker den gamle slutte å virke. Er du sikker på at du vil fortsette?"
+      "reset": "Nullstille API nøkkel"
+      "title": "Din API nøkkel"
+    "edit": "Endre profil"
+    "confirm_password": "Bekreft passord"
+  "classic_label": "Klassisk"
+  "plain_yes": "Ja"
+  "enabled": "Aktivert"
+  "attachment_help_info": "Filstørrelse må være mindre enn 15 MB"
+  "agent_deleted_message": "Denne agenten er slettet"
+  "footer":
+    "helpdesk_software": "Kundesupport Software"
+    "by_freshdesk": "levert av Freshdesk Support Desk"
+  "email": "E-post"
+  "your_email": "Din e-post"
+  "import_zendesk_summary_info": "Zendesk data har blitt importert vellykket."
+  "loading":
+    "activities": "Laster flere aktiviteter"
+  "medium": "Middels"
+  "yes_password_reset": "Ja"
+  "update": "Oppdater"
+  "note": "Merk: "
+  "downgrade_contact_us": "Ta en titt på vår <a target=\"_blank\" href=\"https://freshdesk.com/helpdesk-features\">fullstendige funksjonssammenligning</a>. <br />Er dere fremdeles usikker? <a href = \"mailto:support@freshdesk.com\" >Vi kan hjelpe dere med å bestemme dere!</a>"
+  "plan_amount": "pr agent/måned"
+  "helpdesk":
+    "tickets":
+      "views":
+        "my_closed": "Mine lukkede saker"
+        "monitored_by": "Saker jeg overvåker"
+        "my_due_today": "Min sak forfaller idag"
+        "my_open": "Mine åpne saker"
+        "tags": "Tagger av saker"
+        "my_overdue": "Mine forfalte saker"
+        "new": "Nye Saker"
+        "this_view": "denne visningen"
+        "my_resolved": "Mine Løste Saker"
+        "closed": "Lukkede saker"
+        "select": "Velg visning..."
+        "new_and_my_open": "Nye & Mine Åpne Saker"
+        "my_on_hold": "Mine saker på vent"
+        "tickets_twitter": "Saker fra Twitter"
+        "tickets_by": "Saker av"
+        "on_hold": "Saker På Hold"
+        "resolved_or_closed": "Løst eller lukket"
+        "deleted": "Søppel"
+        "open_or_pending": "Åpen eller på vent"
+        "spam": "Søppel"
+        "all": "Alle Saker"
+        "my_all": "Alle mine saker"
+        "overdue": "Forfalte saker"
+        "no_tickets": "Du har ingen saker i denne visningen"
+        "open": "Åpne saker"
+        "all_tickets": "Alle Saker"
+        "due_today": "Sak forfaller idag"
+        "resolved": "Løste Saker"
+      "friendly_status":
+        "customer_responded": "Kunde svarte"
+        "elapsed": "Svar ventet"
+        "customer_responded_overdue": "Kunde svarte"
+        "resolved": "Løst"
+        "overdue": "Forfalt"
+      "note":
+        "public_note_tip": "Synlig for kunden"
+        "deleted_note": "Slettet"
+      "add_watcher":
+        "me": "Meg selv"
+        "add_agent": "Legg inn agents navn"
+      "show":
+        "forward_form":
+          "title": "Fra:"
+    "time_sheets":
+      "billing_type": "Betalingstype"
+      "group_by": "Grupper etter"
+      "customer": "Kunde"
+      "product": "Produkt"
+      "report":
+        "total": "Totalt"
+    "shared":
+      "update": "Oppdater"
+    "ticket_notifier":
+      "reply":
+        "neutral": "Greit"
+        "happy": "Fantastisk"
+        "unhappy": "Ikke bra"
+  "import_solution_article": "Omgjør forumsak til løsning"
+  "solutions":
+    "status":
+      "published": "Publisert"
+      "draft": "Utkast"
+  "undo": "Angre"
+  "agents": "Agenter"
+  "google_signup":
+    "associate_google":
+      "login": "Logg inn"
+    "signup_google":
+      "company_name": "Firma navn"
+      "submit": "Send inn"
+  "import_zendesk_title": "Importer fra zendesk"
+  "attachment": "Vedlegg"
+  "reply_comment": "Legg til kommentar"
+  "free_plan": "Gratis abonnement"
+  "change_to_free_info": "Nedgradering av din plan vil medføre tap av funksjonalitet og data. Er du sikker på at du vil nedgradere?"
+  "import_user_org": "Brukere og organisasjoner"
+  "step2": "Steg 2"
+  "name": "Navn"
+  "email_notifications":
+    "agent_notification": "Varsling Agent"
+    "title": "E-post varsling"
+    "requestor_notification": "Anmoder varsling"
+    "default_reply_template_info": "Malen vil vises automatisk for alle svar fra agenter når de svarer på en sak"
+    "insert_placeholder": "Sett inn plassholder"
+  "quests":
+    "delete": "Sikkert om du vil fjerne oppgaven?"
+    "badge_mand": "Velg en skilt"
+    "name_mand": "Gi navn til oppgaven"
+  "add_a_topic": "Opprett nytt emne"
+  "add_new_requester": "Legg til ny anmoder"
+  "tag":
+    "title": "Tagger"
+  "assume_identity_button": "Antatt identitet"
+  "forum_shared":
+    "topic_vote":
+      "problem":
+        "voted_users_widget_title": "Personer som har dette problemet"
+        "vote_button": "Jeg har dette problemet"
+        "vote_info_include_1": "Du har dette problemet"
+      "ideas":
+        "vote_button": "Jeg liker denne ideen"
+        "voted_users_widget_title": "Personer som liker denne ideen"
+        "vote_info_include_1": "Du liker denne ideen"
+      "howto":
+        "voted_users_widget_title": "Personer som har dette problemet"
+        "vote_info_include_1": "Du har dette spørsmålet"
+        "vote_button": "Jeg har dette spørsmålet"
+      "unlike": "Ikke lik"
+    "follow_topic": "Følg dette emnet"
+    "post":
+      "delete_comment": "Slett kommentar"
+      "edit_comment": "Rediger kommentar"
+      "delete_comment_confirm": "Slett denne kommentaren, er du sikker?"
+      "post_accepted_as_a_good_answer": "Dette innlegget ansees som et godt svar i denne diskusjonen"
+      "unmark_answer": "Avmerk dette som svar"
+      "answer": "Svar"
+      "mark_answer": "Merk dette som svaret"
+  "send_feedback": "Send tilbakemelding"
+  "support":
+    "tickets":
+      "ticket_survey":
+        "feedback_title": "Beskriv din opplevelse av henvendelsen (valgritt)"
+        "submit": "Send inn"
+        "cancel": "Angre"
+        "rate_again": "Vurdér oss gjerne på nytt"
+        "survey_title": "Vi setter stor pris på om du kan vurdere vår support"
+        "change_of_mind": "Har du forandret mening?"
+        "rating_sub_title": "Du har vurdert oss"
+        "title": "Kundeundersøkelse"
+    "shared":
+      "survey_form":
+        "feedback_title": "Ris og ros kan også hjelpe oss til bedre support i fremtiden"
+        "survey_title": "Vi setter stor pris på om du kan vurdere vår support"
+        "submit": "Send inn"
+        "cancel": "Angre"
+        "change_of_mind": "Har du forandret mening?"
+        "rate_again": "Vurdér oss gjerne på nytt"
+    "surveys":
+      "new":
+        "feedback_optional": "Tilbakemelding er valgfri"
+        "submit": "Send inn"
+        "unhappy_info": "Håper vi kan gi deg bedre support neste gang du tar kontakt med oss."
+        "thanks_info": "Tusen takk for at du gir din vurdering av vår support."
+        "happy_info": "Vi er glade for å kunne hjelpe deg. Godt å vite du er fornøyd med servicen"
+        "additional_info": "I tillegg kan du også dele din erfaring med å ha jobbet med oss."
+        "send": "Send tilbakemelding"
+        "thanks": "Tusen takk for at du gir din vurdering av oss!"
+    "login":
+      "form":
+        "remember": "Husk meg på denne maskinen"
+        "login": "Logg inn"
+        "forgot": "glemt ditt passord?"
+    "canned_form":
+      "next": "Neste"
+      "form_submit": "Send inn"
+  "import": "Importer"
+  "application":
+    "click_to_disable": "Deaktiver integrasjon"
+    "enabled": "Aktivert"
+    "confirm_disable": "Er du sikker på at du vil deaktivere denne integrasjonen"
+    "configure_addon": "Tilpass denne integreringen"
+    "click_to_enable": "Aktiver integrasjon"
+    "title": "Integrasjoner"
+    "disabled": "Deaktivert"
+  "discussions":
+    "unpublished":
+      "index":
+        "title": "Søppel"
+    "moderation":
+      "index":
+        "title": "Søppel"
+    "topics":
+      "answer": "Svar"
+      "post":
+        "delete_confirm": "Slett denne kommentaren, er du sikker?"
+    "topic_merge":
+      "cancel": "Angre"
+  "users":
+    "activations":
+      "users": "brukere."
+      "bulk_send_invite_success": "Aktiveringsepost ble sendt til"
+      "user": "bruker."
+  "add_cc": "Legg til Cc"
+  "failure": "Feil"
+  "freshcaller":
+    "admin":
+      "link_account_request_content":
+        "email": "E-post"
+        "cancel": "Angre"
+  "activate_free_plan": "Aktiver gratis abonnement"
+  "agent_assigned_info": "Ingen åpne saker eller saker på vent for denne agenten"
+  "or": "eller"
+  "feedbackwidget_background": "Bakgrunn"
+  "custom_fields":
+    "email": "E-post"
+    "delete": "Slett"
+  "edit_agent": "Endre Agent"
+  "subscription":
+    "paid": "Betalt"
+    "free_plan_currency_note": "Når dere oppgraderer eller legger til representanter, er betalingen deres i "
+    "upgrade":
+      "message": "Oppgrader din konto for å åpne denne funksjonaliteten."
+      "cname": "Vil du bruke ditt eget domene her? Vennligst oppgrader din konto."
+    "free": "Gratis"
+    "billing": "Fakturering"
+    "total": "Totalt"
+  "cancel_and_back": "Angre og gå tilbake"
+  "plans_and_pricing": "Planer & Priser"
+  "accounts":
+    "show":
+      "export_data": "Eksporter data"
+      "export_data_text": "Generer en XML som inneholder all tilgjengelig hjelp og send den på e-post"
+      "account_settings": "Kontoinnstillinger"
+      "contact_email": "E-post"
+      "primary_contact": "Hovedkontakt detaljer"
+      "invoice_email_info": "Send faktura til"
+      "contact_first_name": "Fornavn"
+      "primary_contact_info": "(brukes til all kontorelatert kommunikasjon fra Freshdesk Support Desk)"
+      "contact_last_name": "Etternavn"
+      "export_now": "Eksporter nå"
+    "cancel":
+      "you_must_confirm": "Du må bekrefte din avslutning"
+      "feedback":
+        "budget_followup": "Dere kan nedgradere til et lavere abonnement i Freshdesk Support Desk uten at det påvirker de eksisterende billettene. Dere kan faktisk hvis budsjettet deres er veldig stramt, skifte til Sprout-abonnementet med 3 gratis representanter så lenge du lever. <a href=\"http://www.freshdesk.com/free-support-software\">Finn ut mer om gratis abonnement</a>"
+      "confirm_and_cancel_my_account": "Jeg bekrefter at jeg ønsker å avslutte min konto og slette alle mine data..."
+      "delete_my_account": "Slett min konto"
+      "cancel_account": "Slett Freshdesk Support Desk konto"
+      "goback": "Tilbake til kontoinnstillinger"
+    "billing":
+      "begin_subscription_info": "vil belaste ditt kort og starte ditt abonnement umiddelbart."
+      "billing": "Fakturering"
+  "zendesk_import":
+    "group": "Agent (gruppetilgang)"
+  "fav_delete_msg": "Er du sikker på at du vil slette dette faviconet?"
+  "reset_my_password": "Nullstill mitt passord"
+  "billing_info": "Informasjon om abonnementet"
+  "upgrade_plan": "Oppgrader"
+  "plain_no": "Nei"
+  "business_hours":
+    "info3": "Definert Arbeidstid"
+    "holiday_list": "Liste over årlige fridager"
+    "valid_time": "Vennligst oppgi en riktig tid"
+    "name": "Navn"
+    "info5": "Fridager vil bli ignorert når SLA blir beregnet for en sak"
+    "helpdesk_hours": "Helpdesk åpningstider"
+    "holiday_added": "Fridag allerede lagt til"
+    "holidays": "Fridager"
+    "holiday_name": "Navn på fridag"
+    "to": "til"
+  "register": "Registrere"
+  "signup": "Registrer deg"
+  "multifile_attachments":
+    "label": "Legg ved filer"
+  "account":
+    "save": "Lagre"
+    "rebrand": "Tilpass din helpdesk"
+    "info3": "Gjenopprett opprinnelige farger"
+    "cancel": "Angre"
+    "customize_portal": "Helpdesk tilpasning"
+    "info5": "Gjenopprett farger"
+    "time_zone": "Tidssone"
+    "active_since": "Aktiv siden"
+    "page_colors":
+      "header": "Topp"
+      "background": "Bakgrunn"
+      "title": "Helpdesk farger"
+      "tab_color": "Fanfarge"
+    "forums_toggle":
+      "title": "Forum"
+    "gdpr_to": "til"
+    "language": "Språk"
+    "helpdesk_name": "Helpdesk/portal navn"
+  "portal_pages":
+    "pages":
+      "ticket_view": "Saksdetaljer"
+      "article_view": "Artikkelvisning"
+      "portal_home": "Portal hjem"
+      "topic_view": "Emne visning"
+      "submit_ticket": "Ny sak"
+      "article_list": "Artikkel liste"
+      "topic_list": "Emne liste"
+      "profile_edit": "Brukerprofil"
+      "forgot_password": "Glemt passord"
+      "user_login": "Logg inn side"
+      "ticket_list": "Saker fra brukere"
+      "discussions_home": "Diskusjoner hjem"
+      "new_topic": "Nytt emne"
+      "solution_home": "Løsninger hjem"
+      "solution_category": "Løsninger kategori hjem"
+      "user_signup": "Ny bruker registrering"
+    "groups":
+      "general": "Generelle sider"
+      "discussions": "Diskusjoner"
+  "your_email_address": "Din e-post adresse"
+  "livechat":
+    "text_yes": "Ja"
+    "cancel": "Angre"
+    "text_no": "Nei"
+    "enabled": "Aktivert"
+    "disabled": "Deaktivert"
+    "help_offline_title": "Topp"
+    "save": "Lagre"
+    "header_title": "Topp"
+  "feedbackwidget_custom_image_info": "hvis du bruker et modifisert bilde vil tekst og farge bli ignorert"
+  "reset_password_title": "Nullstill passord"
+  "feedbackwidget_offset_info": "Offsett vil være avstanden (i piksler) fra venstre eller fra øverst på skjermen widget knappen blir plassert."
+  "automations":
+    "available_placeholders": "Sett inn plassholder"
+  "portalcss":
+    "reset_all_changes": "Nullstill alle endringer"
+    "save_and_continue": "Lagre"
+    "cosmetic":
+      "css_help_message": "Legg til eller skriv over Freshdesk Support Desk sine standardstiler med dine egne css."
+      "subheader_link_color": "Lenkefarger"
+      "css_subheader": "Tilpasset stilark"
+      "subheader_form_elements": "Skjemaelementer"
+      "subheader_background_color": "Bakgrunnsfarge"
+      "subheader_portal_fonts": "Portal fonter"
+      "subheader_tab_color": "Fanefarger"
+    "layout_and_pages_header": "Layout og sider"
+    "css_header": "Stilsett"
+    "color_and_font_header": "farge og font"
+    "classic": "Klassisk"
+    "publish_changes": "Lagre og publiser"
+    "reset_all_confirm_message": "Denne handlingen vil resette alle dine tilpasninger i Freshdesk Support Desk tilbake til standardinnstillingene. Er du sikker på at du vil fortsette?"
+    "reset_to_last_published": "Nullstill side til sist publiserte versjon"
+    "layout_pages":
+      "subheader_pages": "Portal sider"
+      "pagelayout_help_message": "Tilpass hele visningen av din supportside"
+      "footer_layout_title": "Bunn"
+      "subheader_layout": "Portal utseende"
+      "header_layout_help_message": "Endre toppen på din support portal"
+      "footer_layout_help_message": "Endre bunnen på din support portal"
+      "pages_help_message": "Her kan du tilpasse hovedområdet på individuelle sider."
+      "header_layout_title": "Topp"
+      "pagelayout_title": "Sidelayout"
+  "open_tickets": "Åpne Saker"
+  "zendesk_backup": "Backup fil"
+  "suspended_plan_admin_info": "Din konto har blitt suspendert, vennligst kontakt din kontoadministrator på %{email}!"
+  "email_command_setting":
+    "helpcard":
+      "info1": "Når du svarer på e-epostmeldinger fra din innboks kan du inkludere \"e-post kommandoer\" for å få Freshdesk Support Desk til å utføre bestemte handlinger på en sak. E-postkommandoene vil bli fjernet av Freshdesk Support Desk og vil ikke synes for anmoder, mens resten av teksten vil legges inn som del av saksgangen."
+      "ticket_type_example": "Spørsmål"
+      "heading": "Epostkommandoer innstillinger"
+  "change_equal_plan_title": "Er dere sikker på at dere vil skifte til det nye %{to_plan}-abonnementet?"
+  "portal":
+    "topic":
+      "default_select_option": "Velg forumtype"
+      "topic_title": "Emne tittel"
+      "post_topic": "Legg inn emne i"
+    "topic_vote":
+      "howto_unlike_button": "Jeg har ikke dette spørsmålet!"
+      "problem_button": "Har du dette problemet?"
+      "ideas_button": "Liker du denne ideen?"
+      "problem_unlike_button": "Jeg har ikke dette problemet!"
+      "howto_button": "Har du dette spørsmål også?"
+    "search":
+      "placeholder": "Skrive det du søker etter her..."
+    "tickets":
+      "add_or_remove_emails": "Legg til eller fjern e-postadresser som trenger en kopi når en varsling om denne saken blir sendt."
+      "export_ticket_data": "Eksporter saker til CSV"
+      "details": "Saksdetaljer"
+    "said": "sagt"
+  "title": "Tittel"
+  "free_plan_agents_v2": "Ubegrensede representanter"
+  "special_beta_offer": "Spesielt tilbud for Beta kontoer"
+  "days": "dager"
+  "tickets_filter":
+    "sort_fields":
+      "date_created": "Dato opprettet"
+      "last_modified": "Sist endret"
+      "desc": "Synkende"
+      "priority": "Prioritet"
+      "created_at": "Dato opprettet"
+      "due_by": "Frist innen"
+      "updated_at": "Sist endret"
+      "asc": "Stigende"
+    "raised_by": "Saker laget av"
+  "logo_delete_msg": "Er du sikker på at du vil slette denne logoen?"
+  "linkback_overlabel": "URL for å linke tilbake"
+  "amount": "Mengde"
+  "free_plan_agents": "for %{free_agents} agenter"
+  "forums":
+    "search_all":
+      "placeholder": "Søk alle Emner"
+  "working": "Arbeider hos"
+  "ticket_fields":
+    "index":
+      "title": "Saksfelt"
+      "save_ticket_fields": "Lagre"
+    "untitled": "Uten tittel"
+    "confirm_delete": "Er du sikker på at du vil slette dette feltet"
+    "second_choice": "Andrevalg"
+    "first_choice": "Førstevalg"
+    "section":
+      "delete_btn": "Slett"
+    "fields":
+      "requester": "Søk etter anmoder"
+      "source": "Kilde"
+      "created_at": "Opprettet"
+      "product": "Produkt"
+      "tags": "Tagger"
+      "priority": "Prioritet"
+    "formfield_props":
+      "dropdown_choices": "Nedtrekksmeny valg"
+      "level": "Nivå"
+      "add_new_choice": "Legg til nytt valg"
+      "customer_visible": "Vises for kunde"
+      "form_title": "Feltegenskaper"
+      "label": "Feltetikett"
+    "no_choice_message": "Det må være minst ett gyldig valg"
+  "export_to_CSV": "Eksporter til CSV"
+  "email_configs":
+    "info7": "Dette er også din svar til adresse, eks support@dittfirma.no"
+    "remove_msg": "Er du sikker på at du vil fjerne denne e-posten"
+    "dkim":
+      "unverified": "Ikke verifisert"
+      "verified": "Verifisert"
+    "info17": "Denne e-postadressen vil bli inkludert automatisk i Bcc feltet for all kommunikasjon på saken"
+    "info8": "Videresend dine e-poster til"
+    "send_verification_email": "Send verifisering"
+    "reply_email": "Din support e-post"
+    "secondary_supp_email_tool_tip": "Angi denne som primær e-post"
+    "global_support_emails": "Globale Support E-poster"
+    "assign_to_product_msg": "Lenk denne support e-posten til et produkt"
+    "name": "Navn"
+    "name_info_msg": "Navn på e-post som vil bli brukt som svar på saker"
+    "Personalized_email_replies_no": "Nei"
+    "helpcard":
+      "tour1": "Hjelp meg med å konfigurere min support e-post"
+      "info20": "bruk av forskjellige e-postbokser"
+    "new_support_email": "Ny Support E-post"
+    "info11": "Oversikt over alle e-post adresser Support"
+    "set_bcc_email_text": "Set Bcc e-post automatisk"
+    "unverified_info1": "En e-post med lenke for verifisering har blitt sendt til denne e-postadressen. Først etter verifisering vil denne support e-postadressen bli aktiv."
+    "title": "Instillinger E-post"
+    "add_bcc_text": "Legg til Bcc"
+    "mark_as_primary_msg": "Er du sikker på at du vil angi denne som primær support e-post"
+    "info10": "Nye saker til denne e-posten vil automatisk bli tildelt til en gruppe"
+    "Personalized_email_replies_yes": "Ja"
+    "primary_supp_email_tool_tip": "Primær produkt support e-post"
+    "bcc_email": "Bcc adresse"
+  "agent_list":
+    "sort":
+      "sorted_by": "Sortert etter"
+      "asc": "Stigende"
+      "desc": "Synkende"
+      "name": "Navn"
+  "add_new_forum": "Legg til et nytt forum"
+  "helpdesk_reports":
+    "customer_report":
+      "title": "Kundeanalyse"
+    "saved_report":
+      "cancel": "Angre"
+      "save": "Lagre"
+    "today": "Idag"
+    "ticket_schedule":
+      "index":
+        "cancel": "Angre"
+      "new":
+        "email": "E-post"
+        "ticket_fields_title": "Saksfelt"
+    "agent_summary":
+      "title": "Agentprestasjon"
+    "scheduled_reports":
+      "dialog":
+        "email": "E-post"
+    "ticket_volume":
+      "received_tickets": "Mottatte saker"
+      "title": "Trender for saksvolum"
+      "resolved_tickets": "Løste Saker"
+    "timespent":
+      "title": "Sakssyklus"
+    "productivity": "Produktivitet"
+    "date_range": "Dato intervall"
+    "glance":
+      "title": "Brukerstøtte i detalj"
+      "index_title": "Brukerstøtte<br/>i detalj"
+    "customer_happiness": "Kundetilfredshet"
+    "timesheet_reports":
+      "title": "Sammendrag av timeliste"
+    "performance_distribution":
+      "title": "Prestasjonsfordeling"
+    "group_summary":
+      "title": "Gruppeprestasjon"
+    "satisfaction_survey":
+      "title": "Tilfredshetsundersøkelse"
+    "ticket_activity":
+      "learn_more": "Lær mer"
+    "helpdesk_analysis": "Brukerstøtteanalyse"
+    "yesterday": "Igår"
+    "change": "Endre"
+  "enter_payment": "Legg inn betalingsinformasjon..."
+  "no_badge_achieved_label": "Ingen merker oppnådd ennå."
+  "replies": "Svar"
+  "date":
+    "abbr_month_names":
+    - !!null "null"
+    - "Jan"
+    - "Feb"
+    - "Mar"
+    - "Apr"
+    - "May"
+    - "Jun"
+    - "Jul"
+    - "Aug"
+    - "Sep"
+    - "Oct"
+    - "Nov"
+    - "Dec"
+  "social":
+    "twitter_handles":
+      "index":
+        "go_to_ticket": "Gå til sak"
+        "reauth_required": "Tillatelse på nytt kreves"
+        "note_title": "Merk: "
+        "show_more_results": "Vis flere resultater"
+        "note": "Svaret vil ikke bli registrert som en sak eller samtale i Freshdesk Support Desk."
+        "search_twitter": "Søk twitter"
+        "convert_to_ticket": "Gjør om til sak"
+        "no_tweet_results": "Ingen Tweet resultater for"
+        "title": "Twitter kontoer"
+        "from": "Fra: "
+        "remove_handle_msg": "Er du sikker på at du vil fjerne denne twitterkontoen?"
+        "results_for": "Resultater for"
+      "form":
+        "capture_dm_msg": "Lagre <strong> \"Direct messages\"</strong> som en sak"
+        "search_keywords": "Søk Nøkkelord"
+        "product": "Produkt"
+        "capture_dm_info": "Freshdesk Support Desk vil automatisk konvertere alle direktemeldinger for denne Twitter kontoen til saker."
+        "capture_mentions_info": "Freshdesk Support Desk vil automatisk konvertere alle @mentions for denne Twitter kontoen til saker."
+      "signin_info":
+        "title": "Logg inn med Twitter"
+        "add_twitter": "Legg til twitter konto"
+        "engage_customers": "Engasjer kundene dine, direkte på twitter"
+      "edit":
+        "twitter_settings_for_msg": "Twitter innstillinger for"
+    "streams":
+      "tooltip":
+        "convert_to_tkt": "Gjør om til sak"
+      "index":
+        "all": "Alle"
+  "conversation": "Samtaler"
+  "back_plans_billing": "Tilbake til Planer og Betaling"
+  "bottom": "Bunn"
+  "helpdesk_quests":
+    "back_to_dashboard": "< Tilbake til oversikt"
+  "solution_category":
+    "edit": "Rediger løsning kategori"
+    "info2": "Ingen mapper i denne kategorien"
+    "new": "Ny løsningskategori"
+    "name": "Navn"
+  "flash":
+    "customers":
+      "info_select": "Velg minst 1 bruker."
+    "general":
+      "access_denied": "Du har ikke rettigheter til å se denne siden!"
+    "contacts":
+      "info_select": "Velg minst 1 bruker"
+  "import_forum": "Forum"
+  "select_watchers": "Velg følgere"
+  "choose_different_plan": "Velg en annen plan"
+  "import_user_notification": "Du kan sende e-post for brukeraktivering for de importerte kontaktene fra kundefanen "
+  "category":
+    "edit": "Rediger kategori"
+    "new": "Ny kategori"
+  "trail_expiry_one_more_day": "Velg et betalt eller gratis abonnement umiddelbart for å dra fordel av uavbrutt tilgang til Freshdesk Support Desk"
+  "attachment_delete": "Du er i ferd med å slette dette vedlegget permanent. Vil du fortsette?"
+  "clear": "Fjern"
+  "email_command_preview_subject_value": "Support Sak"
+  "connect_ticket": "Lenke til sak"
+  "password_confirmation": "Passord bekreftelse:"
+  "import_step1_info": "Velg en CSV fil og klikk på import"
+  "disabled": "Deaktivert"
+  "forums_order":
+    "recent": "Nylig"
+  "downgrade_loss_message": "<span class=\"label label-important\">Viktig</span> Dere taper data og konfigurasjoner for følgende funksjoner permanent:"
+  "features":
+    "machine_learning": "Maskinlæring"
+    "helpdesk_report": "Grundige rapporter for brukerstøttesystem"
+    "multiple_mailbox_desc": "E-poster fra flere postkasser"
+    "advanced_phone_integration": "Avansert telefonintegrering"
+    "custom_ssl_desc": "Tilpassede SSL-sertifikater"
+    "advanced_phone_desc": "Avanserte telefonfunksjoner"
+    "app_gallery": "Få tilgang til appgalleriet"
+    "custom_survey_desc": "Tilpassede tilfredsstillelsesundersøkelser"
+    "forums_desc": "Diskusjoner på samfunnsforum"
+    "parent_child": "Over-/underordnet-billetter"
+    "adv_social_desc": "Avanserte sosiale funksjoner"
+    "auto_ticket_assignment": "Automatisk sakstildeling"
+    "custom_mailbox_desc": "Tilpassede e-postservere"
+    "shared_ticket_views_desc": "Tilpassede og delte billettvisninger"
+    "custom_ticket_views_desc": "Tilpassede billettvisninger"
+    "cname_dkim_desc": "CNAME- og DKIM-konfigursjoner"
+    "time_event_automation": "Tids-/hendelsesbaserte  automatiseringer"
+    "scheduled_reports": "Planlagte rapporter"
+    "custom_fields_desc": "Tilpassede billetter og kontaktfelt"
+    "live_chat_desc": "Live-chat-konfigurasjoner og -avskrifter"
+    "m_k_base": "Flerspråklig kunnskapsbase"
+    "role_dashboard": "Rollebaserte instrumentpaneler"
+    "custom_ticket_fields_and_views": "Tilpassede billettfelt/-visninger"
+    "feedback_widget": "Widget innstillinger"
+    "multiple_sla_business_desc": "Flere servicenivåavtaler, tidssoner og åpningstider"
+    "ip_whitelisting": "IP-godkjenningslister"
+    "multiple_products": "Flere produkter"
+    "multilingual_kbase_desc": "Flerspråklige kunnskapsbaseartikler"
+    "basic_phone": "Grunnleggende telefoner og sosiale kanaler"
+    "whitelisted_ip_desc": "IP-adresser for godkjenningslister"
+    "portal_customization_desc": "Tilpasninger av kundeportal"
+    "dynamic_email_alert": "Dynamiske e-postvarsler"
+    "multiple_products_desc": "Flere produktportaler / kunnskapsbase"
+    "ticket_dispatch_automation": "Automatisering av billettekspedering"
+    "custom_surveys": "Tilpassede tilfredsstillelsesundersøkelser"
+    "sla_reminders": "Påminnelser og opptrapping for servicenivåavtaler"
+    "multiple_sla": "Flere servicenivåavtaler og tidssoner"
+    "time_event_automation_desc": "Tids- og hendelsesbaserte automatiseringsregler (Supervisor, observatør)"
+    "custom_roles_desc": "Tilpassede representantroller"
+    "ticket_templates": "Billettmaler"
+    "enterprise_reports_desc": "Enterprise-rapporter"
+  "admin_onboarding":
+    "modal":
+      "channels_frame":
+        "forums_channel": "Forum"
+        "email_channel": "E-post"
+      "agents_frame":
+        "send_invite": "Send Invitasjon"
+        "emails_invalid": "En eller flere av dine e-post er ugyldig"
+    "account_verification_message":
+      "cancel_button": "Angre"
+      "modal_send_button": "Send aktivering"
+      "helpnote_or": "eller"
+  "feedbackwidget_defaulttitle": "Hjelp og support"
+  "pending": "På vent"
+  "adv_reports":
+    "no_data_to_display_msg": "Ingen data å vise"
+    "glance":
+      "select_customer_msg": "Velg kunde"
+      "select_agent_msg": "Velg agent"
+      "select_group_msg": "Velg gruppe"
+  "linkback_info": "Du kan velge å lenke tilbake til eget nettsted når kunder klikker på topplogoen"
+  "forgot_password_intro": "Fyll inn skjemaet nedenfor og du vil motta en e-post om hvordan du nullstiller ditt passord"
+  "credit_card_info": "Kredittkort opplysninger"
+  "no_password_reset": "Nei"
+  "no_forum_category": "Ingen forum i denne kategorien"
+  "begin_subscription_confirm": "Kredittkortet ditt vil bli belastet med $%{cost} \\nog ditt abonnement vil starte umiddelbart\\nFortsett?"
+  "integrations":
+    "logmein":
+      "form":
+        "password": "SSO passord"
+        "widget_title": "Widget tittel"
+        "company_id": "Firma ID"
+    "google_analytics":
+      "account_number": "Legg inn ditt sporingsnr."
+      "form":
+        "tracking_id": "Sporingsnr. for "
+        "copy_settings": "Benytt Sporings ID over for alle portaler"
+    "icontact":
+      "form":
+        "api_url": "API url"
+        "app_id": "Applikasjonsnr."
+    "dynamics_v2":
+      "form":
+        "username": "Brukernavn"
+    "quickbooks":
+      "form":
+        "invoices": "Representanter kan vise fakturaer"
+    "marketplace_login":
+      "associate_account":
+        "submit": "Send inn"
+        "email": "E-post"
+        "user_name": "Navn"
+        "company_name": "Firma navn"
+      "admin_credentials":
+        "login": "Logg inn"
+    "capsule":
+      "form":
+        "widget_title": "Widget tittel"
+        "api_key": "Api nøkkel"
+        "domain_info": "Skriv domenet uten https foran, for eksempel example.capsulecrm.com"
+        "domain": "Domene"
+    "google_calendar":
+      "form":
+        "google_calendar_settings": "Innstillinger Google Kalender"
+      "desc": "Du kan organisere hendelser for hver sak med Google kalender."
+      "helptext": "Med Google kalender kan du holde orden på hendelser knyttet til saker. Agenter må knytte sin Google konto til Freshdesk Support Desk for å organisere hendelser med Google kalender."
+    "sugarcrm":
+      "desc": "Du kan se kontaktinformasjon fra SugarCRM i Freshdesk Support Desk."
+      "form":
+        "widget_title": "Widget tittel"
+        "username": "Brukernavn"
+        "domain": "URL til SugarCRM konto"
+    "jira_settings":
+      "none": "Ikke gjør noe."
+      "add_public_note_in_fd": "Legg til offentlig notat i Freshdesk Support Desk."
+      "info1": "Når en Freshdesk Support Desk sak er koblet mot JIRA sak, utfør hendelsene nedenfor."
+    "screen_pop":
+      "widget":
+        "cancel": "Angre"
+    "dropbox":
+      "desc": "Legg ved og del dine data/filer fra Dropbox"
+    "freshbooks":
+      "form":
+        "widget_title": "Widget tittel"
+        "invoices": "Representanter kan vise fakturaer"
+        "api_url": "API url"
+      "desc": "Du kan registrere tid brukt på saker i din Freshbook prosjekter og oppgaver."
+    "hootsuite":
+      "filter":
+        "priority": "Prioritet"
+        "all": "Alle"
+      "submit": "Send inn"
+      "send": "Send tilbakemelding"
+      "social":
+        "convert_to_ticket": "Gjør om til sak"
+      "login":
+        "email": "E-post"
+    "seoshop":
+      "form":
+        "language": "Språk"
+        "api_key": "Api nøkkel"
+    "campaignmonitor":
+      "form":
+        "client_id": "Klientnr."
+        "api_key_info": "Finn din API nøkkel under kontoinnstillinger"
+    "google_contacts":
+      "internal_error": "Intern feil. Vennligst kontakt support."
+      "last_sync": "Sist synkronisert"
+      "MERGE_LATEST": "Slå sammen Freshdesk Support Desk og Google kontakter (siste oppdaterte prioriteres)"
+      "OVERWRITE_REMOTE_small": "Importer"
+      "edit_app": "Oppdater"
+      "delete": "Slett"
+      "group": "Synkroniser gruppenavn"
+      "sync_type": "Hvordan synkronisere?"
+      "label": "Google kontaktsynkronisering"
+      "already_exist": "Denne e-postadressen er allerede konfigurert. Du kan ikke legge den til på nytt."
+      "form":
+        "sync_type": "Synkroniseringstype"
+        "account_not_configured": "<br/>Googlekonto innstillinger er ikke satt opp enda. Klikk på %{action} for å sette opp ny konto med Google <br/><br/>"
+        "sync_type_info": "Hvordan vil du synkronisere kontakter mellom Google og Freshdesk Support Desk."
+      "add_more": "Synkroniser ny konto"
+      "MERGE_REMOTE": "Slå sammen Google og Freshdesk Support Desk kontakter (Google prioriteres)"
+      "email": "E-post"
+      "last_sync_time": "Siste gang synkronisert"
+      "tag": "Synkroniser innstillinger"
+      "MERGE_REMOTE_small": "Slå sammen (Google prioriteres)"
+      "import": "Importer"
+      "MERGE_LOCAL_small": "Slå sammen (Freshdesk Support Desk prioriteres)"
+      "syncing_in_progress": "Synkronisering pågår"
+      "install": "Import og aktivering"
+      "desc": "Periodevis synkroniser kontakter mellom Google og Freshdesk Support Desk."
+      "account": "Konto"
+      "overwrite_existing_user": "Skriv over eksisterende kontaktdetaljer i Freshdesk Support Desk"
+      "MERGE_LOCAL": "Slå sammen Freshdesk Support Desk og Google kontakter (Freshdesk Support Desk prioriteres)"
+      "not_yet_synced": "Synkronisering ikke startet."
+      "sync_status":
+        "added": "Lagt til"
+        "modified": "Endret"
+        "freshdesk": "Status importerte kontakter i Freshdesk Support Desk"
+        "deleted": "slettet"
+      "import_success_no_stats": "Vellykket import av Google kontakter."
+      "last_sync_status": "Siste synkroniseringsstatus"
+      "import_problem": "Problem med import av Google kontakter."
+      "edit_form":
+        "install_title": "Instillinger for kontakter fra Google"
+        "edit_app_title": "Endre instillinger for kontakter fra Google"
+        "mail_box_detail": "Synkroniser med"
+        "import_group": "Velg grupper for import (valgfritt)"
+        "import_title": "Instillinger for import av kontakter fra Google"
+    "batchbook":
+      "form":
+        "widget_title": "Widget tittel"
+    "cti_admin":
+      "phone":
+        "save": "Lagre"
+        "cancel": "Angre"
+      "ctd":
+        "username": "Brukernavn"
+    "custom_application":
+      "script": "Skript"
+      "name": "Navn"
+      "form":
+        "widget_script": "Widget kode"
+        "create_n_enable": "Opprett og aktiver"
+        "widget_title": "Widget navn"
+    "github_settings":
+      "resolved": "Løst"
+    "workflow_max":
+      "form":
+        "widget_title": "Widget tittel"
+        "account_key": "Konto Nøkkel"
+    "magento":
+      "form":
+        "product": "Produkt"
+    "jira":
+      "form":
+        "add_note": "Legg til som privat notat."
+        "username": "Brukernavn"
+        "jira_status_sync_update_customer": "Send svar til kunde og oppdater status felt."
+        "do_nothing": "Ikke gjør noe."
+        "widget_title": "Widget tittel"
+        "jira_note": "Beskrivende tekst"
+        "domain": "Domene"
+        "send_reply": "Send som svar til kunde."
+    "harvest":
+      "form":
+        "domain_info": "Skriv domenet uten https foran, for eksempel example.harvestapp.com"
+        "widget_title": "Widget tittel"
+        "domain": "Domene"
+    "highrise":
+      "form":
+        "widget_title": "Widget tittel"
+    "outlook_contacts":
+      "form":
+        "sync_tag": "Synkroniser innstillinger"
+        "overwrite_existing_user": "Skriv over eksisterende kontaktdetaljer i Freshdesk Support Desk"
+        "submit": "Import og aktivering"
+        "mail_box_detail": "Synkroniser med"
+      "edit_form":
+        "account": "Konto"
+        "not_yet_synced": "Synkronisering ikke startet."
+        "add_more": "Synkroniser ny konto"
+        "delete_account": "Slett"
+        "last_sync_time": "Siste gang synkronisert"
+        "syncing_in_progress": "Synkronisering pågår"
+  "close_this_ticket": "Lukk denne saken"
+  "cancel_my_account": "Kanseller min konto"
+  "search":
+    "no_results_msg": "Ingen resultater funnet"
+  "created_on": "Opprettet den "
+  "total_price": "Totalt"
+  "paid_with": "Betalt med"
+  "attachments": "Vedlegg"
+  "sales": "Salg"
+  "ticket_form":
+    "your_email_address": "E-post"
+  "done": "Ferdig"
+  "sign_in_info": "Du vil bli logget inn med"
+  "header":
+    "signout": "Logg ut"
+    "tabs":
+      "forums": "Forum"
+  "left": "Venstre"
+  "solution":
+    "solution_meta_description": "Meta beskrivelse"
+    "folder": "Mappe"
+    "solution_meta_title": "Tittel tag"
+    "solution_meta_keywords": "Meta nøkkelord"
+    "draft":
+      "portal":
+        "all": "Alle"
+    "solution_meta": "Meta tagger for søkemotorer"
+    "meta_keywords_message": "Skill nøkkelord med komma"
+    "folders":
+      "new":
+        "new_folder": "Ny mappe"
+    "add_category": "Ny kategori"
+    "solution_title": "Tittel"
+  "choose_plan": "Velg plan"
+  "unblock": "Hviteliste"
+  "change": "Endre"
+  "freshchat":
+    "admin":
+      "save": "Lagre"
+      "cancel": "Angre"
+  "suspended_plan_info": "Din konto har blitt stoppet vennligst velg en plan for å fortsette!"
+  "ticket_deleted": "Denne supportsaken har blitt slettet"
+  "signup_complete_activate_info": "Velkommen! Vi har sendt deg en epost med en lenke der du kan registrere ditt passord og aktivere din konto"
+  "topic":
+    "post_comment": "Legg inn"
+    "new": "Legg inn nytt emne"
+    "post": "Legg inn emne"
+    "name": "Navn på emne"
+    "filter_0": "Alle"
+    "msg1": "Denne diskusjonen har stengt for kommentarer"
+    "close": "Lukk denne diskusjonen"
+    "unmark_answer": "Avmerk dette som svar"
+    "update_comment": "Oppdater kommentar"
+    "spam": "Søppel"
+    "all": "Alle"
+    "locked": "Låst"
+    "open": "Gjenåpne denne diskusjonen"
+    "sticky": "Klistret"
+    "add_comment": "Legg inn innlegg"
+  "and_more_plan_downgrade": "Med mer ..."
+  "change_my_plan": "Velg denne planen..."

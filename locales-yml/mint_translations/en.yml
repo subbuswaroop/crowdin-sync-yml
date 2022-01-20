@@ -142,7 +142,6 @@ en:
     info2: Convert to an Agent
   no_message:
     products: You have not created any product yet.
-  conversations_requester_widget_notice: You can select upto %{max_limit} fields to show on the contact info widget
   forum_confirm_msg1: Are you sure you want to delete this category?
   undo_toggle: Undo send
   reorder: Reorder
@@ -168,81 +167,6 @@ en:
   customers: Customers
   import_solution_article_info: 'Note: We will not save the forum comments'
   none: None
-  email_failure:
-    dropped:
-      summary_error_text: "Message dropped - Invalid or problematic address"
-      error_text: "Any message sent to this address will not be delivered as the address is invalid or mistyped"
-      help_text:
-        admin: "Any message sent to this address will not be delivered as the address is invalid or mistyped. Please contact Freshdesk support if you believe that this address is valid and should be removed from the drop list for future communication."
-        agent: "Any message sent to this address will not be delivered as the address is invalid or mistyped. Please contact your account administrator if you believe that this address is valid and should be removed from the drop list for future communication."
-    dropped_unsubscribed:
-      summary_error_text: "Message dropped - Unsubscribed address"
-      error_text: "Any message sent to this address will not be delivered as the recipient has unsubscribed from this domain"
-      help_text:
-        admin: "Any message sent to this address will not be delivered as the recipient has unsubscribed from this domain. Please contact Freshdesk Support if you want to enable future communication with this address."
-        agent: "Any message sent to this address will not be delivered as the recipient has unsubscribed from this domain. Please contact your account administrator if you want to enable future communication with this address."
-    bounce_temporary:
-      summary_error_text: "Message bounced - Temporary error"
-      error_text: "The message did not reach this recipient after multiple attempts. This could be due to connection issues with the remote server or temporary problems like the mailbox being full. Please retry sending the message after some time."
-      help_text: "The message did not reach this recipient after multiple attempts. This could be due to connection issues with the remote server or temporary problems like the mailbox being full. Please retry sending the message after some time."
-    bounce_permanent:
-      summary_error_text: "Message bounced - Permanent error"
-      error_text: "The message did not reach this recipient even after multiple attempts. You can try resending the message, but it's likely that the address may be invalid or mistyped."
-      help_text: "The message did not reach this recipient even after multiple attempts. You can try resending the message, but it's likely that the address may be invalid or mistyped."
-    unknown_error:
-      error_text: "Email rejected due to an unexpected error. Please try again after sometime."
-    server_limit_exceeded:
-      error_text: "Recipient's email server has rejected the email sent due to high volume of emails attempted. This could be an temperory issue on the recipient email server side. Please try again after sometime."
-    invalid_email_bounced:
-      error_text: "The email account that you tried to reach does not exist. Please try double-checking the recipient's email address for typos or unnecessary spaces."
-    restricted_access:
-      error_text: "Recipient mail server has blocked emails to the recipient due to restricted access. Please contact administrator of the recipient domain."
-    domain_blocked:
-      error_text: "Emails from your domain are blocked by the recipient mail server due to content of this email classified as spam or spam emails sent earlier. Please verify the content of email and try again later."
-    mailbox_disabled:
-      error_text: "Recipient mailbox has been disabled. Please contact the recipient or administrator of recipient mail server."
-    missing_dkim:
-      error_text: "Unauthenticated email detected due to missing DKIM set up. Please configure DKIM else contact your IT Administrator. Try sending again after setup is done."
-    mailbox_full:
-      error_text: "Cannot deliver email since the recipient's mailbox is full. Please try again after sometime."
-    missing_dns_bounced:
-      error_text: "DNS records missing for recipients domain. Please contact recipient domain administrator."
-    security_policy:
-      error_text: "Email rejected due to security policies of recipient mail server. Please contact recipient domain administrator."
-    mailbox_limit_exceeded:
-      error_text: "Recipient's mailbox has rejected the email sent due to high volume of emails attempted. This could be an temperory issue on the recipient mailbox side. Please try again after sometime."
-    invalid_email_dropped:
-      error_text: "Email dropped as the email account that you tried to reach does not exist. Please verify the recipient's email address for typos or unnecessary spaces and contact support@freshdesk.com"
-    policy_violation:
-      error_text: "Email dropped due to policy violation. Please contact support."
-    missing_dns_dropped:
-      error_text: "Email dropped due to unavailability of DNS records on recipient domain side. Please contact recipient domain administrator and contact support."
-    recepient_limit_exceeded:
-      error_text: "Email dropped due rate limitation on gmail side. Please try again after sometime."
-    suppression_list_alert:
-      subject: "Request to remove address from drop list"
-      company: "Company"
-      freshdesk_url: "Freshdesk Support Desk URL"
-      dropped_address: "Address to remove from drop list"
-      source_ticket: "Source Ticket"
-      thanks: "Thanks,"
-    agent_notification:
-      subject: "Email was not delivered to %{failed_email}"
-      content: |
-              <p>Hi %{agent_name},<br><br>
-                The following message composed by you on ticket <a target='_blank' href=%{ticket_url}>%{ticket_id}</a> failed to reach the recipient %{failed_email}.<br>
-                Reason: "%{error_message}.<br><br>"
-                Message content: <br>%{failed_content}</p>
-    note_display:
-      title  : "Message not delivered"
-      failed_recipient: "recipient"
-      failed_recipients: "recipients"
-      contact_support: "Request to unblock recipient"
-      mail_sent: "Unblock request sent to Freshdesk Support Desk"
-      call_recipient : "Call recipient"
-      add_note_to_admin : "Notify admin of blocked address"
-      hide_details: "Hide details"
-      show_details: "Show details"
   mailer_notifier:
     security_notification:
       trusted_ip_enabled:
@@ -285,12 +209,12 @@ en:
     freshdesk: Freshdesk Support Desk
     attachment: 'Attachments:'
     specific_agent_activation_email: 'Hi %{agent_name}, <br><br> %{doer} has invited you to be a collaborator in %{helpdesk_name} Helpdesk.
-                                      <br><br> As a collaborator, you can view tickets or reports you have access to, view customer
+                                      <br><br> As a collaborator, you can view tickets or reports you have access to, view customer 
                                       history, access the Knowledge base, and help your colleagues provide exceptional customer support.
                                       <br><br> Click on the URL below to go to your account. <br><br>
                                       <a href="%{activation_url}"> %{activation_url} </a> <br><br>'
-    specific_agent_activation_email_footer: 'Thanks,<br> %{helpdesk_name} Helpdesk <br><br> P.S. New to Freshdesk? Learn how to use the helpdesk by enrolling in the
-                                      <a href="https://freshdesk.com/academy?utm_source=activation-email" target="_blank">Freshdesk Academy.</a>'
+    specific_agent_activation_email_footer: 'Thanks,<br> %{helpdesk_name} Helpdesk <br><br> P.S. New to Freshdesk? Learn how to use the helpdesk by enrolling in the 
+                                      <a href="https://freshdesk.com/academy?utm_source=activation-email" target="_blank">Freshdesk Academy.</a>'              
     notify_new_follower:
       topic:
         title: Added as topic follower
@@ -382,92 +306,65 @@ en:
       notify_dkim_activation: 'DKIM signatures are now activated for emails sent from %{email_domain}.'
       notify_dkim_failure: 'DKIM verification failed for domain %{email_domain}.'
       notify_dkim_enforcement_note: >-
-        You have received this email as you have configured one or more custom domains and are using
+        You have received this email as you have configured one or more custom domains and are using 
         Freshdesk server to send emails.
       notify_dkim_whats_dkim: 'What is DKIM?'
       notify_dkim_whats_dkim_1: >-
-        Domain verification is a mandatory check if you are using the default Freshdesk server as the
+        Domain verification is a mandatory check if you are using the default Freshdesk server as the 
         email communication method.
       notify_dkim_whats_dkim_2: >-
-        To perform domain verification, we support DKIM (Domain Key Identified Mail) that makes
-        your organization capable of authenticating the communication between you and your
+        To perform domain verification, we support DKIM (Domain Key Identified Mail) that makes 
+        your organization capable of authenticating the communication between you and your 
         customers.
       notify_dkim_whats_dkim_2_html: >-
-        To perform domain verification, we support <strong>DKIM (Domain Key Identified Mail)</strong> that makes
-        your organization capable of authenticating the communication between you and your
+        To perform domain verification, we support <strong>DKIM (Domain Key Identified Mail)</strong> that makes 
+        your organization capable of authenticating the communication between you and your 
         customers.
       notify_dkim_enforcement_setup: 'How can you set up DKIM?'
       notify_dkim_setup_text: >-
-        You can enable DKIM for the email domain of your support email address from within Freshdesk, using
+        You can enable DKIM for the email domain of your support email address from within Freshdesk, using 
         the DKIM Settings option under Admin > Channels > Email > Advanced Settings > Configure DKIM.
       notify_dkim_setup_text_html: >-
-        You can enable DKIM for the email domain of your support email address from within Freshdesk, using
+        You can enable DKIM for the email domain of your support email address from within Freshdesk, using 
         the DKIM Settings option under <strong>Admin > Channels > Email > Advanced Settings > Configure DKIM.</strong>
       notify_dkim_enforcement_when: 'When do you have to set up DKIM?'
       notify_dkim_when_text: >-
-        We urge you to set up DKIM as soon as possible to ensure the proper delivery of your incoming and
-        outgoing emails from your Freshdesk Support Desk account. You will also see a banner inside your
+        We urge you to set up DKIM as soon as possible to ensure the proper delivery of your incoming and 
+        outgoing emails from your Freshdesk Support Desk account. You will also see a banner inside your 
         account regarding this.
       notify_dkim_why_dkim: 'Why do you need DKIM?'
       notify_dkim_why_dkim_1: >-
-        DKIM generates a signature, which is attached to the message while in transit, to verify the
+        DKIM generates a signature, which is attached to the message while in transit, to verify the 
         authenticity of the message source.
       notify_dkim_why_dkim_2: >-
-        This signature is associated with the organization's registered domain name. On reaching the
+        This signature is associated with the organization's registered domain name. On reaching the 
         destination, if the message has its signature validated, then the source of the mail is verified.
       notify_dkim_why_dkim_3: >-
-        Hence no one can send emails impersonating your organization and support emails sent by
+        Hence no one can send emails impersonating your organization and support emails sent by 
         Freshdesk on your behalf will not get marked as spam.
       notify_dkim_enforcement_footer_note_html: >-
-        <a href='https://support.freshdesk.com/en/support/solutions/articles/223779-email-domain-verification-using-dkim-records' target="_blank">Click here</a> to know more about DKIM. Write to us at <a href='mailto:support@freshdesk.com' target="_blank">support@freshdesk.com</a> if you have any
+        <a href='https://support.freshdesk.com/en/support/solutions/articles/223779-email-domain-verification-using-dkim-records' target="_blank">Click here</a> to know more about DKIM. Write to us at <a href='mailto:support@freshdesk.com' target="_blank">support@freshdesk.com</a> if you have any 
         questions.
       notify_dkim_enforcement_footer_note: >-
         Visit https://support.freshdesk.com/en/support/solutions/articles/223779-email-domain-verification-using-dkim-records to know more about DKIM. Write to us at support@freshdesk.com if you have any questions.
-      notify_agent_bulk_creation_failure: >-
-        %{success} out of %{total} agents are successfully created. Please find the reason for the failures in the below table
-      notify_agent_bulk_job_failure: >-
-        Your last bulk agents creation job with reference id %{job_id} is failed. Please contact support.
       activate_account: Activate your Freshdesk Support Desk account
       activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
            support your customers. Click on the button below to activate your
            account and get started.'
       activate_button: Activate Account
       hi_user: 'Hi %{agent_name}'
-      activation_message_support_desk: 'You’re one step away from delighting your customers with Freshdesk Support Desk.
+      activation_message_support_desk: 'You’re one step away from delighting your customers with Freshdesk Support Desk. 
       Activate your account by clicking the button below:'
-      agent_invitation_message_support_desk: >-
-        Congratulations! You have been added as an agent to Freshdesk Support Desk to delight your customers.
-        Click on the button below to access your account
-      agent_invitation_button:  Go to Account
-      agent_invitation_message_omnichannel: >-
-        Congratulations! You have been added as an agent to Freshdesk Omnichannel to delight your customers.
-        Click on the button below to access your account
-      activation_message_omnichannel: 'You’re one step away from delighting your customers across every channel with Freshdesk Omnichannel.
+      activation_message_omnichannel: 'You’re one step away from delighting your customers across every channel with Freshdesk Omnichannel. 
       Activate your account by clicking the button below:'
       agent_activation_message_support_desk: '%{performer} wants you to be a part of Freshdesk Support Desk. Join your team by clicking on the button below:'
       agent_activation_message_omnichannel: '%{performer} wants you to be a part of Freshdesk Omnichannel. Join your team by clicking on the button below:'
       agent_activate_button_omnichannel: Join your Omnichannel Support Desk
       agent_activate_button_support_desk: Join your Support Desk
-      go_to_account: 'Goto Account >'
-      welcome_to_freshworks: 'Welcome to Freshworks!'
-      welcome_message_intro: 'We are delighted to have you on board. You are joining thousands of businesses that use Freshdesk to engage with their customers meaningfully.'
-      welcome_message_invitation_message: "You're all set. Log in to explore all of the capabilities of Freshdesk during your 21-day free trial."
-      welcome_message_invitation_button_message: Start using Freshdesk
-      welcome_message_contact_support: "Write to our team of product specialists at support@freshdesk.com for any questions or assistance during your trial period."
-      welcome_message_contact_support_html: "Write to our team of product specialists at <a style='text-decoration:none' href='mailto:support@freshdesk.com'>support@freshdesk.com</a> for any questions or assistance during your trial period."
-      welcome_message_greetings: Here's to keeping our customers delighted, always.
-      welcome_message_regards: Regards,
-      welcome_message_activation_title: Please activate your account
-      welcome_message_activation_message: "Activate your account to unlock all the capabilities of Freshdesk during your 21-day free trial."
-      welcome_message_paste_url: 'If you face any issue with the activate button, paste the link below in your browser:'
-      team_freshworks: Team Freshworks
-      freshworks_terms_and_conditions_html: "Message sent from Freshworks Inc, 2950 S. Delaware Street, Suite 201, San Mateo CA 94403.  <a href='https://www.freshworks.com/terms'>Terms of Service</a> and <a href='https://www.freshworks.com/privacy'>Privacy Notice</a>."
       paste_url: >-
         If the button does not work, copy and paste the URL below in your browser's address bar:
       contact_support: >-
         Do reply to this email if you continue to face any issues with your activation.
-      invitation_contact_support: >-
-         Do reply to this email if you face any issues with log in.
       regards: Best,
       app_name: '%{app_name} Team'
       freshdesk_url: 'Your Freshdesk Support Desk URL:'
@@ -880,22 +777,6 @@ en:
   custom_mailbox_admin_email_notifications:
     regards: Regards
     welcome_message: Dear Admin
-    temporary_authentication_failure_subject: Freshdesk custom mailbox error - Temporary Authentication failure
-    mailbox_limit_exceeded_subject: Freshdesk custom mailbox error - Mailbox limit exceeded
-    server_connection_failure_subject: Freshdesk custom mailbox error - Server connection failure
-    authentication_failure_incorrect_credentials_subject: Freshdesk custom mailbox error - Authentication Failure (Incorrect credentials)
-    authentication_failure_subject: Freshdesk custom mailbox error - Authentication failure
-    multi_factor_authentication_required_subject: Freshdesk custom mailbox error - Multi-factor authentication required
-    mailbox_access_restricted_subject: Freshdesk custom mailbox error - Mailbox access restricted
-    unexpected_error_occurred_subject: Freshdesk custom mailbox error - Unexpected error
-    temporary_authentication_failure_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Temporary Authentication failure'. Please contact your mailbox provider or try again later.
-    mailbox_limit_exceeded_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Mailbox limit exceeded'. Please contact your mailbox provider to increase the limit or try again later.
-    server_connection_failure_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Server connection failure'. Please contact your mailbox provider or try again later.
-    authentication_failure_incorrect_credentials_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Authentication Failure (Incorrect credentials)'. Please connect your mailbox again with the right credentials and try again.
-    authentication_failure_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Authentication failure due to account locked/disabled or unreachable'. Please contact your mailbox provider or try again later.
-    multi_factor_authentication_required_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Multi-factor authentication required'. Please use application password to login.
-    mailbox_access_restricted_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Mailbox access restricted'. Please contact your mailbox provider or try again later.
-    unexpected_error_occurred_description: Your Freshdesk custom mailbox - %{email_mailbox} is unable to send outgoing emails due to 'Unexpected error'. Please contact your mailbox provider or try again later.
   warning: WARNING
   zendesk_url: Zendesk URL
   downgrade_plan_title: Are you sure you want to downgrade?
@@ -950,10 +831,6 @@ en:
     new: New company
     info10: 'Note: Deleting a company will not delete its contacts.'
     info11: Are you sure you want to delete
-    health_score: "Health score"
-    account_tier: "Account tier"
-    renewal_date: "Renewal date"
-    industry: "Industry"
   forwarded_to: Forwarded to
   imap_error: Email server inaccessible
   marketplace:
@@ -1544,31 +1421,6 @@ en:
     quoted_text:
       wrote_on: 'On'
       wrote: wrote
-  call:
-    duration_html: "<br><br> <b>Call Duration:</b> %{call_duration}"
-    note_html: "<br><br> <b>Call Notes:</b> <br> %{call_note}"
-    ticket:
-      completed_title: "%{type} call with %{customer} on %{date} at %{time}"
-      inprogress_title: "%{type} call with %{customer} on %{date} at %{time}"
-      onhold_title: "%{type} call with %{customer} on %{date} at %{time}"
-      voicemail_title: "Voicemail from %{customer}"
-      outgoing_noanswer_title: "Unanswered call to %{customer}"
-      incoming_noanswer_title: "Missed call from %{customer}"
-      abandoned_title: "Abandoned call from %{customer}"
-      callback_noanswer_title: "Missed callback to %{customer}"
-      callback_abandoned_title: "Abandoned callback to %{customer}"
-      default_title: "%{type} call with %{customer} on %{date} at %{time}"
-
-      completed_description: "Conversation between %{customer} and %{agent}"
-      voicemail_description: "Voicemail from %{customer} to %{agent}"
-      incoming_noanswer_description: "Missed call from %{customer} to %{agent}"
-      abandoned_description: "Abandoned call from %{customer} to %{agent}"
-      outgoing_noanswer_description: "Unanswered call from %{agent} to %{customer}"
-      inprogress_description: "Conversation between %{customer} and %{agent}"
-      onhold_description: "Conversation between %{customer} and %{agent}"
-      default_description: "Conversation between %{customer} and %{agent}"
-      callback_noanswer_description: "Missed callback to %{customer}"
-      callback_abandoned_description: "Callback abandoned by %{customer}"
   trial_plan_name: 'Downgrade trial to %{name}'
   user:
     phone_no: Phone number
@@ -1602,18 +1454,7 @@ en:
     country: Country
     state: State
     city: City
-  placeholder:
-    last_order_number: Last order number
-    last_order_date: Last order date
-    last_order_shipping_carrier: Last order shipping carrier
-    last_order_tracking_number: Last order tracking number
-    last_order_tracking_url: Last order tracking URL
-    last_order_shipping_address: Last order shipping address
-    last_order_shipped_date: Last order shipped date
-    last_order_shipping_status: Last order shipping status
   admin:
-    placeholders:
-      shopify: Shopify
     automation_summary:
       performer_5: "Field Technician"
       performer_6: "Field Technician or Requester"
@@ -1628,7 +1469,6 @@ en:
       send_email_to_field_tech: 'Send Email to Field Technician'
       send_email_to_field_group: 'Send Email to Service Group'
       freshservice_incident: 'Create an incident in Freshservice'
-      on_after: 'On or After'
     audit_log:
       event_type:
         category: Knowledge Base - Category
@@ -1982,7 +1822,7 @@ en:
           This is the URL to which Freshdesk Support Desk will redirect users when they click
           on the Logout link in Freshdesk Support Desk.
         whitelisted_ip_modified: IP Whitelisting is modified
-        current_ip_not_in_range: Your current IP address is not part of the IP range restriction specified.
+        current_ip_not_in_range: Your current IP address is not part of the IP range restriction specified.        
         agents_customers: Agents and Customers
         shared_secret: Shared Secret
         admin_notifications: Admin Notifications
@@ -2629,12 +2469,6 @@ en:
           Only applicable if the selected agent is mapped to the internal group
           at the time of rule execution.
     portal_settings:
-      portal_customisation:
-        unverified_user: >-
-          Looks like you haven't verified the contact information, kindly
-          verify to proceed with Portal Customization
-        spam: >-
-          To proceed with Portal Customisation, please contact our support team at support@freshworks.com
       simple:
         bg_color: Body
         headingsColor: Heading color
@@ -3029,16 +2863,6 @@ en:
         dm_threading_interval: Set Ticket Threading Interval
         header: Convert tweets from above stream to tickets
         filter_mentions_html: Filter comments that just have user mentions. (ex. @mark &#128521;)
-        page_posts_label: Page posts
-        ad_posts_label: Ad posts
-        convert_ad_post_helptext: You would be prompted to re-authorize the Facebook account after the changes are saved
-        convert_ad_post_to_ticket: Convert comments on ad posts created by the page into tickets
-        convert_visitor_post_to_ticket: Convert posts added by visitors into tickets
-        convert_page_post_to_ticket: Convert posts added by the page into tickets
-        convert_comment_toggle_helptext: Only convert comments which have the following keywords
-        fb_thread_same_ticket: Thread comments on each post to a single ticket
-        fb_thread_new_ticket: Create a new ticket for every comment on the post
-        visitor_posts_helptext: This option cannot be turned off when comments on each page post are threaded to the same ticket
       helpcard:
         handle_title2: Converting specific tweets to tickets automatically
         handle_info2: >-
@@ -3235,7 +3059,7 @@ en:
         manage_user_group: Manage agents
         manage_users_copy : Manage all agents
         assume_identity: Assume Identity
-        freshchat_send: Send
+        freshchat_send: Send 
         freshchat_conversation_reply_private: Add private note
         freshchat_conversation_reply_private_global: Can add private note to all conversations
         freshchat_conversation_reply_private_group: Can only add private note to all conversations assigned to their group
@@ -3244,7 +3068,7 @@ en:
         freshchat_conversation_reply_global: Can send message to all conversations
         freshchat_conversation_reply_group: Can send message to conversations assigned to their group
         freshchat_conversation_reply_me: Can send message to conversations assigned to them only
-        freschat_conversation_advanced_options: Advanced options
+        freschat_conversation_advanced_options: Advanced options 
         freshchat_conversation_can_send_image: Send images
         freshchat_conversation_can_send_emoji: Send emojis
         freshchat_conversation_can_send_file: Send files
@@ -3279,7 +3103,7 @@ en:
         freshchat_share_canned_response_categories: Whom can they share the categories with?  Global Access
         freshchat_share_canned_response_category_global: Edit all canned responses and categories
         freshchat_share_canned_response_category_group: Edit the categories that are shared with the groups the team member is part of
-        freshchat_share_canned_response_category_me: Edit only their personal categories
+        freshchat_share_canned_response_category_me: Edit only their personal categories  
         freshchat_manage_canned_responses: Manage canned responses
         freshchat_manage_canned_response_global: Edit, move and delete all Canned Responses
         freshchat_manage_canned_response_group: Edit and delete the Canned Responses that are shared with the groups the team member is a part of
@@ -3297,7 +3121,7 @@ en:
         freshchat_create_channels_global: Create topics
         freshchat_update_channels_global: Edit/disable topics
         freshchat_manage_apisdk_global: Manage Mobile SDKs
-        freshchat_manage_webchatconfig_global:
+        freshchat_manage_webchatconfig_global: 
         manage_business_hours: Manage business hours
         manage_csat: Manage Customer Satisfaction Survey
         manage_security: Manage security
@@ -3481,8 +3305,8 @@ en:
       association: "Please modify your configuration here: %{business_calendar_url}"
   omni_groups_sync_failure:
     user: "Hi %{user_name},"
-    message: "The recent update you made to the group %{omni_group_name} on your Freshdesk Omnichannel account has failed"
-    configuration_path: "Please try saving it again here: %{omni_group_url}\n<br />If the problem persists, write to support@freshdesk.com. We'll get it fixed for you quickly."
+    message: "The changes made to %{omni_group_name} has failed"
+    configuration_path: "Please modify your configuration here: %{omni_group_url}"
   bot_training_completed:
     email:
       info3: Let's start supporting!
@@ -3499,7 +3323,6 @@ en:
       widget_code: Get the embed code
   enabled: Enabled
   attachment_help_info: 'File size < %{attachment_size} MB'
-  signup_help_information: 'Once you sign up, you will have complete access to our self service portal and you can use your account to raise support tickets and track their status.'
   agent_deleted_message: This is a deleted agent
   footer:
     helpdesk_software: Help Desk Software
@@ -3729,10 +3552,8 @@ en:
   reply_comment: Add Comment
   customize_domain:
     email:
-      subject: "Here's your new Freshdesk URL"
-      agent_line: "The administrator has changed the URL of your helpdesk. Your new helpdesk URL is: <a href='%{url}'> %{url} </a> (bookmark this for easier access)"
-      admin_line: "The URL of your helpdesk has changed. Your new helpdesk URL is: <a href='%{url}'> %{url} </a> (bookmark this for easier access)"
-      team: "Freshdesk Team"
+      cheers: 'Cheers,'
+      team: Freshdesk Support Desk Team
   free_plan: Free Plan
   change_to_free_info: >-
     Downgrading your plan will result in loss of functionality and data. Are you
@@ -4175,7 +3996,6 @@ en:
           or solve your problem?
         rating_sub_title_v2: Your ratings as
         success_message: Your rating has been submitted successfully
-        survey_not_enabled: 'No active survey present'
     shared:
       survey_form:
         feedback_title: >-
@@ -5096,7 +4916,6 @@ en:
     the widget button (pixels) from the left or top of the screen based on the
     alignment you choose.
   automations:
-    helptext: Scenario Automations let you carry out a series of updates to the ticket with a single click. They help you quickly handle recurring scenarios. For example, you could create a scenario called “Assign to the Escalation team” and send an email to the Escalation team in a single click whenever an issue related to login is reported.
     info4: >-
       Click to insert Placeholders in the content which will dynamically get
       resolved into the appropriate data
@@ -5293,7 +5112,6 @@ en:
         topics: Topics
         tickets: Tickets
       results_for: Search results for
-      label: Search
     said: said
     topic:
       default_select_option: Select a forum type
@@ -5432,9 +5250,6 @@ en:
       requester_responded_at: Customer Response
       due_by: Due by time
       date_created: Date Created
-      fr_due_by: First Response Due By
-      nr_due_by: Next Response Due By
-      closed_at: Date Closed
     company: Company
     raised_by: Tickets created by
   saving: Saving...
@@ -5599,7 +5414,7 @@ en:
       verify: Verify
       status: Status
       remove: Remove
-      host_value_help: Host name for the CNAME record
+      host_value_help: Host name for the TXT record
       title: DKIM Settings
       unverified: Unverified
       type: Type
@@ -6124,10 +5939,6 @@ en:
       tickets:
         create:
           success: Your ticket has been created.
-    tickets:
-      notes:
-        create:
-          access_denied: You do not have permission to post a reply to this ticket. Please check with your admin to know your access privileges.
   import_forum: Forums
   select_watchers: Select Watchers
   choose_different_plan: Choose a different plan
@@ -8509,7 +8320,7 @@ en:
     topic_merged: '[Topic Merged] to %{title}'
     send_reminder_email: 'Reminder:%{todo_body}'
     send_sync_status_email: 'Business calendar %{action} failed'
-    omni_groups_failure_email: 'Changes to the Group settings on your Freshdesk Omnichannel account has failed'
+    omni_groups_failure_email: 'Omni Group Changes failed'
     account_data_export: 'Data Export for %{account}'
     create_support_ticket: 'Data Export Failed In Account %{account}'
     no_tickets_to_export: 'No tickets in range - %{domain}'
@@ -8524,12 +8335,8 @@ en:
     admin_activation: 'Activate your %{app_name} account'
     admin_activation_omnichannel: 'Activate your Freshdesk Omnichannel account'
     admin_activation_support_desk: 'Activate your Freshdesk Support Desk account'
-    agent_invitation_omnichannel:  'Welcome to your Freshdesk Omnichannel account'
-    agent_invitation_support_desk: 'Welcome to your Freshdesk Support Desk account'
     other_agent_activation_omnichannel: 'Here’s your invite to join Freshdesk Omnichannel'
     other_agent_activation_support_desk: 'Here’s your invite to join Freshdesk Support Desk'
-    welcome_message_invitation: Thank you for signing up. Get started.
-    welcome_message_activation: Thank you for signing up. Activate your account.
     custom_ssl_activation: Custom SSL Activated
     notify_facebook_reauth: 'Need Attention, Facebook app should be reauthorized'
     failure_transaction_notifier: Payment failed for auto recharge of day passes
@@ -8545,7 +8352,6 @@ en:
     agent_type_activation: "You have been invited as a collaborator to %{helpdesk_name} Helpdesk"
     ebay_buyer_deletion: "Request to delete Ebay contact information as per GDPR guidelines"
     ebay_seller_deletion: "Request to delete Ebay store related information as per GDPR guidelines"
-    bulk_agents_failure: "Failure notification: Bulk agents creation"
   ebay_seller_deletion_content:
     user: "Hi %{account_name},"
     body: "We have received a request from Ebay to delete your store %{ebay_account_name} information from Freshdesk as per GDPR guidelines."
@@ -8561,7 +8367,7 @@ en:
     user: "Hi %{account_name},"
     body: "We have received a request from your customer %{contact_name} %{contact_url} through Ebay to delete their contact information from your online store as per the GDPR guidelines."
     contact: "Since we are not certain if the contact was created from Ebay (as we create contacts from multiple sources), we will not delete their contact information from Freshdesk automatically."
-    tickets: "However, we would suggest you delete this information manually from Freshdesk as per the customer’s request."
+    tickets: "However, we would suggest you delete this information manually from Freshdesk as per the customer’s request." 
     link: Read more about Freshworks’ commitment to GDPR <a href="https://www.freshworks.com/gdpr/" target="_blank">here</a>
   downgrade_policy_subject:
     downgrade_in_days: 'Your Freshdesk Support Desk subscription will be modified in %{days} days'
@@ -8800,8 +8606,6 @@ en:
     view_details: 'View details'
   common_js_translations:
     of: "of"
-    preview_label: Preview
-    download_label: Download
   whatsapp: "Whatsapp"
   freddy_consumed_session_mailer:
     consumed_sessions_subject: "Your Freddy session consumption has exceeded %{sessions_consumed}% for the billing cycle"
@@ -9139,26 +8943,256 @@ Note: Carry-on luggage can be upto 8 kgs."
           description: "<p> </p>"
     sample_tickets:
       base_tickets:
-        - subject: Email address change
-          description: "Hi,<br><br>
-I need to update my email address. I want to know if I'll lose access to my account if I change it. I've added quite a few products to my cart and don't want to look for them again.<br><br>
-It would be great to continue using this account with my new email address. Please let me know if that's possible.<br><br>
-Regards,<br>
-Emily Garcia"
+        - subject: "Payment failed?"
+          description: "Hello there,<br><br>
+  When I tried to make the payment, I kept getting the same message “Your payment failed” (I’ve attached a screenshot). But I have been charged already for it. <br> Can you help me get a refund? <br>
+  <img src = 'https://s3.amazonaws.com/assets.freshpo.com/sample_data/PaymentFailed.png'>
+  Thanks<br>
+  James"
+        - subject: Mary Jane shoes in Size 8?
+          description: "<p>Hello there,</p><br /><p>I’m looking to buy a pair of Mary Jane shoes and I noticed that you have a local store in Aldovia. Could you let me know if the Mary Jane shoes are available in Size 8? I can pick it up from there.</p><br /><p>Thanks,\n<br />Emily.</p>"
           replies:
-            - "Hi Emily, <br><br>
-The good news is that you will not lose the items in your cart when you change your email address.<br><br>
-A verification email will be sent to your new email address when you update it. Once you successfully verify your new email address, you can access your account as usual.<br><br>
-If you have any other questions, we're always here to help.<br><br>
-Thank you,<br>
-Customer Service"
-        - subject: Payment failed
-          description: "I was trying to make a payment on your site and got a \"Your payment failed\" error. However, my card was charged. Can you let me know if the order is processed or what I need to do? Please see the attached screenshot.<br><br>
-  Thanks,<br>
-  Matt"
-        - subject: Received a broken TV
+            - "<p>Hey Emily,</p><br /><p>Thanks for writing to us!\n<br />I can confirm that our Aldovia store does have the Mary Jane shoes in size 8. I’ve asked them to block a pair for you. Feel free to pick them up anytime :)</p><br /><p>Cheers,\n<br />Rebecca.</p><br /><p><hr></p><p>P.S. This is a sample email that’s been converted into a ticket by Freshdesk Support Desk. <a href = https://support.freshdesk.com/support/solutions/articles/37541-forward-and-convert-your-support-emails-to-tickets-in-freshdesk target= _blank>See how you can start converting email</a> from customers into tickets in your helpdesk.</p>"
+        - subject: Vintage table lamp - Out of stock?
+          description: "<p>Hello,</p><br /><p>I saw a vintage table lamp on your site last month and I’d bookmarked it to buy it later for a friend. I can’t seem to find it anymore though. Is it out of stock or do you not sell those anymore?</p><br /><p>Thanks,\n<br />Matt.</p><p><hr></p><p>P.S. This is a sample message that has been sent to you from website page. <a href = https://support.freshdesk.com/support/solutions/articles/37690-getting-feedback-from-your-website-with-the-feedback-widget target= _blank>See how you can add your own feedback widget</a> on your website or app</p>"
+          replies:
+            - "<p>Hi Matt,</p><br /><p>Thanks for writing in!</p><br /><p>I’m sorry to say those vintage lamps are currently out of stock. I checked with our supplier though and they think it should be available by the end of next month. But if you’d rather not wait that long, I’d love to help you find something else to gift your friend. Let me know what their interests are and I’ll send across a list :)</p><br /><p>Cheers,\n<br />Janet\n<br />Saul’s Emporium Support</p>"
+        - subject: How much time does it take to get my money back!????
+          description: "<p>Hi,</p><br /><p>I had canceled my order ID 6854 (Perception Sound 9.5) last week and I’ve been waiting for my money ever since. It's been a while since your team initiated the process. Any update on this?</p>"
+        - subject: My return was not picked up
+          description: "<p>Hi,</p><br /><p>My Return ID is 35303100 and the product hasn’t been picked up and replaced. The request was raised almost a week ago. Please expedite.</p>"
+          replies:
+            - "<p>Have we assigned a delivery executive to pick up the item and replace the customer’s order?</p>"
+        - subject: How do I place a custom order?
+          description: "<p>I want to purchase an assorted set of retail equipment. I’m not able to build my bundle. Can you help me with this purchase? Looking forward to more information!</p>"
+        - subject: How can I get a refund for my order?
+          description: "<p>Hi there,</p><br /><p>I need a refund for the headphones that I purchased last week. My order ID is #53467. The product was damaged when I received it. Can you please tell me how I can get a refund?</p><br /><p>Best,\n<br />Matt.</p>"
+      ecommerce:
+        - subject: Need to change my shipping address
           description: "Hi,<br><br>
-  The television I ordered from your site was delivered with a cracked screen. I need some help with a refund or a replacement.<br><br>
-  Here is the order number <b>FD06062010</b><br><br>
-  Thanks,<br>
-  Sarah"
+I have to leave the city for a week and I’m afraid nobody will be there to collect my order (#555) when it arrives.<br><br>
+Is there a way for me I can change my shipping address?<br><br>
+Thanks,<br>
+Anne Richard"
+          replies:
+            - "Hi Anne,<br><br>
+You can change your shipping address as long as your order has not been dispatched for delivery. <br><br>
+Your package is waiting to be picked up for delivery, so go ahead with changing the address.<br><br>
+Follow these steps to change the details of your order - <br>
+1. Go to my orders.<br>
+2. Click on the edit details icon for the order which you’d like to update. <br>
+3. Update the required fields and click save changes.<br>
+4. Click done after you’ve finished.<br><br>
+I hope this was helpful. If you have any further doubts, feel free to reach out to me.<br><br>
+Richard Gere<br>
+Saul's Emporium"
+            - "Hey Richard,<br><br> Thank you so much.<br><br> Anne Richard"
+        - subject: Status of my replacement
+          description: "I requested a replacement on my order (#123) and I was told that it would take two working days to have my request processed. <br><br>
+It’s been four days now, I received no further information on this and I’m growing tired of waiting. Can you tell me what’s going on? <br><br>
+Matt Rogers"
+          replies:
+            - "Hi Matt, <br><br>
+The delay is on us, and we are sorry for the inconvenience caused. However, I checked the status of your request and we’ve got some good news for you. Your order is out for delivery and should reach you tomorrow. <br><br>
+To make up for this and to thank you for being patient, we are giving you a 5$ Saul’s exclusive gift coupon. <br><br>
+Richard Gere <br>
+Saul's Emporium"
+            - "I am glad to hear that. Also, thank you for your fast and prompt response. You’re really kind.<br><br> Matt Rogers"
+        - subject: Email address change
+          description: "Hey,<br><br>
+I use Saul’s often, I love the products you guys offer. <br><br>
+I need to update my email address. I want to know if I’ll be losing access to this account? I’ve added a quite a few products to my cart and I don’t want to go on a hunt to find all of them again, if I ever need it. <br><br>
+It would be great if I could continue using this account with my new email address. Please let me know if that’s possible. <br><br>
+Regards,<br>
+Clarice Boone"
+          replies:
+            - "Hi Clarice, <br><br>
+We’re happy to hear that you love our products. Thank you! :)<br><br>
+When you update your email address or password, you will receive an email from Saul’s to verify that it’s you who is requesting the changes. Once you finish the verification process, you can go back to accessing your account as usual. <br><br>
+You can refer to our solution article on <b>changing account details</b> for further details. <br><br>
+In case any questions pop up, we’re always here to help. For now, I am marking this ticket as resolved. <br><br>
+Thank you. :)<br>
+Richard Gere<br>
+Saul's Emporium"
+        - subject: Adding a new payment method
+          description: "Hey!<br><br>
+I want to link my PayPal account to my Saul’s account. Currently, I have my card added. Will I be presented with an option to choose between the two payment methods? Or is there a default payment method or something? Where can I find more details about this? Please help me. <br><br>
+Phileas Fogg"
+          replies:
+            - "Hi Phileas Fogg,<br><br>
+If you have multiple payment methods set up, you will always be given a choice to choose amongst them before making a payment. There is no default payment. <br><br>
+You can refer to our solution article on <b>adding a payment method</b>, for more information. You can write in your questions, we’re always happy to help. <br><br>
+Regards,<br>
+Mary Sheril<br>
+Saul's Emporium"
+      "software & services":
+        - subject: ogg format seems to be off
+          description: "Hi,<br><br> I tried uploading an .ogg file, to share it with my team. But the action failed?<br><br>
+Clarice Boone"
+          replies:
+            - "Hi Clarice, <br><br>
+We’re sorry but we do not support the .ogg format. However, you can convert it to MP3 and upload it. This should be an easy workaround for you.<br><br>
+If you need some more guidance with this, do let us know. We’re here to help you. <br><br>
+Micheal <br>
+Saul's Inc."
+        - subject: Unable to login
+          description: "I changed my login credentials and now I’m not able to login. Can you help me retrieve my account?<br><br>
+Thanks,<br>
+Sam Osborne"
+          replies:
+            - "Hi Sam,<br><br>
+I checked our logs and looks like you haven’t verified the changes.<br><br>
+Check your mailbox (the updated address), you’ll find one from us with the subject “Verify your email” with a link to verify the new email address. You can refer to our article on <b>changing account details</b> for further clarity. If you have any other doubts, feel free to reach out to us.<br><br>
+Richard Gere<br>
+Saul's Inc."
+            - "Hey, my bad. I missed the email. I verified my account, and I’m able to login in now. Thank you so much.<br><br>
+Sam Osborne"
+        - subject: Issue with storage space
+          description: "Hi,<br><br>
+On the Classic plan, I feel like the storage space provided is too less. Is it possible for us to pay some extra amount to buy more storage?<br><br>
+Thanks,<br>
+Rachel Zane"
+          replies:
+            - "Hi Rachel,<br><br>
+I’m sorry but we don’t have this option as of yet. It’s still in the pipeline. You’ll be sure to know once we roll this out. :) <br><br>
+Thanks,<br>
+Norman<br>
+Saul's Inc"
+        - subject: Cancelling our account
+          description: "Hello team, <br><br>
+We’d like to cancel our account. We’re moving on to another application. It would be great if you could have someone help us out with refunding our unused hours? <br><br>
+On a side note, you guys have been tremendous. Thank you for your support.<br><br>
+Thanks<br>
+Bob Tree"
+          replies:
+            - "Hi Bob,<br><br> We’ll have your account manager get in touch with you shortly. :)<br><br>
+However, it’s sad to know that you’re leaving us. :( <br><br>
+Do let us know if we can help in anyway. <br><br>
+Michael<br>
+Saul's Inc."
+      travel:
+        - subject: Need to cancel my tickets
+          description: "Good morning,<br><br>
+I’d like to cancel my upcoming trip to New York, I’ve something important to wrap up in Seattle. Can you help me with this? My e-ticket ID is 333-445-7645.<br><br>
+Thanks,<br>
+Mark Colbert"
+          replies:
+            - "Hi Mark, <br><br>
+Sure I can put in a request for a cancellation. Would you like us to rebook the same itinerary for a different date? Or would you like a refund for the trip?<br><br>
+Rebecca<br>
+Saul's support"
+            - "Hey Rebecca, <br><br>
+I'll just go with refund this time! <br><br>
+Thanks,<br>
+Mark Colbert."
+        - subject: Baggage restrictions
+          description: "Hi,<br><br>
+Can you tell me the baggage restrictions on international flights for the economy class to India? I’m flying to Mumbai from Tennessee. <br><br>
+Sam Kart"
+          replies:
+            - "Hi Sam,<br><br>
+On the economy class, you can carry one bag upto 23 kgs. For carry-on baggage, one bag upto 8 kgs is permitted. You can refer to our article on <b>baggage restrictions</b> for further clarity.<br><br>
+If you need more details, feel free to reach out to us. Bon voyage! :) <br><br><br>
+Richard Gere<br>
+Saul's support"
+            - "Thank you so much. <br><br>
+Sam Kart"
+        - subject: Change dates on my trip
+          description: "Hey,<br><br>
+I need to change the dates on my trip in May - turns out I have some other things to finish up. My itinerary number is 4456789 and its a trip from May 19-May 25. I’d like to move the return date to May 29. <br><br>
+This was a refundable ticket, so I’m assuming there are no additional charges.<br><br>
+Looking for a prompt response.<br><br>
+Lewis Clarke"
+          replies:
+            - "Hey Lewis,<br><br> Thank you for providing the details. You’d not be charged for changing the itinerary as you’ve opted for a refundable ticket. <br><br>
+We’ll have the dates changed for you and notify you once it’s done. :)<br><br>
+Clark, <br>
+Saul's support"
+        - subject: Caribbean Package deal questions
+          description: "Hi,<br><br>
+I was looking at the spring break Caribbean package deal on your website. I’ve got a few questions - <br><br>
+Do you accommodate vegan meals? Also at Labadee, we’d like to do the rainforest bungee jump instead of the mountain trek on Day 3. Can you guys let us know if we’d be refunded for this activity? We’re a group of ten adults.<br><br>
+Thanks,<br>
+Sarah James"
+          replies:
+            - "Hi Sarah,<br><br>
+Yes, we can accomodate vegan meals. Regarding Labadee though, we can't customize the tours for package deals. I'll have a chat with our vendor and see if we can do anything else. I'll keep you posted. :)<br><br>
+Thanks,<br>
+Rebecca<br>
+Saul's support"
+      fsm_base_tickets:
+        - subject: "Solar Panel Maintenance"
+          description: "The wall battery is not charging enough during the day and I am running out of power at night. Is there a problem with the battery or is it a problem with the solar panel?
+                       For context, I have the Sonne 420 (SM289918) which I bought back in October 2013. The Model number is 12009. Will this service be covered by warranty? I remember the sales rep saying there was a 10-year warranty on the panels. "
+          replies:
+            - "Hey Bob, <br><br>
+              I'm sorry to hear you've been having reliability issues with the power source after sundown. We're dispatching one of our field technicians to take a look at the installation on Monday. From what I see, it could be a problem with: <br>
+              1. The Battery <br>
+              2. The Solar Panel itself <br>
+              3. Connection between the two <br>
+              4. Drain due to a poor device connection somewhere in the circuit. <br>
+              Our field technician will diagnose and let you know what steps we take to solve this as soon as possible."
+          service_tasks:
+            - subject: "Battery Health Diagnosis"
+              description: "Customer is having issues with battery power at night. Check battery health levels as well as solar panel connectivity for issues. Run a solar panel efficiency test just in case. <br>
+                           Possible Battery issue. <br>
+                           Product Details: <br>
+                           Sonne 420 (SM289918) <br>
+                           Model #12009 <br>
+                           Date of Purchase: 12th October 2013 <br>
+                           Battery Warranty: Expired <br>
+                           Panel Warranty: Upto 11th October 2023 "
+
+        - subject: "Set top box not turning on"
+          description: "Our set top box is damaged. Please send technician to fix it. If it cannot be fixed, request you to replace the same. <br><br>
+                       Current model: Motorola 7100-P2 HD Set-top Box <br>
+                       Date of purchase: 1st Oct 2020 <br>
+                       Warranty: active"
+
+        - subject: "WiFi disconnected"
+          description: "My wifi has been down for two days now and there has been no response from your team on Twitter. Fix this soon or I'll move to a different ISP. I'm paying 120 dollars a month to be a priority service customer with Fiber connection as well. The router is a Black one from a couple of years back when I originally got the connection and only one of the lights on the router blinks now."
+          replies:
+            - "Hey Emily, <br><br>
+               We apologize for not having responded sooner. One of our senior field techs will be meeting you tomorrow at 3 in the evening to get you back online as soon as possible. <br><br>
+               Thank you for your patience. "
+          service_tasks:
+            - subject: "Router issues"
+              description: "Customer has had no internet connectivity for two days. Contact test shows other apartments in her building are online and functioning but her router is unreachable. Could be a cable problem between the distribution box and her router. <br><br>
+                           Product Details:<br>
+                           Router: Black 9, model #78221<br>
+                           Connection: Fiber - 200m cable<br>
+                           Waiting for 2 days. High priority issue. "
+
+        - subject: "Water leakage in my bathroom"
+          description: "We have water leakage in his house from yesterday. Looks like the washer is worn. Please check. <br>
+                       Also, the wall paint has been damaged due to the leak. "
+          service_tasks:
+            - subject: "Pipe repairs"
+              description: "Leak detection and repair. If there is equipment malfunction (pipes, washers, fittings) replace them <br><br>
+                           Pipe type: PVC Schedule 40 Plain End Pipe <br>
+                           Inventory: replacement piping / joints / washers/ valves, toolkit"
+            - subject: "Painting"
+              description: "Fixing water damaged wall paint. <br><br>
+                           Paint: Valspar The Perfect White Exterior Paint + Primer"
+
+        - subject: "Pest control for office"
+          description: "Please book a disinfection service for our office post Covid lockdown <br><br>
+                       Disinfectant: EPA Registered Peraspray - 10L <br>
+                       Coverage Area: 3000 sq. ft"
+
+        - subject: "Problem with the washing machine"
+          description: "A few minutes into the washing cycle, my washing machine makes a loud whirring noise and comes to a grinding halt. This has happened a few times. Oddly enough, I've noticed this happening in the evenings. The whirring noise rarely occurs in the morning. Can there be a reason for it? Please send someone to check as soon as you can."
+          replies:
+            - "Hi Johnny, <br><br>
+              Sounds like a drum issue to me, I would have to send a technician to your house to check it out. Could you pls confirm if ​this is your address: 7, Clinton St, Brooklyn Heights <br><br>
+              Our records show that you live in a block of apartments. Can you tell me which floor your apartment is on? We'd like to know if a water pressure test needs to be conducted as well and if that's the case, I'll have to inform the field technician to bring the right equipment to your place to solve that issue. <br><br>
+              Also, please let us know a few timeslots tomorrow when our technician can come visit. <br><br>        ​
+              Thanks."
+          service_tasks:
+            - subject: "Washing machine maintenance / drum replacement"
+              description: "A few minutes into the washing cycle, the washing machine makes a loud whirring noise and comes to a grinding halt. This has happened a few times.<br><br>
+                           Possible drum issue.<br><br>
+                           Product details:<br>
+                           Mogra 360 (MG101121)<br>
+                           Model #23412<br>
+                           Warranty upto June 2020"
