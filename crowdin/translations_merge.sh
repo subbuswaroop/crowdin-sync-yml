@@ -1,4 +1,9 @@
 #!/bin/bash
+source_dir=../locales-yml/mint_translations
+new_dir=./tmp
+base_lang='en'
+welsh_lang='cy'
+latvia_lang='lv'
 
 move_dir(){
   src=$1
@@ -9,12 +14,6 @@ move_dir(){
     mv "$1" "$2"
   fi
 }
-
-source_dir=../locales-yml/mint_translations
-new_dir=./tmp
-base_lang='en'
-welsh_lang='cy'
-latvia_lang='lv'
 
 # TODO:
 # Add other mappings like PT-BR, pt-pt, sv-se - Done
@@ -69,13 +68,13 @@ done
 
 rm temp_file.yml
 
-for lang in `ls $1`
+for lang in `ls $new_dir`
 do
   if [ $lang == $base_lang ] || [ $lang == $welsh_lang ] || [ $lang == $latvia_lang ]
   then
     echo "Skipped lang $lang"
   else
-    filename=`ls $1/$lang`
+    filename=`ls $new_dir/$lang`
     cp $new_dir/$lang/$filename new.yaml
     echo "$source_dir/${lang}.yml"
     cp $source_dir/${lang}.yml old.yaml
