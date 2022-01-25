@@ -1,4 +1,4 @@
-name: YAML workflow
+name: Upload Source & Excel workflow
 on:
   push:
     branches: [ master ]
