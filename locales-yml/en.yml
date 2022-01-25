@@ -8798,10 +8798,6 @@ en:
     omni_availability_title: "AVAILABLE AGENTS"
     freshcaller_active_calls_title: "CALLS - ACTIVE"
     view_details: 'View details'
-  common_js_translations:
-    of: "of"
-    preview_label: Preview
-    download_label: Download
   whatsapp: "Whatsapp"
   freddy_consumed_session_mailer:
     consumed_sessions_subject: "Your Freddy session consumption has exceeded %{sessions_consumed}% for the billing cycle"
