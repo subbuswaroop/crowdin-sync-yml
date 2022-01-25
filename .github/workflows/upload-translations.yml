@@ -1,13 +1,30 @@
-name: yaml file workflow
+name: YAML workflow
 on:
   push:
     branches: [ master ]
     paths:
-    - 'locales-yml/en.yml'
+      - 'locales-yml/en.yml'
   
   workflow_dispatch:
 
 jobs:
+  upload-yml-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: crowdin action
+        uses: crowdin/github-action@1.4.0
+        with:
+          upload_sources: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
   yml-to-json-workflow:
     runs-on: ubuntu-latest
     steps:
@@ -52,34 +69,19 @@ jobs:
           name: origjson
           path: orig-en.json
           retention-days: 1
-
-      - name: Download PR JSON artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: prjson
-
-      - name: Download original JSON artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: origjson
-
-      - name: Checking file present
-        run: |
-          cp pr-en.json pr-new.json
-          cp orig-en.json orig-new.json
       
-      - name: Install json-diff and get the difference
-        run: |
-          npm install -g json-diff
-          json-diff orig-en.json pr-en.json > json-diff.txt
-          echo "Diff found"
+      # - name: Install json-diff
+      #   run: |
+      #     npm install -g json-diff
+      #     json-diff orig-en.json pr-en.json > json-diff.txt
+      #     echo "Diff found"
       
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: jsondiff
-          path: json-diff.txt
-          retention-days: 1
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: jsondiff
+      #     path: json-diff.txt
+      #     retention-days: 1
 
   upload-to-excel-workflow:
       runs-on: ubuntu-latest
@@ -94,20 +96,34 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             sha: ${{ github.event.pull_request.head.sha }}
 
+        - name: Download PR JSON artifact
+          uses: actions/download-artifact@v2
+          with:
+            name: prjson
+
+        - name: Download original JSON artifact
+          uses: actions/download-artifact@v2
+          with:
+            name: origjson
+
         - name: Get Diff Action          
           uses: technote-space/get-diff-action@v5
+
+        - name: Install json-diff
+          run: |
+            npm install -g json-diff
         
         - name: Get Newly Added/Modified Keys
           run: |
             echo "Newly added fields" >> diff-text.txt
-            git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
-            git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> new-changes.json
+            json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+            json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> new-changes.json
         
         - name: Get Removed keys
           run: |
             echo "Removed fields (if any)" >> diff-text.txt
-            git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
-            git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> removed-changes.json
+            json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+            json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> removed-changes.json
 
         - name: Get Screenshots
           shell: bash
@@ -117,14 +133,14 @@ jobs:
               grep http ./pr-details-for-screenshot.txt | sed 's/http/\nhttp/g' | { grep ^http || true; } | sed 's/\(^http[^ <]*\)\(.*\)/\1/g' > pr-details-for-screenshot.txt
             fi
 
-        - name: Upload git diff to artifact
+        - name: Upload screenshots to artifact
           uses: actions/upload-artifact@v2
           with:
             name: screenshot
             path: pr-details-for-screenshot.txt
             retention-days: 3
 
-        - name: Download the diff text artifact
+        - name: Download the screenshots from artifact
           uses: actions/download-artifact@v2
           with:
             name: screenshot
@@ -237,21 +253,3 @@ jobs:
           env:
             GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
             GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
-#         run: cat test.yml | yq e '.en.time.am'
-#         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
-          # jq -r '[paths | join(".")]' yml-to-json.json > pr-en.json
-
-     # - name: Show GitHub context
-      #   env:
-      #     GITHUB_CONTEXT: ${{ toJson(github) }}
-      #   run: echo "$GITHUB_CONTEXT"
-
-      # - name: Set HEAD SHA
-      #   id: head-sha
-      #   run: echo "::set-output name=sha::$(git rev-parse HEAD)"
-
-      # - name: Checkout previous branch
-      #   uses: actions/checkout@v2
-      #   with:
-      #     ref: master
-
