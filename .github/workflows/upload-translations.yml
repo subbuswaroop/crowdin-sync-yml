@@ -83,173 +83,173 @@ jobs:
       #     path: json-diff.txt
       #     retention-days: 1
 
-  upload-to-excel-workflow:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+  # upload-to-excel-workflow:
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - name: Checkout
+  #         uses: actions/checkout@v2
 
-        - name: Get current PR
-          uses: 8BitJonny/gh-get-current-pr@1.3.0
-          id: PR
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            sha: ${{ github.event.pull_request.head.sha }}
+      - name: Get current PR
+        uses: 8BitJonny/gh-get-current-pr@1.3.0
+        id: PR
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.event.pull_request.head.sha }}
 
-        - name: Download PR JSON artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: prjson
+      - name: Download PR JSON artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: prjson
 
-        - name: Download original JSON artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: origjson
+      - name: Download original JSON artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: origjson
 
-        - name: Get Diff Action          
-          uses: technote-space/get-diff-action@v5
+      - name: Get Diff Action          
+        uses: technote-space/get-diff-action@v5
 
-        - name: Install json-diff
-          run: |
-            npm install -g json-diff
-        
-        - name: Get Newly Added/Modified Keys
-          run: |
-            echo "Newly added fields" >> diff-text.txt
-            json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
-            json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> new-changes.json
-        
-        - name: Get Removed keys
-          run: |
-            echo "Removed fields (if any)" >> diff-text.txt
-            json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
-            json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> removed-changes.json
+      - name: Install json-diff
+        run: |
+          npm install -g json-diff
+      
+      - name: Get Newly Added/Modified Keys
+        run: |
+          echo "Newly added fields" >> diff-text.txt
+          json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+          json-diff orig-en.json pr-en.json | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> new-changes.json
+      
+      - name: Get Removed keys
+        run: |
+          echo "Removed fields (if any)" >> diff-text.txt
+          json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+          json-diff orig-en.json pr-en.json | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> removed-changes.json
 
-        - name: Get Screenshots
-          shell: bash
-          run: |
-            echo "${{ steps.PR.outputs.pr_body }}" | sed -e 's/|/\\|/g' > pr-details-for-screenshot.txt
-            if grep -q "images" pr-details-for-screenshot.txt; then
-              grep http ./pr-details-for-screenshot.txt | sed 's/http/\nhttp/g' | { grep ^http || true; } | sed 's/\(^http[^ <]*\)\(.*\)/\1/g' > pr-details-for-screenshot.txt
-            fi
+      - name: Get Screenshots
+        shell: bash
+        run: |
+          echo "${{ steps.PR.outputs.pr_body }}" | sed -e 's/|/\\|/g' > pr-details-for-screenshot.txt
+          if grep -q "images" pr-details-for-screenshot.txt; then
+            grep http ./pr-details-for-screenshot.txt | sed 's/http/\nhttp/g' | { grep ^http || true; } | sed 's/\(^http[^ <]*\)\(.*\)/\1/g' > pr-details-for-screenshot.txt
+          fi
 
-        - name: Upload screenshots to artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: screenshot
-            path: pr-details-for-screenshot.txt
-            retention-days: 3
+      - name: Upload screenshots to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshot
+          path: pr-details-for-screenshot.txt
+          retention-days: 3
 
-        - name: Download the screenshots from artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: screenshot
+      - name: Download the screenshots from artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: screenshot
 
-        - name: Get Pull Request URL
-          uses: kceb/pull-request-url-action@v1
-          id: pr-url
+      - name: Get Pull Request URL
+        uses: kceb/pull-request-url-action@v1
+        id: pr-url
 
-        - run: echo "The Pull Request URL is ${{ steps.pr-url.outputs.url }}" >> diff-text.txt
-        - name: iterate screenshot file
-          run: |
-              i=1
-              while read p; do
-                url=$(echo $p | tr -d '>' | tr -d $'\r' | tr -d ')')
-                if [[ $url =~ "images" ]]; then
-                  curl "$url" -o artifacts/screenshot${i}.png
-                  echo "https://uploadscreenshot.s3.ap-south-1.amazonaws.com/${{ steps.PR.outputs.number }}/screenshot${i}.png" >> screenshot-s3-url.txt
-                  i=$((i+1))
-                elif [[ $url =~ "freshrelease" ]]; then
-                  echo $url
-                  if [[ $url =~ "|" ]]; then
-                    echo "The corresponding freshrelease ticket is" >> diff-text.txt
-                    echo $url | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" >> diff-text.txt
-                    echo "The PR url is ${{ github.event.number }} ${{ steps.pr-url.outputs.url }}"
-                  else
-                    echo "The corresponding freshrelease ticket is $url " >> diff-text.txt
-                  fi
+      - run: echo "The Pull Request URL is ${{ steps.pr-url.outputs.url }}" >> diff-text.txt
+      - name: iterate screenshot file
+        run: |
+            i=1
+            while read p; do
+              url=$(echo $p | tr -d '>' | tr -d $'\r' | tr -d ')')
+              if [[ $url =~ "images" ]]; then
+                curl "$url" -o artifacts/screenshot${i}.png
+                echo "https://uploadscreenshot.s3.ap-south-1.amazonaws.com/${{ steps.PR.outputs.number }}/screenshot${i}.png" >> screenshot-s3-url.txt
+                i=$((i+1))
+              elif [[ $url =~ "freshrelease" ]]; then
+                echo $url
+                if [[ $url =~ "|" ]]; then
+                  echo "The corresponding freshrelease ticket is" >> diff-text.txt
+                  echo $url | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" >> diff-text.txt
+                  echo "The PR url is ${{ github.event.number }} ${{ steps.pr-url.outputs.url }}"
+                else
+                  echo "The corresponding freshrelease ticket is $url " >> diff-text.txt
                 fi
-              done < pr-details-for-screenshot.txt
-
-        - name: upload git diff to artifact
-          uses: actions/upload-artifact@v2
-          with:
-            name: difftext
-            path: diff-text.txt
-            retention-days: 3
-
-        - name: Download the diff text artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: difftext
-                
-        - name: iterate new json file
-          run: |
-              if [ -s new-changes.json ]; then
-                echo "[" >> construct-array.txt
-                while read p; do
-                  echo "[" >> construct-array.txt
-                  p=$(echo $p | sed 'y/+/ /')
-                  p=$(echo $p | sed 's#,#,"added","${{ env.SINGLE_S3_URL }}"], #g')
-                  p=$(echo $p | sed '0,/:/ s//,/')
-                  echo $p
-                  echo $p >> construct-array.txt
-                done < new-changes.json
-                echo ",\"added\"]]" >> construct-array.txt
               fi
-              if [ -s removed-changes.json ]; then
-                echo "[" >> construct-remove-array.txt
-                while read p; do
-                  echo "[" >> construct-remove-array.txt
-                  p=$(echo $p | sed 'y/-/ /')
-                  p=$(echo $p | sed 's#,#,"removed","${{ env.SINGLE_S3_URL }}"], #g')
-                  p=$(echo $p | sed '0,/:/ s//,/')
-                  echo $p
-                  echo $p >> construct-remove-array.txt
-                done < removed-changes.json
-                echo ",\"removed\"]]" >> construct-remove-array.txt
-              fi
+            done < pr-details-for-screenshot.txt
 
-        - name: Set json array in git variable
-          id: "json_array"
-          run: |
-            echo "REMOVED_KEYS_FOUND=$(echo false)" >> $GITHUB_ENV
-            echo "NEW_KEYS_FOUND=$(echo false)" >> $GITHUB_ENV
+      - name: upload git diff to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: difftext
+          path: diff-text.txt
+          retention-days: 3
+
+      - name: Download the diff text artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: difftext
+              
+      - name: iterate new json file
+        run: |
             if [ -s new-changes.json ]; then
-              JSON=$(cat ./construct-array.txt)
-              JSON=$(echo $JSON | sed 's/, ]]/]/g')
-              JSON=$(echo $JSON | sed 's/, ,"added"]]/]/g')
-              echo "GITHUB_TESTING=$(echo $JSON)" >> $GITHUB_ENV
-              echo "NEW_KEYS_FOUND=$(echo true)" >> $GITHUB_ENV
-              echo ${{ env.GITHUB_TESTING }}
-            else
-              JSON="[[\"No newly added fields\", \"-\", \"-\", \"-\"]]"
-              echo "GITHUB_TESTING=$(echo $JSON)" >> $GITHUB_ENV
+              echo "[" >> construct-array.txt
+              while read p; do
+                echo "[" >> construct-array.txt
+                p=$(echo $p | sed 'y/+/ /')
+                p=$(echo $p | sed 's#,#,"added","${{ env.SINGLE_S3_URL }}"], #g')
+                p=$(echo $p | sed '0,/:/ s//,/')
+                echo $p
+                echo $p >> construct-array.txt
+              done < new-changes.json
+              echo ",\"added\"]]" >> construct-array.txt
             fi
             if [ -s removed-changes.json ]; then
-              JSON=$(cat ./construct-remove-array.txt)
-              JSON=$(echo $JSON | sed 's/, ]]/]/g')
-              JSON=$(echo $JSON | sed 's/, ,"removed"]]/]/g')
-              echo "GITHUB_REMOVED=$(echo $JSON)" >> $GITHUB_ENV
-              echo "REMOVED_KEYS_FOUND=$(echo true)" >> $GITHUB_ENV
-              echo ${{ env.GITHUB_REMOVED }}
-            else
-              JSON="[[\"No newly removed fields\", \"-\", \"-\", \"-\"]]"
-              echo "GITHUB_REMOVED=$(echo $JSON)" >> $GITHUB_ENV
+              echo "[" >> construct-remove-array.txt
+              while read p; do
+                echo "[" >> construct-remove-array.txt
+                p=$(echo $p | sed 'y/-/ /')
+                p=$(echo $p | sed 's#,#,"removed","${{ env.SINGLE_S3_URL }}"], #g')
+                p=$(echo $p | sed '0,/:/ s//,/')
+                echo $p
+                echo $p >> construct-remove-array.txt
+              done < removed-changes.json
+              echo ",\"removed\"]]" >> construct-remove-array.txt
             fi
 
-        - name: update s3 screenshot url to sheet
-          id: 'update_s3_url_worksheet'
-          uses: jroehl/gsheet.action@v1.0.0
-          with:
-            spreadsheetId: 1XjECBS-qP78FSeU1q55oWNqch-94-YpUh2-naKzIfsw
-            commands: | 
-              [
-                { "command": "getWorksheet", "args": { "worksheetTitle": "Testing Sheet Yaml" }},
-                { "command": "appendData", "args": { "data": [["Key", "Value", "Action Type", "S3 url"]] , "minCol": 1}},
-                { "command": "appendData", "args": { "data": ${{ env.GITHUB_TESTING }} , "minCol": 1}},
-                { "command": "appendData", "args": { "data": ${{ env.GITHUB_REMOVED }} , "minCol": 1}}
-              ]
-          env:
-            GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
-            GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
+      - name: Set json array in git variable
+        id: "json_array"
+        run: |
+          echo "REMOVED_KEYS_FOUND=$(echo false)" >> $GITHUB_ENV
+          echo "NEW_KEYS_FOUND=$(echo false)" >> $GITHUB_ENV
+          if [ -s new-changes.json ]; then
+            JSON=$(cat ./construct-array.txt)
+            JSON=$(echo $JSON | sed 's/, ]]/]/g')
+            JSON=$(echo $JSON | sed 's/, ,"added"]]/]/g')
+            echo "GITHUB_TESTING=$(echo $JSON)" >> $GITHUB_ENV
+            echo "NEW_KEYS_FOUND=$(echo true)" >> $GITHUB_ENV
+            echo ${{ env.GITHUB_TESTING }}
+          else
+            JSON="[[\"No newly added fields\", \"-\", \"-\", \"-\"]]"
+            echo "GITHUB_TESTING=$(echo $JSON)" >> $GITHUB_ENV
+          fi
+          if [ -s removed-changes.json ]; then
+            JSON=$(cat ./construct-remove-array.txt)
+            JSON=$(echo $JSON | sed 's/, ]]/]/g')
+            JSON=$(echo $JSON | sed 's/, ,"removed"]]/]/g')
+            echo "GITHUB_REMOVED=$(echo $JSON)" >> $GITHUB_ENV
+            echo "REMOVED_KEYS_FOUND=$(echo true)" >> $GITHUB_ENV
+            echo ${{ env.GITHUB_REMOVED }}
+          else
+            JSON="[[\"No newly removed fields\", \"-\", \"-\", \"-\"]]"
+            echo "GITHUB_REMOVED=$(echo $JSON)" >> $GITHUB_ENV
+          fi
+
+      - name: update s3 screenshot url to sheet
+        id: 'update_s3_url_worksheet'
+        uses: jroehl/gsheet.action@v1.0.0
+        with:
+          spreadsheetId: 1XjECBS-qP78FSeU1q55oWNqch-94-YpUh2-naKzIfsw
+          commands: | 
+            [
+              { "command": "getWorksheet", "args": { "worksheetTitle": "Testing Sheet Yaml" }},
+              { "command": "appendData", "args": { "data": [["Key", "Value", "Action Type", "S3 url"]] , "minCol": 1}},
+              { "command": "appendData", "args": { "data": ${{ env.GITHUB_TESTING }} , "minCol": 1}},
+              { "command": "appendData", "args": { "data": ${{ env.GITHUB_REMOVED }} , "minCol": 1}}
+            ]
+        env:
+          GSHEET_CLIENT_EMAIL: ${{ secrets.GSHEET_CLIENT_EMAIL }}
+          GSHEET_PRIVATE_KEY: ${{ secrets.GSHEET_PRIVATE_KEY }}
