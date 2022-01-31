@@ -8644,9 +8644,6 @@ en:
     Field_technicians: Field technicians
     subscription_change: Subscription change
     agents: Agents
-    header_txt: Subscription change
-    latest_request: Latest request
-    plan: Plan
     omnichannel: Omnichannel
     to: to
     fsm: FSM
